@@ -1,0 +1,25 @@
+1. Create class "Block"
+2. Create a method canBeUsed of return type bool of class Block, overload function of return type void that takes bool argument to set status
+3. Create methods knot() and cross() of type bool of class Block and initialise both to false for all blocks
+4. Create dynamically created 2D array of type Block of 6 rows 7 columns with continuous memory allocation
+5. Print to screen the array in the form of a grid
+6. Initialise all blocks with highest indices to canBeUsed = true and the rest to false
+7. Mark all blocks with highest possible indices that are of type canBeUsed as 1,2,3,4,5,6,7
+9. Ask P1 to choose his block
+>>>Get column number from user since row will always be set for a particular column
+10. Make a cross appear at that block and set a[i][j].cross() for that block to true
+11. Check if P1 won or if game ended:
+	if yes: clear screen and print to screen P1 wins
+	if not: continue
+12. Set block occupied by P1 to canBeUsed = false and the one above it to canBeUsed = true
+13. Ask P2 to choose his block
+14. Make a knot appear at that block and set a[i][j].knot() for that block to true 
+15. Check if P2 won or if game ended:
+	if yes: clear screen and print to screen P2 wins
+	if not: continue
+16. Repeat this procedure in loops
+17. Check if a player wins: Create an independent method bool check(bool) and initialise it to false. It performs the following actions:
+A. For the whole 2D array, starting with bottom left corner, select all blocks with a[i][j].cross() = true one-by-one and see if it has 3 continuous crosses above or below or to its left or right or diagonally upward left or right or diagonally below left or right, if yes then set check(a[i][j].cross()) to true
+B. Repeat the same procedure for knots, if yes then set check(a[i][j].knot()) to true
+C. If all blocks are set to canBeUsed = false and check(a[i][j].cross()) = check(a[i][j].knot()) = false then clear screen and print to screen that the match is drawn
+18. When the game ends, ask user if he wants to play again as a y/n question: start again if y and terminate console window if n
