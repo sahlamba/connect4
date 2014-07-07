@@ -7,7 +7,22 @@
 	font-weight: 400;
 }
 
+body {
+	background-color: #fff;
+	text-align: center;
+}
+
+#header {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+	#header > div {
+		padding: 20px;
+	}
+
 h1 {
-	font-size: 36px;
+	font-size: 48px;
 	color: #ffe568;
 }
