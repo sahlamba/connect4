@@ -19,22 +19,53 @@ body {
 }
 
 	#header > div {
-		padding: 20px;
+		 padding: 20px;
 	}
 
 h1 {
 	font-size: 48px;
-	color: #fdfcce;
+	color: #f07848;
 }
 
 h2 {
-	width: auto;
 	font-size: 20px;
-	color: #fdfcce;
+	color: #02e4ca;
 }
 
-#match-title {
+#anim{
 	position: relative;
-	width: 100%;
-	overflow: hidden;
+	width: 38px;
+	height: 38px;
+	background-color: coral;
+	-webkit-animation: square-circle 2s .5s infinite  alternate;
+}
+
+@-webkit-keyframes square-circle {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: darksalmon;
+        -webkit-transform:rotate(180deg);
+    }
 }
