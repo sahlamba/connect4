@@ -42,7 +42,7 @@ h2 {
 	height: 10px;
 	z-index: -100;
 	background-color: coral;
-	-webkit-animation: square-circle 2s .5s infinite  alternate;
+	-webkit-animation: square-circle 2s .5s infinite alternate ;
 }
 
 @-webkit-keyframes square-circle {
@@ -71,6 +71,125 @@ h2 {
     100%{
         border-radius: 50%;
         background: darksalmon;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+#buttons{
+
+     padding:50px;
+}
+
+
+
+#buttons button{
+   
+    display: inline-block; 
+    width:50px;
+}
+
+#grid div{
+    height:50px;
+    margin-top: 6px;
+
+}
+
+#grid div div{
+    
+    width:50px;
+    display: inline-block;
+    background-color:lightcoral;
+}
+
+.round1{
+    height:50px;
+    width:50px;
+    -webkit-animation: square-circle1 0.75s .5s 1  alternate;
+     -webkit-animation-fill-mode: forwards;
+    
+/*
+    -webkit-animation-name: square-circle1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+*/
+    visibility: visible !important;
+    
+    
+}
+
+@-webkit-keyframes square-circle1 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: coral;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+
+.round2{
+    height:50px;
+    width:50px;
+    -webkit-animation: square-circle2 0.75s .5s 1  alternate;
+     -webkit-animation-fill-mode: forwards;
+    
+/*
+    -webkit-animation-name: square-circle1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+*/
+    visibility: visible !important;
+    
+    
+}
+
+@-webkit-keyframes square-circle2 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #02e4ca;
         -webkit-transform:rotate(180deg);
     }
 }
