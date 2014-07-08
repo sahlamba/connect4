@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: #fffff0;
+	background-color: #3a3232;
 	text-align: center;
 }
 
@@ -24,13 +24,13 @@ body {
 
 h1 {
 	font-size: 48px;
-	color: #ffe303;
+	color: #fdfcce;
 }
 
 h2 {
 	width: auto;
 	font-size: 20px;
-	color: #555;
+	color: #fdfcce;
 }
 
 #match-title {
