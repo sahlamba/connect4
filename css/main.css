@@ -19,10 +19,53 @@ body {
 }
 
 	#header > div {
-		padding: 20px;
+		display: inline-block;
+            
+        padding: 10px;
 	}
 
 h1 {
 	font-size: 48px;
 	color: #ffe303;
+    
+}
+
+#anim{
+    
+    position:relative;  
+    width:25px;
+    height:25px;
+    background-color: coral;
+    -webkit-animation: square-circle 2s .5s infinite  alternate;
+}
+
+@-webkit-keyframes square-circle{
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: darksalmon;
+        -webkit-transform:rotate(180deg);
+    }
+
 }
