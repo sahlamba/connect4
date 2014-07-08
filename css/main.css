@@ -35,9 +35,11 @@ h2 {
 #anim{
 	position: absolute;
 	top: 30px;
-	left: 35%;
+	left: 50%;
+	margin-left: -180px;
 	width: 10px;
 	height: 10px;
+	z-index: -100;
 	background-color: coral;
 	-webkit-animation: square-circle 2s .5s infinite  alternate;
 }
