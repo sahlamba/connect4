@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: #fffff0;
+	background-color: #3a3232;
 	text-align: center;
 }
 
@@ -20,27 +20,32 @@ body {
 }
 
 	#header > div {
-		display: inline-block;
-        width:inherit;
-        padding: 20px;
+		 padding: 20px;
 	}
 
 h1 {
 	font-size: 48px;
-	color: #ffe303;
-    
+	color: #fdfcce;
+}
+
+h2 {
+	font-size: 20px;
+	color: #fdfcce;
 }
 
 #anim{
-    
-    position:relative;  
-    width:25px;
-    height:25px;
-    background-color: coral;
-    -webkit-animation: square-circle 2s .5s infinite  alternate;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: -180px;
+	width: 10px;
+	height: 10px;
+	z-index: -100;
+	background-color: coral;
+	-webkit-animation: square-circle 2s .5s infinite  alternate;
 }
 
-@-webkit-keyframes square-circle{
+@-webkit-keyframes square-circle {
 
     0%{
         border-radius: 0 0 0 0;
@@ -68,5 +73,4 @@ h1 {
         background: darksalmon;
         -webkit-transform:rotate(180deg);
     }
-
 }
