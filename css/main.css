@@ -33,9 +33,11 @@ h2 {
 }
 
 #anim{
-	position: relative;
-	width: 38px;
-	height: 38px;
+	position: absolute;
+	top: 30px;
+	left: 35%;
+	width: 10px;
+	height: 10px;
 	background-color: coral;
 	-webkit-animation: square-circle 2s .5s infinite  alternate;
 }
