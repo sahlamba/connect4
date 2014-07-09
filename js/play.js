@@ -22,6 +22,171 @@ function disableButtons() {
     document.getElementById("6").disabled = true;
     document.getElementById("7").disabled = true;
 }
+var j = 10, k = 10, l = 10, m = 10, n = 10;
+
+function resultAnim1(j, k, l, m, n) {
+    "use strict";
+    document.getElementById(""+ j + k).className = " resultAnim1";
+    document.getElementById(""+ j + l).className = " resultAnim3";
+    document.getElementById(""+ j + m).className = " resultAnim3";
+    document.getElementById(""+ j + n).className = " resultAnim3";
+
+}
+
+function resultAnim2(j, k, l, m, n) {
+    "use strict";
+    document.getElementById(""+ j + k).className = " resultAnim2";
+    document.getElementById(""+ j + l).className = " resultAnim4";
+    document.getElementById(""+ j + m).className = " resultAnim4";
+    document.getElementById(""+ j + n).className = " resultAnim4";
+
+}
+
+function resultAnimVer1(j, k, l, m, n){
+    "use strict";
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ l + k).className = " resultAnim3";
+    document.getElementById(""+ m + k).className = " resultAnim3";
+    document.getElementById(""+ n + k).className = " resultAnim3";
+}
+
+function resultAnimVer2(j, k, l, m, n){
+    "use strict";
+    document.getElementById(""+ j + k).className = " resultAnim2";
+    document.getElementById(""+ l + k).className = " resultAnim4";
+    document.getElementById(""+ m + k).className = " resultAnim4";
+    document.getElementById(""+ n + k).className = " resultAnim4";
+
+}
+
+function resultAnimForDia1a(j, k){
+    "use strict;"
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
+    var k1 = k +1, k2 = k + 2; k3 = k + 3;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimForDia1b(j, k){
+    "use strict;"
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
+    var k1 = k +1, k2 = k + 2; k3 = k + 3;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+}
+
+
+function resultAnimForDia2a(j, k){
+    "use strict;"
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
+    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimForDia2b(j, k){
+    "use strict;"
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
+    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+}
+
+
+function resultAnimForDia3a(j, k, l){
+    "use strict;"
+    var j1 = j - 1, j2 = j + 1, j3 = j + l;
+    var k1 = k + 1, k2 = k - 1; k3 = k - l;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimForDia3b(j, k, l){
+    "use strict;"
+    var j1 = j - 1, j2 = j + 1, j3 = j + l;
+    var k1 = k + 1, k2 = k - 1; k3 = k - l;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+}
+
+function resultAnimBak1a(j, k){
+    "use strict;"
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
+    var k1 = k + 1, k2 = k + 2; k3 = k + 3;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimBak1b(j, k){
+    "use strict;"
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
+    var k1 = k + 1, k2 = k + 2; k3 = k + 3;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+
+}
+
+
+function resultAnimBak2a(j, k){
+    "use strict;"
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
+    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimBak2b(j, k){
+    "use strict;"
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
+    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+
+}
+
+function resultAnimBak3a(j, k, l){
+    "use strict;"
+    var j1 = j - 1, j2 = j + 1, j3 = j + l;
+    var k1 = k + 1, k2 = k - 1; k3 = k + l;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById(""+ j1 + k1).className = " resultAnim3";
+    document.getElementById(""+ j2 + k2).className = " resultAnim3";
+    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+}
+
+function resultAnimBak3b(j, k, l){
+    "use strict;"
+    var j1 = j - 1, j2 = j + 1, j3 = j + l;
+    var k1 = k + 1, k2 = k - 1; k3 = k + l;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById(""+ j1 + k1).className = " resultAnim4";
+    document.getElementById(""+ j2 + k2).className = " resultAnim4";
+    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+}
+
+
+
+
 
 var a = 0, b = 0;
 function check(a, b) {
@@ -48,7 +213,11 @@ function check(a, b) {
 			if (grid[a][b] === grid[a][b + 1] && grid[a][b] === grid[a][b + 2] && grid[a][b] === grid[a][b + 3]) {
 				if (grid[a][b] === 1) {
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+                    var b1 = b + 1, b2 = b + 2, b3 = b + 3;
+                    resultAnim1(a, b, b1, b2, b3);
 				} else if (grid[a][b] === 0) {
+                    var b1 = b + 1, b2 = b + 2, b3 = b + 3;
+                    resultAnim2(a, b, b1, b2, b3);
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
 				}
 				disableButtons();
@@ -59,20 +228,44 @@ function check(a, b) {
 
 			if (grid[a][b] === grid[a][b - 1] && grid[a][b] === grid[a][b - 2] && grid[a][b] === grid[a][b - 3]) {
 				if (grid[a][b] === 1) {
+                    var b1 = b - 1, b2 = b - 2, b3 = b - 3;
+                    resultAnim1(a, b, b1, b2, b3);
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
 				} else if (grid[a][b] === 0) {
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
-				}
+				    var b1 = b - 1, b2 = b - 2, b3 = b - 3;
+                    resultAnim2(a, b, b1, b2, b3);
+                }
 				disableButtons();
 			}
 		}
 
 	} else if (counter === 2) {
-		if (grid[a][b] === grid[a][b + 2] || grid[a][b] === grid[a][b - 2]) {
-			document.getElementById("result").innerHTML = 'You Win';
-			disableButtons();
+		if (grid[a][b] === grid[a][b + 2]) {
+			
+            if (grid[a][b] === 1) {
+                    var b1 = b - 1, b2 = b + 1, b3 = b + 2;
+                    resultAnim1(a, b, b1, b2, b3);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				} else if (grid[a][b] === 0) {
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    var b1 = b - 1, b2 = b + 1, b3 = b + 2;
+                    resultAnim2(a, b, b1, b2, b3);
+                }
 		}
-
+        if (grid[a][b] === grid[a][b - 2]){
+            
+             if (grid[a][b] === 1) {
+                    var b1 = b - 1, b2 = b + 1, b3 = b - 2;
+                    resultAnim1(a, b, b1, b2, b3);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				} else if (grid[a][b] === 0) {
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    var b1 = b - 1, b2 = b + 1, b3 = b - 2;
+                    resultAnim2(a, b, b1, b2, b3);
+                }
+        
+        }
 
 
 	}
@@ -83,8 +276,10 @@ function check(a, b) {
     if (grid[a][b] === grid[a + 1][b] && grid[a][b] === grid[a + 2][b] && grid[a][b] === grid[a + 3][b]) {
 		if (grid[a][b] === 1) {
 			document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+            resultAnimVer1(a, b, a+1, a+2, a+3);
 		} else if (grid[a][b] === 0) {
 			document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+            resultAnimVer2(a, b, a+1, a+2, a+3);
 		}
 		disableButtons();
 	}
@@ -108,8 +303,10 @@ function check(a, b) {
 		if (direction2 === 1) {
 			if (grid[a][b] === grid[a - 1][b + 1] && grid[a][b] === grid[a - 2][b + 2] && grid[a][b] === grid[a - 3][b + 3]) {
 				if (grid[a][b] === 1) {
+                    resultAnimForDia1a(a,b);
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
 				} else if (grid[a][b] === 0) {
+                    resultAnimForDia1b(a,b);
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
 				}
 				disableButtons();
@@ -120,18 +317,49 @@ function check(a, b) {
 			
 			if (grid[a][b] === grid[a + 1][b - 1] && grid[a][b] === grid[a + 2][b - 2] && grid[a][b] === grid[a + 3][b - 3]) {
 				if (grid[a][b] === 1) {
+                    resultAnimForDia2a(a, b);
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
 				} else if (grid[a][b] === 0) {
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
-				}
+				    resultAnimForDia2a(a, b);
+                }
 				disableButtons();
 			}
 		}
 	} else if (counter2 === 2) {
-		if (grid[a][b] === grid[a - 2][b + 2] || grid[a][b] === grid[a + 2][b - 2]) {
-			document.getElementById("result").innerHTML = 'You Win';
-			disableButtons();
+		
+        if (grid[a][b] === grid[a - 2][b + 2]) {
+			if (grid[a][b] === 1) {
+                    
+                    resultAnimForDia3a(a, b, -2);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				
+            
+            } else if (grid[a][b] === 0) {
+                    resultAnimForDia3b(a, b, -2);
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    
+                    
+                }
+			
+        } 
+        if (grid[a][b] === grid[a + 2][b - 2]){
+            
+           if (grid[a][b] === 1) {
+                    
+                    resultAnimForDia3a(a, b, 2);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				
+            
+            } else if (grid[a][b] === 0) {
+                    resultAnimForDia3b(a, b, 2);
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    
+                    
+                }
+            
 		}
+        disableButtons();
 	}
 	
 	//Forward slash diagonal checking ends
@@ -154,18 +382,22 @@ function check(a, b) {
 			if (grid[a][b] === grid[a + 1][b + 1] && grid[a][b] === grid[a + 2][b + 2] && grid[a][b] === grid[a + 3][b + 3]) {
 				if (grid[a][b] === 1) {
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+                    resultAnimBak1a(a,b);
 				} else if (grid[a][b] === 0) {
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    resultAnimBak1b(a,b);
 				}
 				disableButtons();
 			}
 		}
 
 		if (direction3 === 0) {
-			if (grid[a][b] === grid[a][b - 1] && grid[a][b] === grid[a][b - 2] && grid[a][b] === grid[a][b - 3]) {
+			if (grid[a][b] === grid[a - 1][b - 1] && grid[a][b] === grid[a - 2][b - 2] && grid[a][b] === grid[a - 3][b - 3]) {
 				if (grid[a][b] === 1) {
+                    resultAnimBak2a(a, b);
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
 				} else if (grid[a][b] === 0) {
+                    resultAnimBak2b(a, b);
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
 				}
 				disableButtons();
@@ -174,10 +406,40 @@ function check(a, b) {
 		}
 
 	} else if (counter3 === 2) {
-		if (grid[a][b] === grid[a + 2][b + 2] || grid[a][b] === grid[a - 2][b - 2]) {
-			document.getElementById("result").innerHTML = 'You Win';
-			disableButtons();
-		}
+		if (grid[a][b] === grid[a + 2][b + 2]) {
+            
+		      if (grid[a][b] === 1) {
+                    
+                    resultAnimBak3a(a, b, 2);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				
+            
+            } else if (grid[a][b] === 0) {
+                    resultAnimBak3b(a, b, 2);
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    
+                    
+            }
+        
+        }
+        
+        
+        if(grid[a][b] === grid[a - 2][b - 2]){
+        
+            if (grid[a][b] === 1) {
+                    
+                    resultAnimBak3a(a, b, -2);
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+				
+            
+            } else if (grid[a][b] === 0) {
+                    resultAnimBak3b(a, b, -2);
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+				    
+                    
+            }
+        
+        }
 	}
 	
 	//Backward slash diagonal checking ends
