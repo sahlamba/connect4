@@ -54,7 +54,7 @@ and (max-device-width: 800px) {
 		position: absolute;
 		top: 30px;
 		left: 50%;
-		margin-left: -120px;
+		margin-left: -140px;
 		width: 10px;
 		height: 10px;
 		z-index: -100;
@@ -97,7 +97,7 @@ and (max-device-width: 800px) {
 
 	#grid {
 		width: 248px;
-		height: 215px;
+		height: 213px;
 		margin: 0 auto;
 		background-color: #fdfcce;
 		border-radius: 10px;
@@ -198,11 +198,11 @@ and (min-device-width: 801px) {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		margin: 0 auto;
 	}
 
 	#buttons {
-		padding: 20px;
 		padding-top: 30px;
 	}
 
