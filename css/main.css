@@ -29,7 +29,7 @@ a.text-link:hover {
 
 @media only screen 
 and (min-device-width: 320px) 
-and (max-device-width: 600px) {
+and (max-device-width: 800px) {
 	#header {
 		position: relative;
 		width: 100%;
@@ -54,7 +54,7 @@ and (max-device-width: 600px) {
 		position: absolute;
 		top: 30px;
 		left: 50%;
-		margin-left: -180px;
+		margin-left: -120px;
 		width: 10px;
 		height: 10px;
 		z-index: -100;
@@ -75,13 +75,13 @@ and (max-device-width: 600px) {
 
 	#buttons {
 		width: 100%;
-		padding: 20px;
-		padding-top: 30px;
+		margin-bottom: 20px;
+		margin-top: 30px;
 	}
 
 	#buttons button {
 		display: inline-block;
-		width: 20px;
+		width: 30px;
 		overflow: hidden;
 		padding: 2px;
 		border-radius: 2px;
@@ -97,7 +97,7 @@ and (max-device-width: 600px) {
 
 	#grid {
 		width: 248px;
-		height: 348px;
+		height: 215px;
 		margin: 0 auto;
 		background-color: #fdfcce;
 		border-radius: 10px;
@@ -153,7 +153,7 @@ and (max-device-width: 600px) {
 }
 
 @media only screen 
-and (min-device-width: 600px) {
+and (min-device-width: 801px) {
 	html {
 		min-width: 480px;
 	}
