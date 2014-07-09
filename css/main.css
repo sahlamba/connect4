@@ -50,11 +50,11 @@ and (max-device-width: 800px) {
 		color: #fdfcce;
 	}
 
-	#anim{
+	#anim {
 		position: absolute;
 		top: 30px;
 		left: 50%;
-		margin-left: -140px;
+		margin-left: -130px;
 		width: 10px;
 		height: 10px;
 		z-index: -100;
@@ -70,13 +70,14 @@ and (max-device-width: 800px) {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		margin: 0 auto;
 	}
 
 	#buttons {
 		width: 100%;
 		margin-bottom: 20px;
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 
 	#buttons button {
@@ -97,7 +98,7 @@ and (max-device-width: 800px) {
 
 	#grid {
 		width: 248px;
-		height: 213px;
+		height: 211px;
 		margin: 0 auto;
 		background-color: #fdfcce;
 		border-radius: 10px;
