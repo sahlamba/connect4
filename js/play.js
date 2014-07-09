@@ -1,4 +1,4 @@
-var columns = new Array(100, 6, 6, 6, 6, 6, 6, 6);
+var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 
 var x, chance = 1, grid = new Array(7); //creating 2d array
 grid[1] = new Array(8);

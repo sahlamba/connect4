@@ -41,8 +41,10 @@ h2 {
 	width: 10px;
 	height: 10px;
 	z-index: -100;
+	border-radius: 5px;
 	background-color: coral;
-	-webkit-animation: square-circle 2s .5s infinite alternate ;
+	-webkit-animation: square-circle 3s .5s 1 alternate ;
+	-webkit-animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes square-circle {
@@ -63,58 +65,64 @@ h2 {
         background: indianred;
         -webkit-transform:rotate(90deg);
     }
-    75%{
+    100%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #d83018;
         -webkit-transform:rotate(135deg);
     }
-    100%{
-        border-radius: 50%;
-        background: darksalmon;
-        -webkit-transform:rotate(180deg);
-    }
 }
 
-#buttons{
-
-     padding:50px;
+#buttons {
+	padding: 20px;
+	padding-top: 50px;
 }
 
-
-
-#buttons button{
-   
-    display: inline-block; 
-    width:50px;
-}
-
-#grid div{
-    height:50px;
-    margin-top: 6px;
-
-}
-
-#grid div div{
-    
-    width:50px;
+#buttons button {
     display: inline-block;
-    background-color:lightcoral;
+    width: 50px;
+	overflow: hidden;
+	padding: 2px;
+	border-radius: 2px;
+	background-color: #fdfcce;
+	color: #555;
+	cursor: pointer;
 }
 
-.round1{
-    height:50px;
-    width:50px;
-    -webkit-animation: square-circle1 0.75s .5s 1  alternate;
-     -webkit-animation-fill-mode: forwards;
-    
-/*
+#grid {
+	width: 404px;
+	height: 348px;
+	margin: 0 auto;
+	background-color: #fdfcce;
+	border-radius: 10px;
+	border: 2px solid #a8a779;
+}
+
+#grid div {
+	width: auto;
+	height: 50px;
+	margin: 3px auto;
+}
+
+#grid div div {
+    width: 50px;
+	margin-top: 14px;
+	font-size: 0;
+    display: inline-block;
+    background-color: lightcoral;
+	border-radius: 2px;
+}
+
+.round1 {
+	height:50px;
+	width:50px;
+	-webkit-animation: square-circle1 0.75s .5s 1  alternate;
+	-webkit-animation-fill-mode: forwards;
+	/*
     -webkit-animation-name: square-circle1;
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-duration: 1s;
-*/
-    visibility: visible !important;
-    
-    
+	*/
+	visibility: visible !important;
 }
 
 @-webkit-keyframes square-circle1 {
@@ -149,19 +157,16 @@ h2 {
 
 
 .round2{
-    height:50px;
-    width:50px;
-    -webkit-animation: square-circle2 0.75s .5s 1  alternate;
-     -webkit-animation-fill-mode: forwards;
-    
-/*
-    -webkit-animation-name: square-circle1;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-duration: 1s;
-*/
-    visibility: visible !important;
-    
-    
+	height: 50px;
+	width: 50px;
+	-webkit-animation: square-circle2 0.75s .5s 1  alternate;
+	-webkit-animation-fill-mode: forwards;
+	/*
+	-webkit-animation-name: square-circle1;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 1s;
+	*/
+	visibility: visible !important;
 }
 
 @-webkit-keyframes square-circle2 {
@@ -194,9 +199,6 @@ h2 {
     }
 }
 
-
-#result{
+#result {
     margin: 30px;
-    
-    color:white;
 }
