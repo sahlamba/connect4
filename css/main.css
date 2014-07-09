@@ -103,6 +103,11 @@ a.text-link:hover {
 	cursor: pointer;
 }
 
+#buttons button:hover {
+	background-color: #d83018;
+	color: #fff;
+}
+
 #grid {
 	width: 404px;
 	height: 348px;
