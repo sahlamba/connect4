@@ -191,7 +191,7 @@ function drawCondition(){
         sum+=columns[i];
             
     }
-    if(sum==0){
+    if(sum<=0){
         document.getElementById("result").innerHTML = '<h2 style="color:#d83018;">The game has hence been Drawn</h2>';
         disableButtons();
     }
@@ -333,7 +333,7 @@ function check(a, b) {
 					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
 				} else if (grid[a][b] === 0) {
 					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
-				    resultAnimForDia2a(a, b);
+				    resultAnimForDia2b(a, b);
                 }
 				disableButtons();
 			}
