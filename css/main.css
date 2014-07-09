@@ -651,3 +651,125 @@ and (min-device-width: 801px) {
 	background: url("../images/sahil.jpg") no-repeat center;
 	background-size: cover;
 }
+
+
+.resultAnim1 {
+	height:50px;
+	width:50px;
+	-webkit-animation: square-circle1 0.75s  infinite  alternate-reverse;
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	/*
+    -webkit-animation-name: square-circle1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+	*/
+	
+}
+
+.resultAnim3 {
+	height:50px;
+	width:50px;
+	-webkit-animation: square-circle3 0.75s  infinite  alternate-reverse;
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	/*
+    -webkit-animation-name: square-circle1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+	*/
+	
+}
+
+
+
+.resultAnim2{
+	height: 50px;
+	width: 50px;
+	-webkit-animation: square-circle2 0.75s  infinite  alternate-reverse;
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	/*
+	-webkit-animation-name: square-circle1;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 1s;
+	*/
+	
+}
+
+
+
+
+
+.resultAnim4{
+	height: 50px;
+	width: 50px;
+	-webkit-animation: square-circle4 0.75s  infinite  alternate-reverse;
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	/*
+	-webkit-animation-name: square-circle1;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 1s;
+	*/
+	
+}
+
+
+
+@-webkit-keyframes square-circle3 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: coral;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+@-webkit-keyframes square-circle4 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #02e4ca;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
