@@ -183,15 +183,11 @@ function resultAnimBak3b(j, k, l){
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
     document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
 }
-
+var sum = 0;
 function drawCondition(){
 
-    for(var i=1; i<=7; i++){
-        
-        sum+=columns[i];
-            
-    }
-    if(sum<=0){
+
+    if(chance===42){
         document.getElementById("result").innerHTML = '<h2 style="color:#d83018;">The game has hence been Drawn</h2>';
         disableButtons();
     }
@@ -455,6 +451,9 @@ function check(a, b) {
 	}
 	
 	//Backward slash diagonal checking ends
+drawCondition();
+
+
 }
 
 function turn(x) {
@@ -468,7 +467,9 @@ function turn(x) {
 		document.getElementById("" + p + x).className = 'round1';
 		//document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
 		columns[x] -= 1;
-		chance += 1;
+		if(columns[x]>=0){
+		  chance += 1;
+        }
 		check(p, x);
     } else if (chance % 2 === 0) {
 		p = columns[x];
@@ -476,8 +477,10 @@ function turn(x) {
 		document.getElementById("" + p + x).className = 'round2';
 		//document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
 		columns[x] -= 1;
-		chance += 1;
+        if(columns[x]>=0){
+		  chance += 1;
+        }
 		check(p, x);
     }
-    drawCondition();
+    
 }
