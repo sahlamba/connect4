@@ -187,7 +187,7 @@ var sum = 0;
 function drawCondition(){
 
 
-    if(chance===42){
+    if(chance===43){
         document.getElementById("result").innerHTML = '<h2 style="color:#d83018;">The game has hence been Drawn</h2>';
         disableButtons();
     }
@@ -451,7 +451,7 @@ function check(a, b) {
 	}
 	
 	//Backward slash diagonal checking ends
-drawCondition();
+
 
 
 }
@@ -480,6 +480,7 @@ function turn(x) {
         if(columns[x]>=0){
 		  chance += 1;
         }
+        drawCondition();
 		check(p, x);
     }
     
