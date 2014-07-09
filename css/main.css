@@ -8,6 +8,18 @@
 	-webkit-font-smoothing: antialiased;
 }
 
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 1024px) {
+	* {
+		min-width: 480px;
+	}
+}
+
+html {
+	min-width: 480px;
+}
+
 body {
 	background-color: #3a3232;
 	text-align: center;
@@ -17,7 +29,6 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-    
 }
 
 	#header > div {
@@ -165,7 +176,10 @@ a.text-link:hover {
 }
 
 #match-title {
+	position: relative;
+	width: 80%;
 	padding-top: 20px;
+	margin: 0 auto;
 }
 
 #buttons {
@@ -481,7 +495,7 @@ a.text-link:hover {
 
 #credits {
 	position: relative;
-	width: 600px;
+	width: 50%;
 	overflow: hidden;
 	background-color: #3a3232;
 	margin: 10px auto 20px auto;
