@@ -220,13 +220,13 @@ function check(a, b) {
 
 			if (grid[a][b] === grid[a][b + 1] && grid[a][b] === grid[a][b + 2] && grid[a][b] === grid[a][b + 3]) {
 				if (grid[a][b] === 1) {
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins </h2><h2>and hence has the right to taunt the loser for life!</h2>';
                     var b1 = b + 1, b2 = b + 2, b3 = b + 3;
                     resultAnim1(a, b, b1, b2, b3);
 				} else if (grid[a][b] === 0) {
                     var b1 = b + 1, b2 = b + 2, b3 = b + 3;
                     resultAnim2(a, b, b1, b2, b3);
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				}
 				disableButtons();
 			}
@@ -238,9 +238,9 @@ function check(a, b) {
 				if (grid[a][b] === 1) {
                     var b1 = b - 1, b2 = b - 2, b3 = b - 3;
                     resultAnim1(a, b, b1, b2, b3);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    var b1 = b - 1, b2 = b - 2, b3 = b - 3;
                     resultAnim2(a, b, b1, b2, b3);
                 }
@@ -254,9 +254,9 @@ function check(a, b) {
             if (grid[a][b] === 1) {
                     var b1 = b - 1, b2 = b + 1, b3 = b + 2;
                     resultAnim1(a, b, b1, b2, b3);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
-                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    var b1 = b - 1, b2 = b + 1, b3 = b + 2;
                     resultAnim2(a, b, b1, b2, b3);
                 }
@@ -266,9 +266,9 @@ function check(a, b) {
              if (grid[a][b] === 1) {
                     var b1 = b - 1, b2 = b + 1, b3 = b - 2;
                     resultAnim1(a, b, b1, b2, b3);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    var b1 = b - 1, b2 = b + 1, b3 = b - 2;
                     resultAnim2(a, b, b1, b2, b3);
                 }
@@ -283,10 +283,10 @@ function check(a, b) {
 	
     if (grid[a][b] === grid[a + 1][b] && grid[a][b] === grid[a + 2][b] && grid[a][b] === grid[a + 3][b]) {
 		if (grid[a][b] === 1) {
-			document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+			document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
             resultAnimVer1(a, b, a+1, a+2, a+3);
 		} else if (grid[a][b] === 0) {
-			document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+			document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
             resultAnimVer2(a, b, a+1, a+2, a+3);
 		}
 		disableButtons();
@@ -312,10 +312,10 @@ function check(a, b) {
 			if (grid[a][b] === grid[a - 1][b + 1] && grid[a][b] === grid[a - 2][b + 2] && grid[a][b] === grid[a - 3][b + 3]) {
 				if (grid[a][b] === 1) {
                     resultAnimForDia1a(a,b);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
                     resultAnimForDia1b(a,b);
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				}
 				disableButtons();
 			}
@@ -326,9 +326,9 @@ function check(a, b) {
 			if (grid[a][b] === grid[a + 1][b - 1] && grid[a][b] === grid[a + 2][b - 2] && grid[a][b] === grid[a + 3][b - 3]) {
 				if (grid[a][b] === 1) {
                     resultAnimForDia2a(a, b);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    resultAnimForDia2b(a, b);
                 }
 				disableButtons();
@@ -340,12 +340,12 @@ function check(a, b) {
 			if (grid[a][b] === 1) {
                     
                     resultAnimForDia3a(a, b, -2);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				
             
             } else if (grid[a][b] === 0) {
                     resultAnimForDia3b(a, b, -2);
-                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    
                     
                 }
@@ -356,12 +356,12 @@ function check(a, b) {
            if (grid[a][b] === 1) {
                     
                     resultAnimForDia3a(a, b, 2);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				
             
             } else if (grid[a][b] === 0) {
                     resultAnimForDia3b(a, b, 2);
-                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    
                     
                 }
@@ -389,10 +389,10 @@ function check(a, b) {
 		if (direction3 === 1) {
 			if (grid[a][b] === grid[a + 1][b + 1] && grid[a][b] === grid[a + 2][b + 2] && grid[a][b] === grid[a + 3][b + 3]) {
 				if (grid[a][b] === 1) {
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
                     resultAnimBak1a(a,b);
 				} else if (grid[a][b] === 0) {
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
                     resultAnimBak1b(a,b);
 				}
 				disableButtons();
@@ -403,10 +403,10 @@ function check(a, b) {
 			if (grid[a][b] === grid[a - 1][b - 1] && grid[a][b] === grid[a - 2][b - 2] && grid[a][b] === grid[a - 3][b - 3]) {
 				if (grid[a][b] === 1) {
                     resultAnimBak2a(a, b);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				} else if (grid[a][b] === 0) {
                     resultAnimBak2b(a, b);
-					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				}
 				disableButtons();
 
@@ -419,12 +419,12 @@ function check(a, b) {
 		      if (grid[a][b] === 1) {
                     
                     resultAnimBak3a(a, b, 2);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				
             
             } else if (grid[a][b] === 0) {
                     resultAnimBak3b(a, b, 2);
-                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    
                     
             }
@@ -437,12 +437,12 @@ function check(a, b) {
             if (grid[a][b] === 1) {
                     
                     resultAnimBak3a(a, b, -2);
-					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2>';
+					document.getElementById("result").innerHTML = '<h2 style="color:coral;">Player 1 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				
             
             } else if (grid[a][b] === 0) {
                     resultAnimBak3b(a, b, -2);
-                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2>';
+                    document.getElementById("result").innerHTML = '<h2 style="color:#02e4ca;">Player 2 Wins</h2><h2>and hence has the right to taunt the loser for life!</h2>';
 				    
                     
             }
