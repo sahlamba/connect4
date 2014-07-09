@@ -6,6 +6,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="A simple and awesome, virtual Connect 4 game!">
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/icon">
 		<link href="images/favicon.ico" rel="icon" type="image/icon">
@@ -23,14 +24,14 @@
 				<h1>Connect <span style="color: #d83018; font-size: 48px;">4</span></h1>
 			</div>
 		</div>
-
-		<div id="match-title">
-		<div>
-			<h2><span style="color: coral; font-size: 20px;" id="player1">Player1</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #02e4ca; font-size: 20px;" id="player2">Player2</span></h2> 
-		</div>
-		</div>
         
         <div id="content">
+			<div id="match-title">
+			<div>
+				<h2><span style="color: coral; font-size: 20px;" id="player1">Player1</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #02e4ca; font-size: 20px;" id="player2">Player2</span></h2> 
+			</div>
+			</div>
+			
             <div id="buttons">
                 <button id="1" onclick="turn(1);">1</button>
                 <button id="2" onclick="turn(2);">2</button>
@@ -137,18 +138,18 @@
                     <div id="67">
                     </div>
                 </div>
-            </div> 
-            <div id="result">
             </div>
 			
-			<div id="credits">
-				<p>Designed &amp; developed by<br></p>
-				<div id="credit-image-wrapper">
-					<a href="https://www.facebook.com/sahil.lamba95" target="_blank"><div class="credit-image sahil"></div></a>
-					<a href="https://www.facebook.com/aman.srivastava.520125" target="_blank"><div class="credit-image aman"></div></a>
-				</div>
+            <div id="result">
+            </div>
+        </div>
+		
+		<div id="credits">
+			<p>Designed &amp; Developed by<br></p>
+			<div id="credit-image-wrapper">
+				<a href="https://www.facebook.com/sahil.lamba95" target="_blank"><div class="credit-image sahil"></div></a>
+				<a href="https://www.facebook.com/aman.srivastava.520125" target="_blank"><div class="credit-image aman"></div></a>
 			</div>
-			
-        </div>    
+		</div>
 	</body>
 </html>
