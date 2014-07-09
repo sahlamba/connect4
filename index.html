@@ -11,8 +11,11 @@
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/icon">
 		<link href="images/favicon.ico" rel="icon" type="image/icon">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
+		<link href="css/font.css" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script src="js/play.js"></script>
+		<script src="js/effects.js"></script>
 		<title>Connect 4</title>
 	</head>
 
@@ -23,6 +26,33 @@
 			<div>
 				<h1>Connect <span style="color: #d83018; font-size: 48px;">4</span></h1>
 			</div>
+		</div>
+		
+		<div id="rules-lightbox">
+			<img src="images/close.gif" alt="Close" class="close-img" onclick="hideRules();">
+			<div id="rules">
+				<h1>How to play?</h1>
+				<p>
+					<br>
+					Connect 4 is a tic-tac-toe like game in which two players drop discs into a 7 &times; 6 grid.
+					The first player to get 4 in a row (either vertically, horizontally or diagonally) wins.
+					<br><br>
+					Click on the column number below each column to drop a disc into that column.
+					<br><br>
+					<strong>Remember!</strong>
+					<br>
+					Since the discs are <em>dropped</em>, the lowermost empty slot (square-shaped) will receive the new disc.
+				</p>
+			</div>
+		</div>
+		
+		<div id="menu">
+			<div class="icon-book-open" onclick="viewRules();">
+			</div>
+			<a href="">
+				<div class="icon-ccw">
+				</div>
+			</a>
 		</div>
         
         <div id="content">
