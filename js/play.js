@@ -184,7 +184,19 @@ function resultAnimBak3b(j, k, l){
     document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
 }
 
+function drawCondition(){
 
+    for(var i=1; i<=7; i++){
+        
+        sum+=columns[i];
+            
+    }
+    if(sum==0){
+        document.getElementById("result").innerHTML = '<h2 style="color:#d83018;">The game has hence been Drawn</h2>';
+        disableButtons();
+    }
+
+}
 
 
 
@@ -467,4 +479,5 @@ function turn(x) {
 		chance += 1;
 		check(p, x);
     }
+    drawCondition();
 }
