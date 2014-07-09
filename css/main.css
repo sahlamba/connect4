@@ -164,9 +164,13 @@ a.text-link:hover {
     }
 }
 
+#match-title {
+	padding-top: 20px;
+}
+
 #buttons {
 	padding: 20px;
-	padding-top: 50px;
+	padding-top: 30px;
 }
 
 #buttons button {
@@ -476,10 +480,13 @@ a.text-link:hover {
 }
 
 #credits {
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	width: 200px;
+	position: relative;
+	width: 600px;
+	overflow: hidden;
+	background-color: #3a3232;
+	margin: 10px auto 20px auto;
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
 	z-index: 1000;
 }
 
