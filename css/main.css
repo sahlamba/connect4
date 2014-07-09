@@ -58,8 +58,35 @@ a.text-link:hover {
 	z-index: -100;
 	border-radius: 5px;
 	background-color: coral;
-	-webkit-animation: square-circle 3s .5s 1 alternate ;
-	-webkit-animation-fill-mode: forwards;
+	animation: square-circle 3s .5s 1 alternate forwards;
+	-webkit-animation: square-circle 3s .5s 1 alternate forwards;
+	-moz-animation: square-circle 3s .5s 1 alternate forwards;
+	-o-animation: square-circle 3s .5s 1 alternate forwards;
+}
+
+@keyframes square-circle {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        transform:rotate(90deg);
+    }
+    100%{
+        border-radius: 50% 50% 50% 0;
+        background: #d83018;
+        transform:rotate(135deg);
+    }
 }
 
 @-webkit-keyframes square-circle {
@@ -84,6 +111,56 @@ a.text-link:hover {
         border-radius: 50% 50% 50% 0;
         background: #d83018;
         -webkit-transform:rotate(135deg);
+    }
+}
+
+@-moz-keyframes square-circle {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -moz-transform:rotate(90deg);
+    }
+    100%{
+        border-radius: 50% 50% 50% 0;
+        background: #d83018;
+        -moz-transform:rotate(135deg);
+    }
+}
+
+@-o-keyframes square-circle {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -o-transform:rotate(90deg);
+    }
+    100%{
+        border-radius: 50% 50% 50% 0;
+        background: #d83018;
+        -o-transform:rotate(135deg);
     }
 }
 
@@ -135,8 +212,10 @@ a.text-link:hover {
 .round1 {
 	height:50px;
 	width:50px;
-	-webkit-animation: square-circle1 0.75s .5s 1  alternate;
-	-webkit-animation-fill-mode: forwards;
+	animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-webkit-animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-moz-animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-o-animation: square-circle1 0.75s .5s 1  alternate forwards;
 	/*
     -webkit-animation-name: square-circle1;
     -webkit-animation-timing-function: ease-out;
@@ -145,8 +224,36 @@ a.text-link:hover {
 	visibility: visible !important;
 }
 
-@-webkit-keyframes square-circle1 {
+@keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: coral;
+        transform:rotate(180deg);
+    }
+}
 
+@-webkit-keyframes square-circle1 {
     0%{
         border-radius: 0 0 0 0;
         background: coral;
@@ -175,12 +282,71 @@ a.text-link:hover {
     }
 }
 
+@-moz-keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -moz-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: coral;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: coral;
+        -o-transform:rotate(180deg);
+    }
+}
 
 .round2{
 	height: 50px;
 	width: 50px;
-	-webkit-animation: square-circle2 0.75s .5s 1  alternate;
-	-webkit-animation-fill-mode: forwards;
+	animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-webkit-animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-moz-animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-o-animation: square-circle2 0.75s .5s 1  alternate forwards;
 	/*
 	-webkit-animation-name: square-circle1;
 	-webkit-animation-timing-function: ease-out;
@@ -189,8 +355,36 @@ a.text-link:hover {
 	visibility: visible !important;
 }
 
-@-webkit-keyframes square-circle2 {
+@keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+       	transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #02e4ca;
+        transform:rotate(180deg);
+    }
+}
 
+@-webkit-keyframes square-circle2 {
     0%{
         border-radius: 0 0 0 0;
         background: coral;
@@ -219,6 +413,64 @@ a.text-link:hover {
     }
 }
 
+@-moz-keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -moz-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #02e4ca;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: coral;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #02e4ca;
+        -o-transform:rotate(180deg);
+    }
+}
+
 #result {
     margin: 30px;
 }
@@ -243,7 +495,7 @@ a.text-link:hover {
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
-	background-color: #fff;
+	background-color: #fdfcce;
 	border: 2px solid #fff;
 	margin: 0 5px;
 }
