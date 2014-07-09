@@ -93,6 +93,7 @@ and (max-device-width: 800px) {
 		padding: 20px 0;
 		width: 250px;
 		margin: 0 auto;
+		overflow: scroll;
 	}
 	
 	#rules > p {
