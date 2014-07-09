@@ -9,15 +9,10 @@
 }
 
 @media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 1024px) {
-	* {
+and (min-device-width: 1024px) {
+	html {
 		min-width: 480px;
 	}
-}
-
-html {
-	min-width: 480px;
 }
 
 body {
