@@ -24,7 +24,7 @@ function result(i) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
 	}
 	
-	$("#result-lightbox").delay(500).fadeIn(300);
+	$("#result-lightbox").delay(1500).fadeIn(500);
 }
 
 function disableButtons() {
