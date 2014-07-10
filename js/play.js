@@ -181,7 +181,7 @@ function resultAnimBak2b(j, k){
 function resultAnimBak3a(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1; k3 = k + l;
+    var k1 = k - 1, k2 = k + 1; k3 = k + l;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -191,7 +191,7 @@ function resultAnimBak3a(j, k, l){
 function resultAnimBak3b(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1; k3 = k + l;
+    var k1 = k - 1, k2 = k + 1; k3 = k + l;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -390,8 +390,8 @@ function check(a, b) {
 	}
 	
 	if (grid[a][b] === grid[a - 1][b - 1]) {
-		counter += 1;
-		direction = 0;
+		counter3 += 1;
+		direction3 = 0;
 	}
 	
 	if (counter3 === 1) {
