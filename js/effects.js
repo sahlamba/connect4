@@ -1,18 +1,14 @@
-/*global $*/
+/*global $, confirm*/
 
-window.onbeforeunload = function (e) {
+function reload() {
 	"use strict";
 	
-	e = e || window.event;
+	location.reload();
 	
-	//For IE and Firefox prior to version 4
-	if (e) {
-		e.returnValue = 'Your game progress will not be saved. If you clicked refresh/restart, the game board will be reset.';
-	}
-	
-	//For others
-	return 'Your game progress will not be saved. If you clicked refresh/restart, the game board will be reset.';
-};
+	$(window).bind('beforeunload', function () {
+		return 'Your game progress will not be saved.';
+	});
+}
 
 var rules_light_box_flag = 0;
 
