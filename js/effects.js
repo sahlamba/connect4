@@ -7,11 +7,11 @@ window.onbeforeunload = function (e) {
 	
 	//For IE and Firefox prior to version 4
 	if (e) {
-		e.returnValue = 'Your game progress will not be saved.';
+		e.returnValue = 'Your game progress will not be saved. If you clicked refresh/restart, the game board will be reset.';
 	}
 	
 	//For others
-	return 'Your game progress will not be saved.';
+	return 'Your game progress will not be saved. If you clicked refresh/restart, the game board will be reset.';
 };
 
 var rules_light_box_flag = 0;
