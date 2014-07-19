@@ -11,6 +11,15 @@ grid[5] = new Array(8);
 grid[6] = new Array(8);
 grid[7] = new Array(8);
 
+var gridc = new Array(7);
+gridc[1] = new Array(8);
+gridc[2] = new Array(8);
+gridc[3] = new Array(8);
+gridc[4] = new Array(8);
+gridc[5] = new Array(8);
+gridc[6] = new Array(8);
+grid[7] = new Array(8);
+
 //Value of grid[x][y] is 0 for Player2 and 1 for Player1
 
 function result(i) {
@@ -480,7 +489,15 @@ function turn(x) {
 		  chance += 1;
         }
 		check(p, x);
-    } else if (chance % 2 === 0) {
+    
+        
+        
+        
+        
+        x= AIMove();
+        
+        
+        
 		p = columns[x];
 		grid[p][x] = 0;
 		document.getElementById("" + p + x).className = 'round2';
@@ -493,4 +510,292 @@ function turn(x) {
 		check(p, x);
     }
     
+}
+
+
+function copyGrid(){
+
+    for(var i=1; i <= 7; i++){
+        
+        for(var j=1; j<=8; j++){
+            gridc[i][j]=grid[i][j];
+        }
+    }
+}
+
+var columnResult = [100, 0, 0, 0, 0, 0, 0, 0];
+    
+
+function AIMove(){
+
+    copyGrid();
+    
+    for(var i=1; i<=7; i++){
+    
+        var l= columns[i];
+        gridc[l][i]=0;
+        columnResult[i] += tempcheck(l,i);
+        
+        var maxi=0;
+        
+        for(var j=1; j<=7; j++){
+        
+            if(columnResult[j]>maxi){
+                maxi=j;
+            }
+        }
+        
+        return maxi;
+        
+        
+        
+    
+    }
+    
+
+
+
+}
+
+
+
+
+
+
+function tempcheck(a, b) {
+	"use strict";
+    
+
+	
+    var counter = 0, direction = 5;
+	
+	//Horizontal checking starts
+	
+	if (gridc[a][b] === gridc[a][b + 1]) {
+		counter += 1;
+		direction = 1;
+	}
+
+
+	if (gridcc[a][b] === gridcc[a][b - 1]) {
+		counter += 1;
+		direction = 0;
+	}
+
+	if (counter === 1) {
+		if (direction === 1) {
+
+			if (gridcc[a][b] === gridcc[a][b + 1] && gridcc[a][b] === gridcc[a][b + 2] && gridcc[a][b] === gridcc[a][b + 3]) {
+				if (gridc[a][b] === 1) {
+					return 1;
+                    
+				} else if (gridc[a][b] === 0) {
+                    
+                    return 2;
+				}
+				disableButtons();
+			}
+		}
+
+		if (direction === 0) {
+
+			if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+				if (gridc[a][b] === 1) {
+                   
+					return 1;
+				} else if (gridc[a][b] === 0) {
+					
+				    return 2;
+                }
+				disableButtons();
+			}
+		}
+
+	} else if (counter === 2) {
+		if (gridc[a][b] === gridc[a][b + 2]) {
+			
+            if (gridc[a][b] === 1) {
+                    
+					return 1;
+				} else if (gridc[a][b] === 0) {
+                    return 2;
+				    
+                }
+		}
+        if (gridc[a][b] === gridc[a][b - 2]){
+            
+             if (gridc[a][b] === 1) {
+                    
+					return 1;
+				} else if (gridc[a][b] === 0) {
+					return 2;
+				    
+                }
+        
+        }
+
+
+	}
+	
+	//Horixontal checking ends
+	//Verticle checking starts
+	
+    if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+		if (gridc[a][b] === 1) {
+			return 1;
+		} else if (gridc[a][b] === 0) {
+			return 2;
+		}
+		disableButtons();
+	}
+	
+	//Verticle checking ends
+	//Forward slash diagonal checking starts
+	
+    var counter2 = 0, direction2 = 5;
+	
+    if (gridc[a][b] === gridc[a - 1][b + 1]) {
+		counter2 += 1;
+		direction2 = 1;
+	}
+        
+    if (gridc[a][b] === gridc[a + 1][b - 1]) {
+		counter2 += 1;
+		direction2 = 0;
+	}
+        
+    if (counter2 === 1) {
+		if (direction2 === 1) {
+			if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+				if (gridc[a][b] === 1) {
+                     
+					return 1;
+				} else if (gridc[a][b] === 0) {
+                    return 2;
+				}
+				disableButtons();
+			}
+		}
+            
+		if (direction2 === 0) {
+			
+			if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+				if (gridc[a][b] === 1) {
+                     
+					return 1;
+				} else if (gridc[a][b] === 0) {
+					return 2;
+                }
+				disableButtons();
+			}
+		}
+	} else if (counter2 === 2) {
+		
+        if (gridc[a][b] === gridc[a - 2][b + 2]) {
+			if (gridc[a][b] === 1) {
+                    
+					return 1;
+            } else if (gridc[a][b] === 0) {
+                   return 2;                   
+                }
+			
+        } 
+        if (gridc[a][b] === gridc[a + 2][b - 2]){
+            
+           if (gridc[a][b] === 1) {
+                    
+                     
+					return 1;
+				
+            
+            } else if (gridc[a][b] === 0) {
+                    return 2;
+				    
+                    
+                }
+            
+		}
+        disableButtons();
+	}
+	
+	//Forward slash diagonal checking ends
+	//Backward slash diagonal checking starts
+	
+    var counter3 = 0, direction3 = 5;
+	
+	if (gridc[a][b] === gridc[a + 1][b + 1]) {
+		counter3 += 1;
+		direction3 = 1;
+	}
+	
+	if (gridc[a][b] === gridc[a - 1][b - 1]) {
+		counter3 += 1;
+		direction3 = 0;
+	}
+	
+	if (counter3 === 1) {
+		if (direction3 === 1) {
+			if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+				if (gridc[a][b] === 1) {
+					return 1;
+                     
+				} else if (gridc[a][b] === 0) {
+					return 2;
+				}
+				disableButtons();
+			}
+		}
+
+		if (direction3 === 0) {
+			if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+				if (gridc[a][b] === 1) {
+                     
+					return 1;
+				} else if (gridc[a][b] === 0) {
+                   return 2;
+				}
+				disableButtons();
+
+			}
+		}
+
+	} else if (counter3 === 2) {
+		if (gridc[a][b] === gridc[a + 2][b + 2]) {
+            
+		      if (gridc[a][b] === 1) {
+                    
+                     
+					return 1;
+				
+            
+            } else if (gridc[a][b] === 0) {
+                    return 2;
+				    
+                    
+            }
+        
+        }
+        
+        
+        if(gridc[a][b] === gridc[a - 2][b - 2]){
+        
+            if (gridc[a][b] === 1) {
+                    
+                     
+					return 1;
+				
+            
+            } else if (gridc[a][b] === 0) {
+                    return 2;
+				    
+                    
+            }
+        
+        }
+	}
+	
+	//Backward slash diagonal checking ends
+
+
+
 }
