@@ -230,6 +230,18 @@ and (max-device-width: 800px) {
 		border: 2px solid #fff;
 		margin: 0 5px;
 	}
+	
+	#share-button-wrapper {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.share {
+		position: relative;
+		width: 164px;
+		margin: 10px auto;
+		z-index: 1150;
+	}
 }
 
 @media only screen 
@@ -402,15 +414,20 @@ and (min-device-width: 801px) {
 		background-color: lightcoral;
 		border-radius: 2px;
 	}
+	
+	#content {
+		width: 800px;
+		margin: 0 auto;
+		border-bottom: 1px solid #ddd;
+	}
 
 	#credits {
 		position: relative;
 		width: 50%;
 		overflow: hidden;
 		background-color: #3a3232;
-		margin: 10px auto 20px auto;
+		margin: 0 auto 20px auto;
 		padding-top: 20px;
-		border-top: 1px solid #ddd;
 		z-index: 1000;
 	}
 
@@ -429,6 +446,20 @@ and (min-device-width: 801px) {
 		background-color: #fdfcce;
 		border: 2px solid #fff;
 		margin: 0 5px;
+	}
+	
+	
+	#share-button-wrapper {
+		display: block;
+		margin-top: 10px;
+	}
+
+	.share {
+		position: fixed;
+		width: 164px;
+		top: 20px;
+		right: 30px;
+		z-index: 1150;
 	}
 }
 
@@ -1118,23 +1149,4 @@ and (min-device-width: 801px) {
         background: #02e4ca;
         -o-transform:rotate(180deg);
     }
-}
-
-
-#credit-image-wrapper{
-
-    display:block;
-    
-
-
-}
-#share-button-wrapper{
-    display:block;
-    margin-top:0.5em;
-
-}
-
-#shareText{
-    margin-top:5em;
-    position: relative;
 }
