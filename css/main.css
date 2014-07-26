@@ -216,8 +216,8 @@ and (max-device-width: 800px) {
 
 	#credit-image-wrapper {
 		position: relative;
-		width: 130px;
-		margin: 5px auto;
+		width: 192px;
+		margin: 10px auto;
 	}
 
 	.credit-image {
@@ -229,6 +229,7 @@ and (max-device-width: 800px) {
 		background-color: #fdfcce;
 		border: 2px solid #fff;
 		margin: 0 5px;
+
 	}
 	
 	#share-button-wrapper {
@@ -433,8 +434,8 @@ and (min-device-width: 801px) {
 
 	#credit-image-wrapper {
 		position: relative;
-		width: 130px;
-		margin: 5px auto;
+		width: 192px;
+		margin: 10px auto;
 	}
 
 	.credit-image {
@@ -447,7 +448,6 @@ and (min-device-width: 801px) {
 		border: 2px solid #fff;
 		margin: 0 5px;
 	}
-	
 	
 	#share-button-wrapper {
 		display: block;
@@ -832,6 +832,10 @@ and (min-device-width: 801px) {
 
 .sahil {
 	background: url("../images/sahil.jpg") no-repeat center;
+	background-size: cover;
+}
+.mihir {
+	background: url("../images/mihir.jpg") no-repeat center;
 	background-size: cover;
 }
 
