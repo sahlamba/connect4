@@ -1119,3 +1119,22 @@ and (min-device-width: 801px) {
         -o-transform:rotate(180deg);
     }
 }
+
+
+#credit-image-wrapper{
+
+    display:block;
+    
+
+
+}
+#share-button-wrapper{
+    display:block;
+    margin-top:0.5em;
+
+}
+
+#shareText{
+    margin-top:5em;
+    position: relative;
+}
