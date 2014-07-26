@@ -208,7 +208,7 @@ and (max-device-width: 800px) {
 		width: 80%;
 		overflow: hidden;
 		background-color: #3a3232;
-		margin: 10px auto 20px auto;
+		margin: 0 auto 20px auto;
 		padding-top: 20px;
 		border-top: 1px solid #ddd;
 		z-index: 1000;
