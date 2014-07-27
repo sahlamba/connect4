@@ -493,9 +493,21 @@ function turn(x) {
         
         
         
-        
-        x= AIMove();
-        
+        var t= x;
+        if(t===1){
+        x= Math.floor((Math.random() * 4) + 1);
+        }
+
+        else if(t===7){
+            x=Math.floor((Math.random() * 8) + 5);
+
+        }
+
+        else {
+
+            x=Math.floor((Math.random() * (t+2)) + (t-1));
+        }
+
         
         
 		p = columns[x];
