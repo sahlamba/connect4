@@ -2,7 +2,8 @@
 
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 
-var x, chance = 1, grid = new Array(7); //Creating 2d array
+var x, chance = 1, grid = new Array(7);//Creating 2d array
+grid[0]= new Array(8);
 grid[1] = new Array(8);
 grid[2] = new Array(8);
 grid[3] = new Array(8);
@@ -10,8 +11,10 @@ grid[4] = new Array(8);
 grid[5] = new Array(8);
 grid[6] = new Array(8);
 grid[7] = new Array(8);
+grid[0][0]=-100;
 
 var gridc = new Array(7);
+gridc[0]= new Array(8);
 gridc[1] = new Array(8);
 gridc[2] = new Array(8);
 gridc[3] = new Array(8);
@@ -19,7 +22,8 @@ gridc[4] = new Array(8);
 gridc[5] = new Array(8);
 gridc[6] = new Array(8);
 gridc[7] = new Array(8);
-
+gridc[0][0]=-100;
+var terminator=1; //1=on 2=off
 //Value of grid[x][y] is 0 for Player2 and 1 for Player1
 
 function result(i) {
@@ -29,6 +33,8 @@ function result(i) {
 		document.getElementById("actual-result").innerHTML = '<h2 style="color:#d83018;">The game has hence been drawn.</h2>';
 	} else if (i === 1) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:coral; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+        terminator=2;
+        
 	} else if (i === 2) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
 	}
@@ -87,7 +93,7 @@ function resultAnimVer2(j, k, l, m, n){
 function resultAnimForDia1a(j, k){
     "use strict";
     var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k +1, k2 = k + 2; k3 = k + 3;
+    var k1 = k +1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -97,7 +103,7 @@ function resultAnimForDia1a(j, k){
 function resultAnimForDia1b(j, k){
     "use strict";
     var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k +1, k2 = k + 2; k3 = k + 3;
+    var k1 = k +1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -108,7 +114,7 @@ function resultAnimForDia1b(j, k){
 function resultAnimForDia2a(j, k){
     "use strict;"
     var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -118,7 +124,7 @@ function resultAnimForDia2a(j, k){
 function resultAnimForDia2b(j, k){
     "use strict";
     var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -129,7 +135,7 @@ function resultAnimForDia2b(j, k){
 function resultAnimForDia3a(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1; k3 = k - l;
+    var k1 = k + 1, k2 = k - 1, k3 = k - l;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -139,7 +145,7 @@ function resultAnimForDia3a(j, k, l){
 function resultAnimForDia3b(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1; k3 = k - l;
+    var k1 = k + 1, k2 = k - 1, k3 = k - l;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -149,7 +155,7 @@ function resultAnimForDia3b(j, k, l){
 function resultAnimBak1a(j, k){
     "use strict;"
     var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k + 1, k2 = k + 2; k3 = k + 3;
+    var k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -159,7 +165,7 @@ function resultAnimBak1a(j, k){
 function resultAnimBak1b(j, k){
     "use strict;"
     var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k + 1, k2 = k + 2; k3 = k + 3;
+    var k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -169,7 +175,7 @@ function resultAnimBak1b(j, k){
 function resultAnimBak2a(j, k){
     "use strict;"
     var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -179,7 +185,7 @@ function resultAnimBak2a(j, k){
 function resultAnimBak2b(j, k){
     "use strict;"
     var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k - 1, k2 = k - 2; k3 = k - 3;
+    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -190,7 +196,7 @@ function resultAnimBak2b(j, k){
 function resultAnimBak3a(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k - 1, k2 = k + 1; k3 = k + l;
+    var k1 = k - 1, k2 = k + 1, k3 = k + l;
     document.getElementById("" + j + k).className = " resultAnim1";
     document.getElementById(""+ j1 + k1).className = " resultAnim3";
     document.getElementById(""+ j2 + k2).className = " resultAnim3";
@@ -200,7 +206,7 @@ function resultAnimBak3a(j, k, l){
 function resultAnimBak3b(j, k, l){
     "use strict;"
     var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k - 1, k2 = k + 1; k3 = k + l;
+    var k1 = k - 1, k2 = k + 1, k3 = k + l;
     document.getElementById("" + j + k).className = " resultAnim2";
     document.getElementById(""+ j1 + k1).className = " resultAnim4";
     document.getElementById(""+ j2 + k2).className = " resultAnim4";
@@ -474,6 +480,8 @@ function check(a, b) {
 
 }
 
+var del;
+
 function turn(x) {
     "use strict";
 	
@@ -490,36 +498,28 @@ function turn(x) {
         }
 		check(p, x);
     
-        
-        
-        
-        var t= x;
-        if(t===1){
-        x= Math.floor((Math.random() * 4) + 1);
+        if(terminator===2){
+            return;
         }
-
-        else if(t===7){
-            x=Math.floor((Math.random() * 8) + 5);
-
-        }
-
-        else {
-
-            x=Math.floor((Math.random() * (t+2)) + (t-1));
-        }
+        
+        x=AIMove();
 
         
         
-		p = columns[x];
-		grid[p][x] = 0;
-		document.getElementById("" + p + x).className = 'round2';
-		//document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
-		columns[x] -= 1;
-        if(columns[x]>=0){
-		  chance += 1;
-        }
-        drawCondition();
-		check(p, x);
+		 del = setTimeout(function(){
+            p = columns[x];
+            grid[p][x] = 0;
+            document.getElementById("" + p + x).className = 'round2';
+            //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
+            columns[x] -= 1;
+            if(columns[x]>=0){
+              chance += 1;
+            }
+            drawCondition();
+            check(p, x);}, 1000);
+        
+        setTimeout(function(){clearTimeout(del);}, 1000);
+    
     }
     
 }
@@ -535,24 +535,352 @@ function copyGrid(){
     }
 }
 
-var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
+
     
 
 function AIMove(){
-
     
+    var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
+
+    var toReturn=0;
+    copyGrid();
         
     for(var i = 1; i <= 7; i++){
+        
         copyGrid();
         
-        var l= columns[i];
+        var l=0;
+        l= columns[i];
         gridc[l][i]=0;
-        var k = tempcheck(l, i);
-        document.getElementById("match-title").innerHTML=''+k;
-        columnResult[i] += k;
-
-        }
+        
+        var counter = 0, direction = 5;
+        
+        var a=l, b=i;
+        
+        //Horizontal self checking starts
     
+        if (gridc[a][b] === gridc[a][b + 1]) {
+            counter += 1;
+            direction = 1;
+        }
+
+
+        if (gridc[a][b] === gridc[a][b - 1]) {
+            counter += 1;
+            direction = 0;
+        }
+        
+        if (counter === 1) {
+        if (direction === 1) {
+                                                                
+            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
+                
+                columnResult[i]+=11;
+            }
+        }
+
+        if (direction === 0) {
+
+            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+                
+                columnResult[i]+=11;
+                
+            }
+        }
+
+    } else if (counter === 2) {
+        if (gridc[a][b] === gridc[a][b + 2]) {
+            
+            columnResult[i]+=11;
+        }
+        if (gridc[a][b] === gridc[a][b - 2]){
+            
+             columnResult[i]+=11;
+        
+        }
+        
+
+    }
+    //horizontal self checking ends
+        
+    //horizontal opponent checking starts
+        
+        gridc[l][i]=1;
+        
+        
+                if (gridc[a][b] === gridc[a][b + 1]) {
+            counter += 1;
+            direction = 1;
+        }
+
+
+        if (gridc[a][b] === gridc[a][b - 1]) {
+            counter += 1;
+            direction = 0;
+        }
+        
+        if (counter === 1) {
+        if (direction === 1) {
+                                                                
+            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
+                
+                columnResult[i]+=10;
+            }
+        }
+
+        if (direction === 0) {
+
+            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+                
+                columnResult[i]+=10;
+                
+            }
+        }
+
+    } else if (counter === 2) {
+        if (gridc[a][b] === gridc[a][b + 2]) {
+            
+            columnResult[i]+=10;
+        }
+        if (gridc[a][b] === gridc[a][b - 2]){
+            
+             columnResult[i]+=10;
+        
+        }
+        
+
+    }
+        
+    //horizontal opponent checking ends 
+        
+    //vertical self checking starts
+        
+        gridc[l][i]=0;
+        
+        if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+
+           columnResult[i]+=11;
+        }
+        
+    //vertical self checking ends
+    //vertical opponent checking starts
+        
+        gridc[l][i]=1;
+        
+        if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+
+           columnResult[i]+=10;
+        }
+    //vertical opponent checking ends
+        
+    //forward slash self checking starts
+    gridc[l][i]=0;    
+    var counter2 = 0, direction2 = 5;
+    
+    if (gridc[a][b] === gridc[a - 1][b + 1]) {
+        counter2 += 1;
+        direction2 = 1;
+    }
+        
+    if (gridc[a][b] === gridc[a + 1][b - 1]) {
+        counter2 += 1;
+        direction2 = 0;
+    }
+        
+    if (counter2 === 1) {
+        if (direction2 === 1) {
+            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+                    
+                
+                  
+                columnResult[i]+=11;
+                
+                
+            }
+        }
+            
+        if (direction2 === 0) {
+            
+            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+                
+                columnResult[i]+=11;
+                
+            }
+        }
+    } else if (counter2 === 2) {
+        
+        if (gridc[a][b] === gridc[a - 2][b + 2]) {
+           
+            columnResult[i]+=11;
+            
+        } 
+        if (gridc[a][b] === gridc[a + 2][b - 2]){
+            
+          columnResult[i]+=11;
+            
+        }
+        
+    }
+        
+        
+        
+    //forward slash self checking ends    
+    //forward slash opponent checking starts
+      
+    gridc[l][i]=1;    
+    var counter2 = 0, direction2 = 5;
+    
+    if (gridc[a][b] === gridc[a - 1][b + 1]) {
+        counter2 += 1;
+        direction2 = 1;
+    }
+        
+    if (gridc[a][b] === gridc[a + 1][b - 1]) {
+        counter2 += 1;
+        direction2 = 0;
+    }
+        
+    if (counter2 === 1) {
+        if (direction2 === 1) {
+            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+                    
+                
+                  
+                columnResult[i]+=10;
+                
+                
+            }
+        }
+            
+        if (direction2 === 0) {
+            
+            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+                
+                columnResult[i]+=10;
+                
+            }
+        }
+    } else if (counter2 === 2) {
+        
+        if (gridc[a][b] === gridc[a - 2][b + 2]) {
+           
+            columnResult[i]+=10;
+            
+        } 
+        if (gridc[a][b] === gridc[a + 2][b - 2]){
+            
+          columnResult[i]+=10;
+            
+        }
+        
+    }
+        
+    //forward slash opponent checking ends
+        
+        
+        
+    //backward slash self checking starts
+    gridc[l][i]=0;
+        
+    var counter3 = 0, direction3 = 5;
+    
+    if (gridc[a][b] === gridc[a + 1][b + 1]) {
+        counter3 += 1;
+        direction3 = 1;
+    }
+    
+    if (gridc[a][b] === gridc[a - 1][b - 1]) {
+        counter3 += 1;
+        direction3 = 0;
+    }
+    
+    if (counter3 === 1) {
+        if (direction3 === 1) {
+            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+                
+               columnResult[i]+=11;
+                
+            }
+        }
+
+        if (direction3 === 0) {
+            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+                
+                columnResult[i]+=11;
+                
+            }
+        }
+
+    } else if (counter3 === 2) {
+        if (gridc[a][b] === gridc[a + 2][b + 2]) {
+            
+            columnResult[i]+=11;
+        
+        }
+        
+        
+        if(gridc[a][b] === gridc[a - 2][b - 2]){
+        
+            columnResult[i]+=11;
+        
+        }
+    }
+    //backward slash self checking ends 
+        
+        
+    //backward slash opponent checking starts
+        
+        gridc[l][i] = 1;
+        
+        var counter3 = 0, direction3 = 5;
+    
+    if (gridc[a][b] === gridc[a + 1][b + 1]) {
+        counter3 += 1;
+        direction3 = 1;
+    }
+    
+    if (gridc[a][b] === gridc[a - 1][b - 1]) {
+        counter3 += 1;
+        direction3 = 0;
+    }
+    
+    if (counter3 === 1) {
+        if (direction3 === 1) {
+            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+                
+               columnResult[i]+=10;
+                
+            }
+        }
+
+        if (direction3 === 0) {
+            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+                
+                columnResult[i]+=10;
+                
+            }
+        }
+
+    } else if (counter3 === 2) {
+        if (gridc[a][b] === gridc[a + 2][b + 2]) {
+            
+            columnResult[i]+=10;
+        
+        }
+        
+        
+        if(gridc[a][b] === gridc[a - 2][b - 2]){
+        
+            columnResult[i]+=10;
+        
+        }
+    }
+        
+    //backward slash opponent checking ends
+}
+        
+
+        
         var maxi=0;
         
         for(var j=1; j<=7; j++){
@@ -561,16 +889,19 @@ function AIMove(){
                 maxi=j;
             }
         }
-        if(maxi != 0){
+        if(maxi != 0 && maxi<=7 && maxi >=1){
             return maxi;
         }
         else{
-            return 2;
+            return Math.floor((Math.random() * 7) + 1);
         }
         
+    
+    
+    
+
+
 }
-
-
 
 function tempcheck(a, b) {
     "use strict;"
@@ -592,8 +923,8 @@ function tempcheck(a, b) {
 
     if (counter === 1) {
         if (direction === 1) {
-
-            if (gridcc[a][b] === gridc[a][b + 1] && gridcc[a][b] === gridcc[a][b + 2] && gridcc[a][b] === gridcc[a][b + 3]) {
+                                                                
+            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 if (gridc[a][b] === 1) {
                     returnValue=100;
                 } else if (gridc[a][b] === 0) {
