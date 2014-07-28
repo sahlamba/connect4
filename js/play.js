@@ -277,7 +277,7 @@ function check(a, b) {
 			}
 		}
 
-	} else if (counter === 2) {
+	}  if (counter === 2) {
 		if (grid[a][b] === grid[a][b + 2]) {
 			
             if (grid[a][b] === 1) {
@@ -363,7 +363,7 @@ function check(a, b) {
 				disableButtons();
 			}
 		}
-	} else if (counter2 === 2) {
+	}  if (counter2 === 2) {
 		
         if (grid[a][b] === grid[a - 2][b + 2]) {
 			if (grid[a][b] === 1) {
@@ -437,7 +437,7 @@ function check(a, b) {
 			}
 		}
 
-	} else if (counter3 === 2) {
+	}  if (counter3 === 2) {
 		if (grid[a][b] === grid[a + 2][b + 2]) {
             
 		      if (grid[a][b] === 1) {
