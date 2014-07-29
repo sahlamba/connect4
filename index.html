@@ -1,47 +1,38 @@
 <!DOCTYPE html>
 
 <!-- connect4 index.html -->
-<!-- Designed & developed by Aman Srivastava & Sahil Lamba -->
-<?php
-
-include 'count.php';
-hit_count();
-
-
-?>
+<!-- Designed & developed by Aman Srivastava, Mihir Rana & Sahil Lamba -->
 <html>
 
-    
-    
-    
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="A simple and awesome, virtual Connect 4 game!">
+
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/icon">
 		<link href="images/favicon.ico" rel="icon" type="image/icon">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
-		<link href="css/font.css" rel="stylesheet" type="text/css">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="js/play.js"></script>
-    	<script src="js/effects.js"></script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "00d7dfb1-e12f-4b19-aca5-6ee38134f80f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
-        
-
-        
 		<title>Connect 4</title>
 	</head>
 
 	<body>
-		<div id="header">
-			<div id="anim">
-			</div>
+		<div class="header">
+			<div class="head-element left">
 			<div>
-				<h1>Connect <span style="color: #d83018; font-size: 48px;">4</span></h1>
+				<h1>Connect <span style="color: #ffd700;">4</span></h1>
 			</div>
+			</div>
+			<div class="head-element right">
+            <div class="share-button-wrapper">
+                <span class='st_facebook_large' displayText='Facebook'></span>
+                <span class='st_googleplus_large' displayText='Google +'></span>
+                <span class='st_twitter_large' displayText='Tweet'></span>
+                <span class='st_linkedin_large' displayText='LinkedIn'></span>
+            </div>
+		</div>
 		</div>
 		
 		<div id="rules-lightbox">
@@ -59,28 +50,26 @@ hit_count();
 					<br>
 					Since the discs are <em>dropped</em>, the lowermost empty slot (square-shaped) in the choosen column will receive the new disc.
                     <br>
-                    So get ready to exercise your brains and beat the opponent to shame. Go on <span style="color: #fdfcce; font-size: 20px;"> Connect </span><span style="color: #d83018; font-size: 20px;"> 4</span>
-                    <br><br>
+                    So get ready to exercise your brains and beat the opponent to shame. Go on <span style="color: #40e0d0;"> Connect </span><span style="color: #ffd700;"> 4</span>
+                    <br>
                     P.S. for the dim witted: Just click on numbers and watch the cool animations.
 				</p>
 			</div>
 		</div>
-		
-		<div id="menu">
-			<div class="icon-book-open" onclick="viewRules();">
-			</div>
-			<div class="icon-ccw" onclick="reload();">
-			</div>
-		</div>
         
-        <div id="content">
-			<div id="match-title">
+        <div class="content">
+			<div class="menu">
+				<div onclick="viewRules();"><i class="fa fa-book"></i>&nbsp; Rules</div>
+				<div onclick="reload();"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
+				<a href="knights.html"><div><i class="fa fa-flash"></i>&nbsp; Who built this?</div></a>
+			</div>
+			<div class="match-title">
 			<div>
-				<h2><span style="color: coral; font-size: 20px;" id="player1">Player1</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #02e4ca; font-size: 20px;" id="player2">Player2</span></h2> 
+				<h2><span style="color: #a7fc00;" id="player1">Player1</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">Player2</span></h2> 
 			</div>
 			</div>
 			
-            <div id="grid">
+            <div class="grid">
                 <div id="r1">
                     <div id="11">
                     </div>
@@ -179,7 +168,7 @@ hit_count();
                 </div>
             </div>
 			
-			<div id="buttons">
+			<div class="buttons">
                 <button id="1" onclick="turn(1);">1</button>
                 <button id="2" onclick="turn(2);">2</button>
                 <button id="3" onclick="turn(3);">3</button>
@@ -195,35 +184,24 @@ hit_count();
 				<h1>Congratulations!</h1>
 				<div id="actual-result">
 				</div>
-				<div id="menu">
-					<div class="icon-book-open" onclick="viewRules();">
-					</div>
-					<a href="">
-						<div class="icon-ccw">
-						</div>
-					</a>
-				</div>
 			</div>
 		</div>
 		
-		<div class="share">
-			<p>Share this on<br></p>
-            <div id="share-button-wrapper">
-
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            </div>
-		</div>
-		
-		<div id="credits">
-			<p>Designed &amp; Developed by<br></p>
-			<div id="credit-image-wrapper">
+		<div class="credits">
+			<p>We created this shit, folks!<br></p>
+			<div class="credit-image-wrapper">
 				<a href="https://www.facebook.com/sahil.lamba95" target="_blank"><div class="credit-image sahil"></div></a>
 				<a href="https://www.facebook.com/aman.srivastava.520125" target="_blank"><div class="credit-image aman"></div></a>
                 <a href="https://www.facebook.com/ranamihir" target="_blank"><div class="credit-image mihir"></div></a>
 			</div>
         </div>
+
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+        <script src="js/play.js" type="text/javascript"></script>
+        <script src="js/effects.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">
+            stLight.options({publisher: "00d7dfb1-e12f-4b19-aca5-6ee38134f80f", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+        </script>
 	</body>
 </html>

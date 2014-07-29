@@ -9,13 +9,12 @@
 }
 
 body {
-	background-color: #3a3232;
 	text-align: center;
 }
 
 p {
 	font-size: inherit;
-	color: #fff;
+	color: #fefefe;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -25,19 +24,19 @@ a:link, a:visited, a:hover, a:active {
 }
 
 a.text-link:hover {
-	color: #d83018;
+	/*color: #40e0d0;*/
 }
 
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 800px) {
-	#header {
+	.header {
 		position: relative;
 		width: 100%;
 		overflow: hidden;
 	}
 
-		#header > div {
+		.header > div {
 			 padding: 20px;
 		}
 	
@@ -51,25 +50,17 @@ and (max-device-width: 800px) {
 		color: #fdfcce;
 	}
 	
-	#menu {
+	.menu {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
 		margin: 0 auto;
 	}
-	
-	.icon-book-open, .icon-ccw {
-		font-size: 22px;
-		color: #fdfcce;
+
+	.menu div {
 		display: inline-block;
-		cursor: pointer;
-		margin: 0 20px;
 	}
-	
-	.icon-book-open:hover, .icon-ccw:hover {
-		color: #d83018;
-	}
-	
+		
 	#rules-lightbox {
 		position: fixed;
 		top: 0;
@@ -133,7 +124,7 @@ and (max-device-width: 800px) {
 		margin-bottom: 30px;
 	}
 
-	#anim {
+	.anim {
 		position: absolute;
 		top: 30px;
 		left: 50%;
@@ -149,7 +140,7 @@ and (max-device-width: 800px) {
 		-o-animation: square-circle 3s .5s 1 alternate forwards;
 	}
 	
-	#match-title {
+	.match-title {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
@@ -157,13 +148,13 @@ and (max-device-width: 800px) {
 		margin: 0 auto;
 	}
 
-	#buttons {
+	.buttons {
 		width: 100%;
 		margin-bottom: 20px;
 		margin-top: 20px;
 	}
 
-	#buttons button {
+	.buttons button {
 		display: inline-block;
 		width: 30px;
 		overflow: hidden;
@@ -174,12 +165,12 @@ and (max-device-width: 800px) {
 		cursor: pointer;
 	}
 
-	#buttons button:hover {
+	.buttons button:hover {
 		background-color: #d83018;
 		color: #fff;
 	}
 
-	#grid {
+	.grid {
 		width: 248px;
 		height: 211px;
 		margin: 0 auto;
@@ -188,13 +179,13 @@ and (max-device-width: 800px) {
 		border: 2px solid #a8a779;
 	}
 
-	#grid div {
+	.grid div {
 		width: auto;
 		height: 30px;
 		margin: 3px auto;
 	}
 
-	#grid div div {
+	.grid div div {
 		width: 30px;
 		margin-top: 4px;
 		font-size: 0;
@@ -203,7 +194,7 @@ and (max-device-width: 800px) {
 		border-radius: 2px;
 	}
 
-	#credits {
+	.credits {
 		position: relative;
 		width: 80%;
 		overflow: hidden;
@@ -214,7 +205,7 @@ and (max-device-width: 800px) {
 		z-index: 1000;
 	}
 
-	#credit-image-wrapper {
+	.credit-image-wrapper {
 		position: relative;
 		width: 192px;
 		margin: 10px auto;
@@ -232,7 +223,7 @@ and (max-device-width: 800px) {
 
 	}
 	
-	#share-button-wrapper {
+	.share-button-wrapper {
 		display: block;
 		margin-top: 10px;
 	}
@@ -248,46 +239,72 @@ and (max-device-width: 800px) {
 @media only screen 
 and (min-device-width: 801px) {
 	html {
-		min-width: 480px;
+		background: url("../images/bg.jpg") no-repeat fixed;
+		background-size: cover;
+		min-width: 540px;
 	}
 
-	#header {
+	span {
+		font-size: inherit;
+	}
+
+	.header {
 		position: relative;
 		width: 100%;
 		overflow: hidden;
+		border-bottom: 1px solid #ddd;
+		background: url("../images/overlay-50.png") repeat;
 	}
-
-		#header > div {
-			 padding: 20px;
+	
+	.head-element {
+		width: 50%;
+		margin: 0 auto;
+	}
+	
+		.head-element > div {
+			padding: 10px 0;
 		}
 	
+	.share-button-wrapper {
+		display: block;
+		margin-top: 5px;
+	}
+	
+	.left {
+		float: left;
+	}
+	
+	.right {
+		float: right;
+	}
+	
 	h1 {
-		font-size: 48px;
-		color: #fdfcce;
+		font-size: 32px;
+		color: #40e0d0;
 	}
 
 	h2 {
 		font-size: 20px;
-		color: #fdfcce;
+		color: #fefefe;
 	}
 	
-	#menu {
+	.menu {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
 		margin: 0 auto;
 	}
-	
-	.icon-book-open, .icon-ccw {
-		font-size: 30px;
-		color: #fdfcce;
+
+	.menu div {
 		display: inline-block;
 		cursor: pointer;
 		margin: 0 20px;
+		font-size: inherit;
+		color: #fefefe;
 	}
-	
-	.icon-book-open:hover, .icon-ccw:hover {
-		color: #d83018;
+
+	.menu div:hover {
+		color: #40e0d0;
 	}
 
 	#rules-lightbox {
@@ -346,93 +363,80 @@ and (min-device-width: 801px) {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
-
-	#anim{
-		position: absolute;
-		top: 30px;
-		left: 50%;
-		margin-left: -180px;
-		width: 10px;
-		height: 10px;
-		z-index: -100;
-		border-radius: 5px;
-		background-color: coral;
-		animation: square-circle 3s .5s 1 alternate forwards;
-		-webkit-animation: square-circle 3s .5s 1 alternate forwards;
-		-moz-animation: square-circle 3s .5s 1 alternate forwards;
-		-o-animation: square-circle 3s .5s 1 alternate forwards;
-	}
 	
-	#match-title {
+	.match-title {
 		position: relative;
 		width: 80%;
 		padding-top: 20px;
 		padding-bottom: 20px;
 		margin: 0 auto;
 	}
-
-	#buttons {
-		padding-top: 30px;
-		padding-bottom: 20px;
+	
+	.content {
+		margin: 0 auto;
 	}
 
-	#buttons button {
-		display: inline-block;
-		width: 50px;
-		overflow: hidden;
-		padding: 2px;
-		border-radius: 2px;
-		background-color: #fdfcce;
-		color: #555;
-		cursor: pointer;
-	}
-
-	#buttons button:hover {
-		background-color: #d83018;
-		color: #fff;
-	}
-
-	#grid {
+	.grid {
 		width: 404px;
 		height: 348px;
 		margin: 0 auto;
-		background-color: #fdfcce;
+		background-color: #444;
 		border-radius: 10px;
-		border: 2px solid #a8a779;
+		border: 1px solid #ddd;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom: 10px solid #ddd;
 	}
 
-	#grid div {
+	.grid div {
 		width: auto;
 		height: 50px;
 		margin: 3px auto;
 	}
 
-	#grid div div {
+	.grid div div {
 		width: 50px;
 		margin-top: 14px;
 		font-size: 0;
 		display: inline-block;
-		background-color: lightcoral;
+		background-color: #555;
 		border-radius: 2px;
 	}
 	
-	#content {
-		width: 800px;
-		margin: 0 auto;
-		border-bottom: 1px solid #ddd;
+	.buttons {
+		padding-top: 30px;
+		padding-bottom: 20px;
 	}
 
-	#credits {
+	.buttons button {
+		display: inline-block;
+		width: 50px;
+		overflow: hidden;
+		padding: 3px;
+		border-radius: 2px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-color: #fefefe;
+		border-bottom: 3px solid #999;
+		color: #444;
+		cursor: pointer;
+	}
+
+	.buttons button:hover {
+		background-color: #a7fc00;
+		border-bottom: 3px solid #52a700;
+	}
+
+	.credits {
 		position: relative;
 		width: 50%;
 		overflow: hidden;
-		background-color: #3a3232;
-		margin: 0 auto 20px auto;
-		padding-top: 20px;
+		margin: 0 auto;
+		padding-bottom: 20px;
 		z-index: 1000;
 	}
 
-	#credit-image-wrapper {
+	.credit-image-wrapper {
 		position: relative;
 		width: 192px;
 		margin: 10px auto;
@@ -444,123 +448,10 @@ and (min-device-width: 801px) {
 		width: 50px;
 		height: 50px;
 		border-radius: 25px;
-		background-color: #fdfcce;
-		border: 2px solid #fff;
+		background-color: #fefefe;
+		border: 2px solid #ddd;
 		margin: 0 5px;
 	}
-	
-	#share-button-wrapper {
-		display: block;
-		margin-top: 10px;
-	}
-
-	.share {
-		position: fixed;
-		width: 164px;
-		top: 20px;
-		right: 30px;
-		z-index: 1150;
-	}
-}
-
-@keyframes square-circle {
-
-    0%{
-        border-radius: 0 0 0 0;
-        background: coral;
-        transform:rotate(0deg);
-    
-    }
-    25%{
-        border-radius: 50% 0 0 0;
-        background: darksalmon;
-        transform:rotate(45deg);
-    }
-    50%{
-        border-radius: 50% 50% 0 0;
-        background: indianred;
-        transform:rotate(90deg);
-    }
-    100%{
-        border-radius: 50% 50% 50% 0;
-        background: #d83018;
-        transform:rotate(135deg);
-    }
-}
-
-@-webkit-keyframes square-circle {
-
-    0%{
-        border-radius: 0 0 0 0;
-        background: coral;
-        -webkit-transform:rotate(0deg);
-    
-    }
-    25%{
-        border-radius: 50% 0 0 0;
-        background: darksalmon;
-        -webkit-transform:rotate(45deg);
-    }
-    50%{
-        border-radius: 50% 50% 0 0;
-        background: indianred;
-        -webkit-transform:rotate(90deg);
-    }
-    100%{
-        border-radius: 50% 50% 50% 0;
-        background: #d83018;
-        -webkit-transform:rotate(135deg);
-    }
-}
-
-@-moz-keyframes square-circle {
-
-    0%{
-        border-radius: 0 0 0 0;
-        background: coral;
-        -moz-transform:rotate(0deg);
-    
-    }
-    25%{
-        border-radius: 50% 0 0 0;
-        background: darksalmon;
-        -moz-transform:rotate(45deg);
-    }
-    50%{
-        border-radius: 50% 50% 0 0;
-        background: indianred;
-        -moz-transform:rotate(90deg);
-    }
-    100%{
-        border-radius: 50% 50% 50% 0;
-        background: #d83018;
-        -moz-transform:rotate(135deg);
-    }
-}
-
-@-o-keyframes square-circle {
-
-    0%{
-        border-radius: 0 0 0 0;
-        background: coral;
-        -o-transform:rotate(0deg);
-    
-    }
-    25%{
-        border-radius: 50% 0 0 0;
-        background: darksalmon;
-        -o-transform:rotate(45deg);
-    }
-    50%{
-        border-radius: 50% 50% 0 0;
-        background: indianred;
-        -o-transform:rotate(90deg);
-    }
-    100%{
-        border-radius: 50% 50% 50% 0;
-        background: #d83018;
-        -o-transform:rotate(135deg);
-    }
 }
 
 .round1 {
@@ -581,28 +472,28 @@ and (min-device-width: 801px) {
 @keyframes square-circle1 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         transform:rotate(180deg);
     }
 }
@@ -610,28 +501,28 @@ and (min-device-width: 801px) {
 @-webkit-keyframes square-circle1 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -webkit-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -webkit-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -webkit-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -webkit-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -639,28 +530,28 @@ and (min-device-width: 801px) {
 @-moz-keyframes square-circle1 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -moz-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -moz-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -moz-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -moz-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -moz-transform:rotate(180deg);
     }
 }
@@ -668,28 +559,28 @@ and (min-device-width: 801px) {
 @-o-keyframes square-circle1 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -o-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -o-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -o-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -o-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -o-transform:rotate(180deg);
     }
 }
@@ -712,28 +603,28 @@ and (min-device-width: 801px) {
 @keyframes square-circle2 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
        	transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         transform:rotate(180deg);
     }
 }
@@ -741,28 +632,28 @@ and (min-device-width: 801px) {
 @-webkit-keyframes square-circle2 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -webkit-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -webkit-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -webkit-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -webkit-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -770,28 +661,28 @@ and (min-device-width: 801px) {
 @-moz-keyframes square-circle2 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -moz-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -moz-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -moz-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -moz-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -moz-transform:rotate(180deg);
     }
 }
@@ -799,28 +690,28 @@ and (min-device-width: 801px) {
 @-o-keyframes square-circle2 {
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -o-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -o-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -o-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -o-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -o-transform:rotate(180deg);
     }
 }
@@ -919,28 +810,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         transform:rotate(180deg);
     }
 }
@@ -949,28 +840,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -webkit-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -webkit-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -webkit-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -webkit-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -979,28 +870,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -moz-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -moz-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -moz-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -webkit-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -moz-transform:rotate(180deg);
     }
 }
@@ -1009,28 +900,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -o-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -o-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -o-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #52a700;
         -o-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: coral;
+        background: #a7fc00;
         -o-transform:rotate(180deg);
     }
 }
@@ -1039,28 +930,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         transform:rotate(180deg);
     }
 }
@@ -1069,28 +960,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -webkit-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -webkit-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -webkit-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -webkit-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -1099,28 +990,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -moz-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -moz-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -moz-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -moz-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -moz-transform:rotate(180deg);
     }
 }
@@ -1129,28 +1020,28 @@ and (min-device-width: 801px) {
 
     0%{
         border-radius: 0 0 0 0;
-        background: coral;
+        background: #555;
         -o-transform:rotate(0deg);
     
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: darksalmon;
+        background: #777;
         -o-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: indianred;
+        background: #999;
         -o-transform:rotate(90deg);
     }
     75%{
         border-radius: 50% 50% 50% 0;
-        background: lightcoral;
+        background: #aa7200;
         -o-transform:rotate(135deg);
     }
     100%{
         border-radius: 50%;
-        background: #02e4ca;
+        background: #ffd700;
         -o-transform:rotate(180deg);
     }
 }
