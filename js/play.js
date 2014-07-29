@@ -329,7 +329,7 @@ function check(a, b) {
 	//Forward slash diagonal checking starts
 	
     var counter2 = 0, direction2 = 5;
-	
+if(a>=1&&b<=6){ 	
     if (grid[a][b] === grid[a - 1][b + 1]) {
 		counter2 += 1;
 		direction2 = 1;
@@ -397,10 +397,10 @@ function check(a, b) {
 		}
         disableButtons();
 	}
-	
+}        
 	//Forward slash diagonal checking ends
 	//Backward slash diagonal checking starts
-	
+if(a>=1&&b<=6){  	
     var counter3 = 0, direction3 = 5;
 	
 	if (grid[a][b] === grid[a + 1][b + 1]) {
@@ -477,7 +477,7 @@ function check(a, b) {
         
         }
 	}
-	
+}	
 	//Backward slash diagonal checking ends
 
 
@@ -491,7 +491,7 @@ function turn(x) {
 	
 	var p;
 	
-    if (chance % 2 !== 0) {
+    
 		p = columns[x];
 		grid[p][x] = 1;
 		document.getElementById("" + p + x).className = 'round1';
@@ -505,36 +505,38 @@ function turn(x) {
         if(terminator===2){
             return;
         }
-    } 
+     
     
-    if(chance % 2===0){
+    
         
-         var r=AIMove();
+        var r=AIMove();
         p = columns[r];
-        grid[p][r] = 0;
-        
-        
-        
-		 del = setTimeout(function(){
+    if(columns[r]>1){
+            grid[p][r] = 0;
+
+
+
+             del = setTimeout(function(){
+
+                document.getElementById("" + p + r).className = 'round2';
+                //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
+                 }, 1000);
+
+
+            if(columns[r]>0){
+                  chance += 1;
+                }
+
+
+
             
-            document.getElementById("" + p + r).className = 'round2';
-            //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
-             }, 1000);
-        
-        
-        if(columns[r]>0){
-              chance += 1;
+            check(p, r);
+
+            setTimeout(function(){clearTimeout(del);}, 1000);
+
+            columns[r]--;
             }
         
-
-        
-        drawCondition();
-        check(p, r);
-        
-        setTimeout(function(){clearTimeout(del);}, 1000);
-    
-        columns[r]--;
-    }    
 }
 
 
@@ -697,60 +699,62 @@ function AIMove(){
     //forward slash self checking starts
     gridc[l][i]=0;    
     var counter2 = 0, direction2 = 5;
-    
-    if (gridc[a][b] === gridc[a - 1][b + 1]) {
-        counter2 += 1;
-        direction2 = 1;
-    }
-        
-    if (gridc[a][b] === gridc[a + 1][b - 1]) {
-        counter2 += 1;
-        direction2 = 0;
-    }
-        
-    if (counter2 === 1) {
-        if (direction2 === 1) {
-            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-                    
-                
-                  
+if(a>=1&&b<=6){    
+        if (gridc[a][b] === gridc[a - 1][b + 1]) {
+            counter2 += 1;
+            direction2 = 1;
+        }
+
+        if (gridc[a][b] === gridc[a + 1][b - 1]) {
+            counter2 += 1;
+            direction2 = 0;
+        }
+
+        if (counter2 === 1) {
+            if (direction2 === 1) {
+                if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+
+
+
+                    columnResult[i]+=11;
+
+
+                }
+            }
+
+            if (direction2 === 0) {
+
+                if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+
+                    columnResult[i]+=11;
+
+                }
+            }
+        } else if (counter2 === 2) {
+
+    if(a>=2&&b<=5){
+            if (gridc[a][b] === gridc[a - 2][b + 2]) {
+
                 columnResult[i]+=11;
-                
-                
+
+            } 
+            if (gridc[a][b] === gridc[a + 2][b - 2]){
+
+              columnResult[i]+=11;
+
             }
         }
-            
-        if (direction2 === 0) {
-            
-            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
-                
-                columnResult[i]+=11;
-                
-            }
-        }
-    } else if (counter2 === 2) {
-        
-        if (gridc[a][b] === gridc[a - 2][b + 2]) {
-           
-            columnResult[i]+=11;
-            
-        } 
-        if (gridc[a][b] === gridc[a + 2][b - 2]){
-            
-          columnResult[i]+=11;
-            
-        }
-        
+
     }
         
-        
+}        
         
     //forward slash self checking ends    
     //forward slash opponent checking starts
       
     gridc[l][i]=1;    
      counter2 = 0, direction2 = 5;
-    
+if(a>=1&&b<=6){    
     if (gridc[a][b] === gridc[a - 1][b + 1]) {
         counter2 += 1;
         direction2 = 1;
@@ -795,7 +799,7 @@ function AIMove(){
         }
         
     }
-        
+}        
     //forward slash opponent checking ends
         
         
@@ -809,7 +813,7 @@ function AIMove(){
         counter3 += 1;
         direction3 = 1;
     }
-    
+if(a>1&&b<=6){    
     if (gridc[a][b] === gridc[a - 1][b - 1]) {
         counter3 += 1;
         direction3 = 0;
@@ -847,7 +851,7 @@ function AIMove(){
         }
     }
     //backward slash self checking ends 
-        
+}        
         
     //backward slash opponent checking starts
         
@@ -859,7 +863,7 @@ function AIMove(){
         counter3 += 1;
         direction3 = 1;
     }
-    
+if(a>=1&&b<=6){    
     if (gridc[a][b] === gridc[a - 1][b - 1]) {
         counter3 += 1;
         direction3 = 0;
@@ -898,7 +902,7 @@ function AIMove(){
     }
         
     //backward slash opponent checking ends
-        
+}        
     //three in a row self starts
         
         gridc[l][i]=0;
@@ -932,120 +936,126 @@ function AIMove(){
         
     //three in a row self ends   
     
-//    //just above check start
-//        
-//        gridc[l][i]=0;
-//        gridc[l-1][i]=1;
-//        a=(l-1), b=(i);
-//        
-//    //horizontal opponent checking starts
-//        
-//        
-//        
-//            var counter5 = 0, direction5 = 5;
-//            if (gridc[a][b] === gridc[a][b + 1]) {
-//            counter5 += 1;
-//            direction5 = 1;
-//        }
-//
-//
-//        if (gridc[a][b] === gridc[a][b - 1]) {
-//            counter5 += 1;
-//            direction5 = 0;
-//        }
-//        
-//        if (counter5 === 1) {
-//        if (direction5 === 1) {
-//                                                                
-//            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
-//                
-//                columnResult[i]-=50;
-//            }
-//        }
-//
-//        if (direction5 === 0) {
-//
-//            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
-//                
-//                columnResult[i]-=50;
-//                
-//            }
-//        }
-//
-//    } else if (counter5 === 2) {
-//        if (gridc[a][b] === gridc[a][b + 2]) {
-//            
-//            columnResult[i]-=50;
-//        }
-//        if (gridc[a][b] === gridc[a][b - 2]){
-//            
-//             columnResult[i]-=50;
-//        
-//        }
-//        
-//
-//    }
-//        
-//    //horizontal opponent checking ends 
-//    //forward slash opponnent checking starts
-//        
-//    gridc[l][i]=0;
-//    gridc[l-1][i]=1; 
-//    a=l-1, b=i;    
-//     
-//    counter2 = 0, direction2 = 5;
-//    
-//    if (gridc[a][b] === gridc[a - 1][b + 1])
-//    {
-//        counter2 += 1;
-//        direction2 = 1;
-//    }
-//        
-//    if (gridc[a][b] === gridc[a + 1][b - 1]) {
-//        counter2 += 1;
-//        direction2 = 0;
-//    }
-//        
-//    if (counter2 === 1) {
-//        if (direction2 === 1) {
-//            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-//                    
-//                
-//                  
-//                columnResult[i]-=50;
-//                
-//                
-//            }
-//        }
-//            
-//        if (direction2 === 0) {
-//            
-//            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
-//                
-//                columnResult[i]-=50;
-//                
-//            }
-//        }
-//    } else if (counter2 === 2) {
-//        
-//        if (gridc[a][b] === gridc[a - 2][b + 2]) {
-//           
-//            columnResult[i]-=50;
-//            
-//        } 
-//        if (gridc[a][b] === gridc[a + 2][b - 2]){
-//            
-//          columnResult[i]-=50;
-//            
-//        }
-//        
-//    }
-//        
-//    //forward slash opponnent checking end    
-//        
-//    //just above check end    
-//        
-//        
+    //just above check start
+        
+        gridc[l][i]=0;
+        a=(l-1), b=(i);
+if(b<=6&&a>=1){ 
+        gridc[l-1][i]=1;
+        
+        
+    //horizontal opponent checking starts
+        
+      
+        
+            var counter5 = 0, direction5 = 5;
+            if (gridc[a][b] === gridc[a][b + 1]) {
+            counter5 += 1;
+            direction5 = 1;
+        }
+
+
+        if (gridc[a][b] === gridc[a][b - 1]) {
+            counter5 += 1;
+            direction5 = 0;
+        }
+        
+        if (counter5 === 1) {
+        if (direction5 === 1) {
+                                                                
+            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
+                
+                columnResult[i]-=50;
+            }
+        }
+
+        if (direction5 === 0) {
+
+            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+                
+                columnResult[i]-=50;
+                
+            }
+        }
+
+    } else if (counter5 === 2) {
+        if (gridc[a][b] === gridc[a][b + 2]) {
+            
+            columnResult[i]-=50;
+        }
+        if (gridc[a][b] === gridc[a][b - 2]){
+            
+             columnResult[i]-=50;
+        
+        }
+        
+
+    }
+ } 
+        
+    //horizontal opponent checking ends 
+    //forward slash opponnent checking starts
+    
+        
+    gridc[l][i]=0;
+    a=l-1, b=i; 
+if(a>=1&&b<=6){
+    gridc[l-1][i]=1; 
+       
+     
+    counter2 = 0, direction2 = 5;
+    
+    if (gridc[a][b] === gridc[a - 1][b + 1])
+    {
+        counter2 += 1;
+        direction2 = 1;
+    }
+        
+    if (gridc[a][b] === gridc[a + 1][b - 1]) {
+        counter2 += 1;
+        direction2 = 0;
+    }
+        
+    if (counter2 === 1) {
+        if (direction2 === 1) {
+            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+                    
+                
+                  
+                columnResult[i]-=50;
+                
+                
+            }
+        }
+            
+        if (direction2 === 0) {
+            
+            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+                
+                columnResult[i]-=50;
+                
+            }
+        }
+    } else if (counter2 === 2) {
+        
+        if (gridc[a][b] === gridc[a - 2][b + 2]) {
+           
+            columnResult[i]-=50;
+            
+        } 
+        if (gridc[a][b] === gridc[a + 2][b - 2]){
+            
+          columnResult[i]-=50;
+            
+        }
+        
+    }
+        
+    //forward slash opponnent checking end    
+}        
+    //just above check end    
+        
+        
 }
         
 
@@ -1061,11 +1071,21 @@ function AIMove(){
         
             }
         }
-        if(maxi !== 0 && maxi<=7 && maxi >=1){
+        if(maxi !== 0 && maxi<=7 && maxi >=1 && columns[maxi]>0){
             return maxi;
         }
         else{
-            return Math.floor((Math.random() * 7) + 1);
+            var checker =0;
+                while(checker===0){
+                var k= Math.floor((Math.random() * 7) + 1);
+
+                if(columns[k]>0){
+                    return k;
+                    cecker =1;
+                }
+
+            
+            }    
         }
         
     
