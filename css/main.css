@@ -235,7 +235,7 @@ and (max-device-width: 800px) {
 @media only screen 
 and (min-device-width: 801px) {
 	html {
-		background: url("../images/bg.png") repeat fixed;
+		background: url("../images/4.jpg") repeat fixed;
 		min-width: 540px;
 	}
 
