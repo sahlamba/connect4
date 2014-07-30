@@ -235,7 +235,7 @@ and (max-device-width: 800px) {
 @media only screen 
 and (min-device-width: 801px) {
 	html {
-		background: #fff;
+		background: url("../images/bg.png") repeat fixed;
 		min-width: 540px;
 	}
 
@@ -274,6 +274,8 @@ and (min-device-width: 801px) {
 	}
 	
 	h1 {
+		margin-top: -8px;
+		font-family: 'Pacifico';
 		font-size: 32px;
 		color: #555;
 	}
@@ -375,10 +377,11 @@ and (min-device-width: 801px) {
 		width: 404px;
 		height: 348px;
 		margin: 0 auto;
-		background-color: #777;
+		background-color: #fff;
 		border-radius: 10px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
+		border: 1px solid #555;
 		border-bottom: 10px solid #555;
 	}
 
@@ -524,7 +527,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #7c0;
+        background: #ffd700;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -621,7 +624,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         transform:rotate(180deg);
     }
 }
@@ -650,7 +653,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #d83018;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -679,7 +682,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         -moz-transform:rotate(180deg);
     }
 }
@@ -708,7 +711,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         -o-transform:rotate(180deg);
     }
 }
@@ -910,7 +913,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         transform:rotate(180deg);
     }
 }
@@ -940,7 +943,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         -webkit-transform:rotate(180deg);
     }
 }
@@ -970,7 +973,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         -moz-transform:rotate(180deg);
     }
 }
@@ -1000,7 +1003,7 @@ and (min-device-width: 801px) {
     }
     100%{
         border-radius: 50%;
-        background: #20c0b0;
+        background: #08c;
         -o-transform:rotate(180deg);
     }
 }
