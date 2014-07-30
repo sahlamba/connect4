@@ -19,9 +19,9 @@ function result(i) {
 	if (i === 0) {
 		document.getElementById("actual-result").innerHTML = '<h2 style="color:#d83018;">The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:coral; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#7c0; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
 	} else if (i === 2) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#20c0b0; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
 	}
 	
 	$("#result-lightbox").delay(1500).fadeIn(500);

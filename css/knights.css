@@ -1,0 +1,8 @@
+.play {
+	font-size: 32px;
+	color: #555;
+}
+
+	.play:hover {
+		color: #d83018;
+	}
