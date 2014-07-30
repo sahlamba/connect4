@@ -57,6 +57,22 @@ function disableButtons() {
     document.getElementById("6").disabled = true;
     document.getElementById("7").disabled = true;
 }
+
+function enableButtons() {
+	"use strict";
+	
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = false;
+    document.getElementById("3").disabled = false;
+    document.getElementById("4").disabled = false;
+    document.getElementById("5").disabled = false;
+    document.getElementById("6").disabled = false;
+    document.getElementById("7").disabled = false;
+}
+
+
+
+
 var j = 10, k = 10, l = 10, m = 10, n = 10;
 
 function resultAnim1(j, k, l, m, n) {
@@ -400,7 +416,7 @@ if(a>=1&&b<=6){
 }        
 	//Forward slash diagonal checking ends
 	//Backward slash diagonal checking starts
-if(a>=1&&b<=6){  	
+if(a>=1&&b<=7){  	
     var counter3 = 0, direction3 = 5;
 	
 	if (grid[a][b] === grid[a + 1][b + 1]) {
@@ -514,11 +530,13 @@ function turn(x) {
     if(columns[r]>1){
             grid[p][r] = 0;
 
-
+            disableButtons();
 
              del = setTimeout(function(){
+                
 
                 document.getElementById("" + p + r).className = 'round2';
+                check(p, r); 
                 //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
                  }, 1000);
 
@@ -530,9 +548,13 @@ function turn(x) {
 
 
             
-            check(p, r);
+            
 
-            setTimeout(function(){clearTimeout(del);}, 1000);
+            setTimeout(function(){clearTimeout(del);
+                                 
+                                 enableButtons();
+                                 
+                                 }, 1000);
 
             columns[r]--;
             }
@@ -863,7 +885,7 @@ if(a>1&&b<=6){
         counter3 += 1;
         direction3 = 1;
     }
-if(a>=1&&b<=6){    
+if(a>1&&b<=6){    
     if (gridc[a][b] === gridc[a - 1][b - 1]) {
         counter3 += 1;
         direction3 = 0;
@@ -927,8 +949,8 @@ if(a>=1&&b<=6){
                 emptyCounter++;
             }
         
-        if(counter===2){
-                columnResult[i]+=8;
+        if(emptyCounter===2){
+                columnResult[i]+=9;
             }
             
         }
@@ -938,10 +960,11 @@ if(a>=1&&b<=6){
     
     //just above check start
         
-        gridc[l][i]=0;
+        
         a=(l-1), b=(i);
-if(b<=6&&a>=1){ 
-        gridc[l-1][i]=1;
+if(b<=6&&a>=1){
+        gridc[l][i]=0;
+        gridc[a][b]=1;
         
         
     //horizontal opponent checking starts
@@ -965,7 +988,7 @@ if(b<=6&&a>=1){
                                                                 
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 
-                columnResult[i]-=50;
+                columnResult[i]-=15;
             }
         }
 
@@ -973,7 +996,7 @@ if(b<=6&&a>=1){
 
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                 
-                columnResult[i]-=50;
+                columnResult[i]-=15;
                 
             }
         }
@@ -981,11 +1004,11 @@ if(b<=6&&a>=1){
     } else if (counter5 === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
             
-            columnResult[i]-=50;
+            columnResult[i]-=15;
         }
         if (gridc[a][b] === gridc[a][b - 2]){
             
-             columnResult[i]-=50;
+             columnResult[i]-=15;
         
         }
         
@@ -997,9 +1020,10 @@ if(b<=6&&a>=1){
     //forward slash opponnent checking starts
     
         
-    gridc[l][i]=0;
+    
     a=l-1, b=i; 
 if(a>=1&&b<=6){
+    gridc[l][i]=0;
     gridc[l-1][i]=1; 
        
      
@@ -1022,7 +1046,7 @@ if(a>=1&&b<=6){
                     
                 
                   
-                columnResult[i]-=50;
+                columnResult[i]-=15;
                 
                 
             }
@@ -1032,7 +1056,7 @@ if(a>=1&&b<=6){
             
             if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                 
-                columnResult[i]-=50;
+                columnResult[i]-=15;
                 
             }
         }
@@ -1040,12 +1064,12 @@ if(a>=1&&b<=6){
         
         if (gridc[a][b] === gridc[a - 2][b + 2]) {
            
-            columnResult[i]-=50;
+            columnResult[i]-=15;
             
         } 
         if (gridc[a][b] === gridc[a + 2][b - 2]){
             
-          columnResult[i]-=50;
+          columnResult[i]-=15;
             
         }
         
@@ -1053,11 +1077,68 @@ if(a>=1&&b<=6){
         
     //forward slash opponnent checking end    
 }        
+        
+        
+    //backward slash checking starts
+         
+        a=l-1, b=i;
+
+        
+        var counter6 = 0, direction6 = 5;
+ if(a>1&&b<=6){    
+     
+    gridc[l][i]=0;
+    gridc[l-1][i]=1;
+    if (gridc[a][b] === gridc[a + 1][b + 1]) {
+        counter6 += 1;
+        direction6 = 1;
+    }
+   
+    if (gridc[a][b] === gridc[a - 1][b - 1]) {
+        counter6 += 1;
+        direction6 = 0;
+    }
+    
+    if (counter6 === 1) {
+        if (direction6 === 1) {
+            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+                
+               columnResult[i]-=50;
+                
+            }
+        }
+
+        if (direction6 === 0) {
+            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+                
+                columnResult[i]-=50;
+                
+            }
+        }
+
+    } else if (counter6 === 2) {
+        if (gridc[a][b] === gridc[a + 2][b + 2]) {
+            
+            columnResult[i]-=50;
+        
+        }
+        
+        
+        if(gridc[a][b] === gridc[a - 2][b - 2]){
+        
+            columnResult[i]-=50;
+        
+        }
+    }
+        
+        
+        
+    //backward slash checking ends    
     //just above check end    
         
         
-}
-        
+    }
+}        
 
         
         var maxi=0;
@@ -1081,7 +1162,7 @@ if(a>=1&&b<=6){
 
                 if(columns[k]>0){
                     return k;
-                    cecker =1;
+                    checker =1;
                 }
 
             
@@ -1091,6 +1172,5 @@ if(a>=1&&b<=6){
     
     
     
-
-
+    
 }
