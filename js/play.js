@@ -345,7 +345,7 @@ function check(a, b) {
 	//Forward slash diagonal checking starts
 	
     var counter2 = 0, direction2 = 5;
-if(a>=1&&b<=6){ 	
+if(a>=1&&b<=7){ 	
     if (grid[a][b] === grid[a - 1][b + 1]) {
 		counter2 += 1;
 		direction2 = 1;
@@ -721,7 +721,7 @@ function AIMove(){
     //forward slash self checking starts
     gridc[l][i]=0;    
     var counter2 = 0, direction2 = 5;
-if(a>=1&&b<=6){    
+if(a>1&&b<=6){    
         if (gridc[a][b] === gridc[a - 1][b + 1]) {
             counter2 += 1;
             direction2 = 1;
