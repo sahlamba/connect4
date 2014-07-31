@@ -26,7 +26,7 @@ gridc[5] = new Array(9);
 gridc[6] = new Array(9);
 gridc[7] = new Array(9);
 
-gridc[0][0]=-100;
+gridc[0][0]=null;
 var terminator=1; //1=on 2=off
 //Value of grid[x][y] is 0 for Player2 and 1 for Player1
 
@@ -527,7 +527,7 @@ function turn(x) {
         
         var r=AIMove();
         p = columns[r];
-    if(columns[r]>1){
+    if(columns[r]>=1){
             grid[p][r] = 0;
 
             disableButtons();
@@ -558,6 +558,8 @@ function turn(x) {
 
             columns[r]--;
             }
+    
+    drawCondition();
         
 }
 
@@ -580,6 +582,7 @@ var toContinue= 2;
 
 function checkHorizontal(var a, var b){
         var counter = 0, direction = 5;
+    if(b<=6){
         if (gridc[a][b] === gridc[a][b + 1]) {
             counter += 1;
             direction = 1;
@@ -624,44 +627,49 @@ function checkHorizontal(var a, var b){
             }
         }
 
-    } else if (counter === 2) {
-        if (gridc[a][b] === gridc[a][b + 2]) {
-            
-                            
-                toContinue= toContinue*0;
-                if(gridc[a][b]===0){
-                    columnsCopy[b]=100;
+        }   else if (counter === 2) {
+            if(b<=5){
+                if (gridc[a][b] === gridc[a][b + 2]) {
+
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnsCopy[b]=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnsCopy[b]=-100;
+                    }
                 }
-                
-                else if(gridc[a][b]===1){
-                    columnsCopy[b]=-100;
+                if (gridc[a][b] === gridc[a][b - 2]){
+
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnsCopy[b]=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnsCopy[b]=-100;
+                    }
                 }
-        }
-        if (gridc[a][b] === gridc[a][b - 2]){
-            
-                             
-                toContinue= toContinue*0;
-                if(gridc[a][b]===0){
-                    columnsCopy[b]=100;
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnsCopy[b]=-100;
-                }
+            }
         }
     }
 }
-
 function checkVertical(var a, var b){
-    if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+    if(a<=5){
+    
+        if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
-        toContinue= toContinue*0;
-        if(gridc[a][b]===0){
-            columnsCopy[b]=100;
-        }
+            toContinue= toContinue*0;
+            if(gridc[a][b]===0){
+                columnsCopy[b]=100;
+            }
 
-        else if(gridc[a][b]===1){
-            columnsCopy[b]=-100;
+            else if(gridc[a][b]===1){
+                columnsCopy[b]=-100;
+            }
         }
     }
 }
@@ -751,11 +759,13 @@ function checkBackwardSlash(var a, var b){
     
     var counter3 = 0, direction3 = 5;
     
+    if(a>1&&b<=6){
+    
     if (gridc[a][b] === gridc[a + 1][b + 1]) {
         counter3 += 1;
         direction3 = 1;
     }
-    if(a>1&&b<=6){    
+        
         if (gridc[a][b] === gridc[a - 1][b - 1]) {
             counter3 += 1;
             direction3 = 0;
@@ -826,7 +836,7 @@ function checkBackwardSlash(var a, var b){
 
 function AIMove(){
 
-    for(var i=1, i<=7, i++){
+    for(var i=1; i<=7; i++){
         copyGrid();
         var l= columnsCopy[i];
         columnsCopy[i]--;
@@ -837,7 +847,7 @@ function AIMove(){
         checkBackwardSlash(l, i);
         if(toContinue!==0){
             
-            for(var j=1, j<=7, j++){
+            for(var j=1; j<=7; j++){
                 l= columnsCopy[j];
                 columnsCopy[j]--;
                 gridc[l][j]=1;
@@ -847,7 +857,7 @@ function AIMove(){
                 checkBackwardSlash(l, j);
                 if(toContinue!==0){
                     
-                    for(var k=1, k<=7, k++){
+                    for(var k=1; k<=7; k++){
                         l= columnsCopy[k];
                         columnsCopy[k]--;
                         gridc[l][k]=0;
@@ -857,7 +867,7 @@ function AIMove(){
                         checkBackwardSlash(l, k);
                         if(toContinue!==0){
                             
-                            for(var m=1, m<=7, m++){
+                            for(var m=1; m<=7; m++){
                                 l= columnsCopy[m];
                                 columnsCopy[m]--;
                                 gridc[l][m]=1;
@@ -867,14 +877,16 @@ function AIMove(){
                                 checkBackwardSlash(l, m);
                                 if(toContinue!==0){
                                     
-                                    for(var n=1, n<=7, n++){
+                                    for(var n=1; n<=7; n++){
                                         l= columnsCopy[n];
                                         columnsCopy[n]--;
-                                        gridc[l][n]=1;
+                                        gridc[l][n]=0;
                                         checkHorizontal(l, n);
                                         checkVertical(l, n);
                                         checkForwardSlash(l, n);
-                                        checkBackwardSlash(l, n);    
+                                        checkBackwardSlash(l, n);
+                                        
+                                        
                                     }
                                 }
                             }
@@ -885,7 +897,7 @@ function AIMove(){
         }
     }
 
-    var maxi=0;
+    var maxi=Math.floor((Math.random() * 7) + 1);
     for(var j=1; j<=7; j++){
              
         if(columnResult[j]>maxi){
