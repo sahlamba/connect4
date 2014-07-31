@@ -580,7 +580,7 @@ function copyGrid(){
 
 var toContinue= 2;
 
-function checkHorizontal(var a, var b){
+function checkHorizontal(a, b){
         var counter = 0, direction = 5;
     if(b<=6){
         if (gridc[a][b] === gridc[a][b + 1]) {
@@ -657,7 +657,7 @@ function checkHorizontal(var a, var b){
         }
     }
 }
-function checkVertical(var a, var b){
+function checkVertical(a, b){
     if(a<=5){
     
         if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
@@ -674,7 +674,7 @@ function checkVertical(var a, var b){
     }
 }
 
-function checkForwardSlash(var a, var b){
+function checkForwardSlash(a, b){
      
     var counter2 = 0, direction2 = 5;
     if(a>1&&b<=6){    
@@ -755,7 +755,7 @@ function checkForwardSlash(var a, var b){
 }
 
 
-function checkBackwardSlash(var a, var b){
+function checkBackwardSlash(a,  b){
     
     var counter3 = 0, direction3 = 5;
     
@@ -867,29 +867,29 @@ function AIMove(){
                         checkBackwardSlash(l, k);
                         if(toContinue!==0){
                             
-                            for(var m=1; m<=7; m++){
-                                l= columnsCopy[m];
-                                columnsCopy[m]--;
-                                gridc[l][m]=1;
-                                checkHorizontal(l, m);
-                                checkVertical(l, m);
-                                checkForwardSlash(l, m);
-                                checkBackwardSlash(l, m);
-                                if(toContinue!==0){
-                                    
-                                    for(var n=1; n<=7; n++){
-                                        l= columnsCopy[n];
-                                        columnsCopy[n]--;
-                                        gridc[l][n]=0;
-                                        checkHorizontal(l, n);
-                                        checkVertical(l, n);
-                                        checkForwardSlash(l, n);
-                                        checkBackwardSlash(l, n);
-                                        
-                                        
-                                    }
-                                }
-                            }
+//                            for(var m=1; m<=7; m++){
+//                                l= columnsCopy[m];
+//                                columnsCopy[m]--;
+//                                gridc[l][m]=1;
+//                                checkHorizontal(l, m);
+//                                checkVertical(l, m);
+//                                checkForwardSlash(l, m);
+//                                checkBackwardSlash(l, m);
+//                                if(toContinue!==0){
+//                                    
+//                                    for(var n=1; n<=7; n++){
+//                                        l= columnsCopy[n];
+//                                        columnsCopy[n]--;
+//                                        gridc[l][n]=0;
+//                                        checkHorizontal(l, n);
+//                                        checkVertical(l, n);
+//                                        checkForwardSlash(l, n);
+//                                        checkBackwardSlash(l, n);
+//                                        
+//                                        
+//                                    }
+//                                }
+//                            }
                         }
                     }
                 }
