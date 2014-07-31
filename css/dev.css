@@ -29,7 +29,8 @@ and (min-device-width: 801px) {
 	}
 	
 		.member > div {
-			width: 850px;
+			width: 870px;
+            height: 160px;
 			padding: 40px 0;
 			margin: 0 auto;
 		}
@@ -40,11 +41,39 @@ and (min-device-width: 801px) {
 		height: 150px;
 		border-radius: 75px;
 		border: 5px solid #fff;
-		margin: 0 20px;
+		margin: 0 40px;
 	}
 	
 	.member-desc {
 		position: relative;
-		width: 
+		width: 590px;
+        height: 120px;
+        padding: 20px;
+        border-radius: 10px;
+        background: url("../images/overlay-white.png") repeat;
+        color: #333;
+        overflow: hidden;
+        text-align: left;
 	}
+    
+    h3 {
+        color: #333;
+        font-size: 20px;
+    }
+    
+    h4 {
+        color: #555;
+    }
+}
+
+.design-tools {
+    background: url("../images/design-tools.jpg") repeat;
+}
+
+.ahoy {
+    background: url("../images/ahoy.jpg") repeat;
+}
+
+.science {
+    background: url("../images/science.png") repeat;
 }
