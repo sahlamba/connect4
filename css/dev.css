@@ -1,9 +1,50 @@
-.play {
-	font-size: 24px;
-    margin-top: 8px;
-	color: #555;
-}
-
-	.play:hover {
-		color: #d83018;
+@media only screen 
+and (min-device-width: 801px) {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
 	}
+	
+	.play {
+		font-size: 24px;
+		margin-top: 8px;
+		color: #555;
+	}
+
+		.play:hover {
+			color: #d83018;
+		}
+	
+	.first {
+		margin-top: 63px !important;
+	}
+	
+	.member {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background-position: top left;
+	}
+	
+		.member > div {
+			width: 850px;
+			padding: 40px 0;
+			margin: 0 auto;
+		}
+	
+	.member-img {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius: 75px;
+		border: 5px solid #fff;
+		margin: 0 20px;
+	}
+	
+	.member-desc {
+		position: relative;
+		width: 
+	}
+}
