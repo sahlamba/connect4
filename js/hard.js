@@ -2,6 +2,7 @@
 
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 var columnsCopy = [100, 6, 6, 6, 6, 6, 6];
+var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
 
 var x, chance = 1, grid = new Array(8);//Creating 2d array
 grid[0]= new Array(9);
@@ -580,7 +581,7 @@ function copyGrid(){
 
 var toContinue= 2;
 
-function checkHorizontal(a, b){
+function checkHorizontal(a, b, c){
         var counter = 0, direction = 5;
     if(b<=6){
         if (gridc[a][b] === gridc[a][b + 1]) {
@@ -601,11 +602,11 @@ function checkHorizontal(a, b){
                 
                 toContinue= toContinue*0;
                 if(gridc[a][b]===0){
-                    columnsCopy[b]=100;
+                    columnResult[b]+=100;
                 }
                 
                 else if(gridc[a][b]===1){
-                    columnsCopy[b]=-100;
+                    columnResult[b]-=100;
                 }
             }
         }
@@ -617,11 +618,11 @@ function checkHorizontal(a, b){
                                 
                 toContinue= toContinue*0;
                 if(gridc[a][b]===0){
-                    columnsCopy[b]=100;
+                    columnResult[b]+=100;
                 }
                 
                 else if(gridc[a][b]===1){
-                    columnsCopy[b]=-100;
+                    columnResult[b]-=100;
                 }
                 
             }
@@ -634,11 +635,11 @@ function checkHorizontal(a, b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
                 }
                 if (gridc[a][b] === gridc[a][b - 2]){
@@ -646,35 +647,35 @@ function checkHorizontal(a, b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
                 }
             }
         }
     }
 }
-function checkVertical(a, b){
+function checkVertical(a, b, c){
     if(a<=5){
     
         if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
             toContinue= toContinue*0;
             if(gridc[a][b]===0){
-                columnsCopy[b]=100;
+                columnResult[b]+=100;
             }
 
             else if(gridc[a][b]===1){
-                columnsCopy[b]=-100;
+                columnResult[b]-=100;
             }
         }
     }
 }
 
-function checkForwardSlash(a, b){
+function checkForwardSlash(a, b, c){
      
     var counter2 = 0, direction2 = 5;
     if(a>1&&b<=6){    
@@ -694,11 +695,11 @@ function checkForwardSlash(a, b){
                     
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
                 }
             }
@@ -709,11 +710,11 @@ function checkForwardSlash(a, b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
                 }
@@ -727,11 +728,11 @@ function checkForwardSlash(a, b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
                 } 
@@ -739,11 +740,11 @@ function checkForwardSlash(a, b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
                 }
@@ -755,7 +756,7 @@ function checkForwardSlash(a, b){
 }
 
 
-function checkBackwardSlash(a,  b){
+function checkBackwardSlash(a,  b, c){
     
     var counter3 = 0, direction3 = 5;
     
@@ -777,11 +778,11 @@ function checkBackwardSlash(a,  b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
                 }
@@ -792,11 +793,11 @@ function checkBackwardSlash(a,  b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
                 }
@@ -807,11 +808,11 @@ function checkBackwardSlash(a,  b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
             }
@@ -821,11 +822,11 @@ function checkBackwardSlash(a,  b){
 
                     toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnsCopy[b]=100;
+                        columnResult[b]+=100;
                     }
 
                     else if(gridc[a][b]===1){
-                        columnsCopy[b]=-100;
+                        columnResult[b]-=100;
                     }
 
             }
@@ -835,69 +836,70 @@ function checkBackwardSlash(a,  b){
 }
 
 function AIMove(){
+     
 
     for(var i=1; i<=7; i++){
         copyGrid();
         var l= columnsCopy[i];
         columnsCopy[i]--;
         gridc[l][i]=0;
-        checkHorizontal(l, i);
-        checkVertical(l, i);
-        checkForwardSlash(l, i);
-        checkBackwardSlash(l, i);
-        if(toContinue!==0){
-            
-            for(var j=1; j<=7; j++){
-                l= columnsCopy[j];
-                columnsCopy[j]--;
-                gridc[l][j]=1;
-                checkHorizontal(l, j);
-                checkVertical(l, j);
-                checkForwardSlash(l, j);
-                checkBackwardSlash(l, j);
-                if(toContinue!==0){
-                    
-                    for(var k=1; k<=7; k++){
-                        l= columnsCopy[k];
-                        columnsCopy[k]--;
-                        gridc[l][k]=0;
-                        checkHorizontal(l, k);
-                        checkVertical(l, k);
-                        checkForwardSlash(l, k);
-                        checkBackwardSlash(l, k);
-                        if(toContinue!==0){
-                            
-//                            for(var m=1; m<=7; m++){
-//                                l= columnsCopy[m];
-//                                columnsCopy[m]--;
-//                                gridc[l][m]=1;
-//                                checkHorizontal(l, m);
-//                                checkVertical(l, m);
-//                                checkForwardSlash(l, m);
-//                                checkBackwardSlash(l, m);
-//                                if(toContinue!==0){
-//                                    
-//                                    for(var n=1; n<=7; n++){
-//                                        l= columnsCopy[n];
-//                                        columnsCopy[n]--;
-//                                        gridc[l][n]=0;
-//                                        checkHorizontal(l, n);
-//                                        checkVertical(l, n);
-//                                        checkForwardSlash(l, n);
-//                                        checkBackwardSlash(l, n);
-//                                        
-//                                        
-//                                    }
-//                                }
-//                            }
-                        }
-                    }
-                }
-            }
-        }
+        checkHorizontal(l, i, 1);
+        checkVertical(l, i, 1);
+        checkForwardSlash(l, i, 1);
+        checkBackwardSlash(l, i, 1);
+//        if(toContinue!==0){
+//            
+////            for(var j=1; j<=7; j++){
+////                l= columnsCopy[j];
+////                columnsCopy[j]--;
+////                gridc[l][j]=1;
+////                checkHorizontal(l, j, 2);
+////                checkVertical(l, j, 2);
+////                checkForwardSlash(l, j, 2);
+////                checkBackwardSlash(l, j, 2);
+////                if(toContinue!==0){
+////                    
+////                    for(var k=1; k<=7; k++){
+////                        l= columnsCopy[k];
+////                        columnsCopy[k]--;
+////                        gridc[l][k]=0;
+////                        checkHorizontal(l, k, 2);
+////                        checkVertical(l, k, 2);
+////                        checkForwardSlash(l, k, 2);
+////                        checkBackwardSlash(l, k, 2);
+////                        if(toContinue!==0){
+////                            
+////                            for(var m=1; m<=7; m++){
+////                                l= columnsCopy[m];
+////                                columnsCopy[m]--;
+////                                gridc[l][m]=1;
+////                                checkHorizontal(l, m, 3);
+////                                checkVertical(l, m, 3);
+////                                checkForwardSlash(l, m, 3);
+////                                checkBackwardSlash(l, m, 3);
+//////                                if(toContinue!==0){
+//////                                    
+//////                                    for(var n=1; n<=7; n++){
+//////                                        l= columnsCopy[n];
+//////                                        columnsCopy[n]--;
+//////                                        gridc[l][n]=0;
+//////                                        checkHorizontal(l, n, 4);
+//////                                        checkVertical(l, n, 4);
+//////                                        checkForwardSlash(l, n, 4);
+//////                                        checkBackwardSlash(l, n, 4);
+//////                                        
+//////                                        
+//////                                    }
+//////                                }
+////                            }
+////                        }
+////                    }
+////                }
+////            }
+//        }
     }
 
-    var maxi=Math.floor((Math.random() * 7) + 1);
+    var maxi=0;
     for(var j=1; j<=7; j++){
              
         if(columnResult[j]>maxi){
@@ -911,14 +913,16 @@ function AIMove(){
         return maxi;
     }
     else{
-        var checker =0;
-        while(checker===0){
-            var k= Math.floor((Math.random() * 7) + 1);
-
-            if(columns[k]>0){
-                return k;
-                checker =1;
-            }
-        }    
+//        var checker =0;
+//        while(checker===0){
+//            var k= Math.floor((Math.random() * 7) + 1);
+//
+//            if(columns[k]>0){
+//                return k;
+//                checker =1;
+//            }
+//        }
+        document.getElementById("match-title").innerHTML=''+maxi;
+        return 2;
     }
 }
