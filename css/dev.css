@@ -66,6 +66,10 @@ and (min-device-width: 801px) {
     }
 }
 
+.sam {
+    background: url("../images/chevron.png") repeat;
+}
+
 .design-tools {
     background: url("../images/design-tools.jpg") repeat;
 }
@@ -76,4 +80,8 @@ and (min-device-width: 801px) {
 
 .science {
     background: url("../images/science.png") repeat;
+}
+
+.brijan {
+    background: url("../images/brijan.gif") repeat;
 }
