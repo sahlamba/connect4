@@ -109,3 +109,11 @@ and (min-device-width: 801px) {
 .brijan {
     background: url("../images/brijan.gif") repeat;
 }
+
+.red-letters {
+    background: url("../images/red-letters.png") repeat;
+}
+
+.illusion {
+    background: url("../images/illusion.png") repeat;
+}
