@@ -4,7 +4,7 @@ and (min-device-width: 801px) {
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 1000;
+		z-index: 4000;
 	}
 	
 	.play {
@@ -64,6 +64,30 @@ and (min-device-width: 801px) {
     h4 {
         color: #555;
     }
+}
+
+#prllx-layer1 {
+	position: fixed;
+	top: 63px;
+	z-index: 2700;
+}
+
+#prllx-layer2 {
+	position: fixed;
+	top: 303px;
+	z-index: 2800;
+}
+
+#prllx-layer3 {
+	position: fixed;
+	top: 543px;
+	z-index: 2900;
+}
+
+#prllx-layer4 {
+	position: fixed;
+	top: 783px;
+	z-index: 3000;
 }
 
 .sam {
