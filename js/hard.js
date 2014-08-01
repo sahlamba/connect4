@@ -4,7 +4,7 @@ var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 var columnsCopy = [100, 6, 6, 6, 6, 6, 6];
 
 var x, chance = 1, grid = new Array(8);//Creating 2d array
-grid[0]= new Array(9);
+grid[0] = new Array(9);
 grid[1] = new Array(9);
 grid[2] = new Array(9);
 grid[3] = new Array(9);
@@ -14,10 +14,10 @@ grid[6] = new Array(9);
 grid[7] = new Array(9);
 
 
-grid[0][0]=-100;
+grid[0][0] = -100;
 
 var gridc = new Array(9);
-gridc[0]= new Array(9);
+gridc[0] = new Array(9);
 gridc[1] = new Array(9);
 gridc[2] = new Array(9);
 gridc[3] = new Array(9);
@@ -26,8 +26,8 @@ gridc[5] = new Array(9);
 gridc[6] = new Array(9);
 gridc[7] = new Array(9);
 
-gridc[0][0]=-100;
-var terminator=1; //1=on 2=off
+gridc[0][0] = -100;
+var terminator = 1; //1=on 2=off
 //Value of grid[x][y] is 0 for Player2 and 1 for Player1
 
 function result(i) {
@@ -37,7 +37,7 @@ function result(i) {
 		document.getElementById("actual-result").innerHTML = '<h2 style="color:#d83018;">The game has hence been drawn.</h2>';
 	} else if (i === 1) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:coral; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
-        terminator=2;
+        terminator = 2;
         
 	} else if (i === 2) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
@@ -77,160 +77,148 @@ var j = 10, k = 10, l = 10, m = 10, n = 10;
 
 function resultAnim1(j, k, l, m, n) {
     "use strict";
-    document.getElementById(""+ j + k).className = " resultAnim1";
-    document.getElementById(""+ j + l).className = " resultAnim3";
-    document.getElementById(""+ j + m).className = " resultAnim3";
-    document.getElementById(""+ j + n).className = " resultAnim3";
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById("" + j + l).className = " resultAnim3";
+    document.getElementById("" + j + m).className = " resultAnim3";
+    document.getElementById("" + j + n).className = " resultAnim3";
 
 }
 
 function resultAnim2(j, k, l, m, n) {
     "use strict";
-    document.getElementById(""+ j + k).className = " resultAnim2";
-    document.getElementById(""+ j + l).className = " resultAnim4";
-    document.getElementById(""+ j + m).className = " resultAnim4";
-    document.getElementById(""+ j + n).className = " resultAnim4";
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById("" + j + l).className = " resultAnim4";
+    document.getElementById("" + j + m).className = " resultAnim4";
+    document.getElementById("" + j + n).className = " resultAnim4";
 
 }
 
-function resultAnimVer1(j, k, l, m, n){
+function resultAnimVer1(j, k, l, m, n) {
     "use strict";
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ l + k).className = " resultAnim3";
-    document.getElementById(""+ m + k).className = " resultAnim3";
-    document.getElementById(""+ n + k).className = " resultAnim3";
+    document.getElementById("" + l + k).className = " resultAnim3";
+    document.getElementById("" + m + k).className = " resultAnim3";
+    document.getElementById("" + n + k).className = " resultAnim3";
 }
 
-function resultAnimVer2(j, k, l, m, n){
+function resultAnimVer2(j, k, l, m, n) {
     "use strict";
-    document.getElementById(""+ j + k).className = " resultAnim2";
-    document.getElementById(""+ l + k).className = " resultAnim4";
-    document.getElementById(""+ m + k).className = " resultAnim4";
-    document.getElementById(""+ n + k).className = " resultAnim4";
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById("" + l + k).className = " resultAnim4";
+    document.getElementById("" + m + k).className = " resultAnim4";
+    document.getElementById("" + n + k).className = " resultAnim4";
 
 }
 
-function resultAnimForDia1a(j, k){
+function resultAnimForDia1a(j, k) {
     "use strict";
-    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k +1, k2 = k + 2, k3 = k + 3;
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3, k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
 }
 
-function resultAnimForDia1b(j, k){
+function resultAnimForDia1b(j, k) {
     "use strict";
-    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k +1, k2 = k + 2, k3 = k + 3;
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3, k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
 }
 
 
-function resultAnimForDia2a(j, k){
-    "use strict;"
-    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
-    document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
-}
-
-function resultAnimForDia2b(j, k){
+function resultAnimForDia2a(j, k) {
     "use strict";
-    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
-    document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
-}
-
-
-function resultAnimForDia3a(j, k, l){
-    "use strict;"
-    var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1, k3 = k - l;
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3, k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
 }
 
-function resultAnimForDia3b(j, k, l){
-    "use strict;"
-    var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k + 1, k2 = k - 1, k3 = k - l;
+function resultAnimForDia2b(j, k) {
+    "use strict";
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3, k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
 }
 
-function resultAnimBak1a(j, k){
-    "use strict;"
-    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k + 1, k2 = k + 2, k3 = k + 3;
+
+function resultAnimForDia3a(j, k, l) {
+    "use strict";
+    var j1 = j - 1, j2 = j + 1, j3 = j + l, k1 = k + 1, k2 = k - 1, k3 = k - l;
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
 }
 
-function resultAnimBak1b(j, k){
-    "use strict;"
-    var j1 = j + 1, j2 = j + 2, j3 = j + 3;
-    var k1 = k + 1, k2 = k + 2, k3 = k + 3;
+function resultAnimForDia3b(j, k, l) {
+    "use strict";
+    var j1 = j - 1, j2 = j + 1, j3 = j + l, k1 = k + 1, k2 = k - 1, k3 = k - l;
     document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4";
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
 }
 
-function resultAnimBak2a(j, k){
-    "use strict;"
-    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
+function resultAnimBak1a(j, k) {
+    "use strict";
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3, k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
 }
 
-function resultAnimBak2b(j, k){
-    "use strict;"
-    var j1 = j - 1, j2 = j - 2, j3 = j - 3;
-    var k1 = k - 1, k2 = k - 2, k3 = k - 3;
+function resultAnimBak1b(j, k) {
+    "use strict";
+    var j1 = j + 1, j2 = j + 2, j3 = j + 3, k1 = k + 1, k2 = k + 2, k3 = k + 3;
     document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
-
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
 }
 
-function resultAnimBak3a(j, k, l){
-    "use strict;"
-    var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k - 1, k2 = k + 1, k3 = k + l;
+function resultAnimBak2a(j, k) {
+    "use strict";
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3, k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim1";
-    document.getElementById(""+ j1 + k1).className = " resultAnim3";
-    document.getElementById(""+ j2 + k2).className = " resultAnim3";
-    document.getElementById(""+ j3 + k3).className = " resultAnim3"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
 }
 
-function resultAnimBak3b(j, k, l){
-    "use strict;"
-    var j1 = j - 1, j2 = j + 1, j3 = j + l;
-    var k1 = k - 1, k2 = k + 1, k3 = k + l;
+function resultAnimBak2b(j, k) {
+    "use strict";
+    var j1 = j - 1, j2 = j - 2, j3 = j - 3, k1 = k - 1, k2 = k - 2, k3 = k - 3;
     document.getElementById("" + j + k).className = " resultAnim2";
-    document.getElementById(""+ j1 + k1).className = " resultAnim4";
-    document.getElementById(""+ j2 + k2).className = " resultAnim4";
-    document.getElementById(""+ j3 + k3).className = " resultAnim4"; 
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
+
+}
+
+function resultAnimBak3a(j, k, l) {
+    "use strict";
+    var j1 = j - 1, j2 = j + 1, j3 = j + l, k1 = k - 1, k2 = k + 1, k3 = k + l;
+    document.getElementById("" + j + k).className = " resultAnim1";
+    document.getElementById("" + j1 + k1).className = " resultAnim3";
+    document.getElementById("" + j2 + k2).className = " resultAnim3";
+    document.getElementById("" + j3 + k3).className = " resultAnim3";
+}
+
+function resultAnimBak3b(j, k, l) {
+    "use strict";
+    var j1 = j - 1, j2 = j + 1, j3 = j + l, k1 = k - 1, k2 = k + 1, k3 = k + l;
+    document.getElementById("" + j + k).className = " resultAnim2";
+    document.getElementById("" + j1 + k1).className = " resultAnim4";
+    document.getElementById("" + j2 + k2).className = " resultAnim4";
+    document.getElementById("" + j3 + k3).className = " resultAnim4";
 }
 
 var sum = 0;
