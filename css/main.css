@@ -29,6 +29,15 @@ a:link, a:visited, a:hover, a:active {
 	text-decoration: none;
 }
 
+i {
+	font-style: normal;
+}
+
+.text-link:hover {
+	color: #d83018;
+	cursor: pointer;
+}
+
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 800px) {
@@ -242,7 +251,7 @@ and (max-device-width: 800px) {
 and (min-device-width: 801px) {
 	html {
 		background: url("../images/back.png") repeat fixed;
-		min-width: 850px;
+		min-width: 900px;
 	}
 
 	.header {
