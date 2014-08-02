@@ -891,8 +891,8 @@ function AIMove(){
         
         a=(l-1), b=(i);
 if(b<=6&&a>=1){
-        gridc[l][i]=0;
-        gridc[a][b]=1;
+        gridc[l][i]=1;
+        gridc[a][b]=0;
         
         
     //horizontal opponent checking starts
@@ -915,7 +915,7 @@ if(b<=6&&a>=1){
         if (direction5 === 1) {
                                                                 
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
-                
+                document.getElementById("match-title").innerHTML=' fuck ';
                 columnResult[i]-=15;
             }
         }
@@ -923,7 +923,7 @@ if(b<=6&&a>=1){
         if (direction5 === 0) {
 
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
-                
+                document.getElementById("match-title").innerHTML=' fuck ';
                 columnResult[i]-=15;
                 
             }
@@ -931,11 +931,11 @@ if(b<=6&&a>=1){
 
     } else if (counter5 === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
-            
+            document.getElementById("match-title").innerHTML=' fuck ';
             columnResult[i]-=15;
         }
         if (gridc[a][b] === gridc[a][b - 2]){
-            
+            document.getElementById("match-title").innerHTML=' fuck ';
              columnResult[i]-=15;
         
         }
@@ -973,7 +973,7 @@ if(a>=1&&b<=6){
             if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
                     
                 
-                  
+                 document.getElementById("match-title").innerHTML=' fuck '; 
                 columnResult[i]-=15;
                 
                 
@@ -983,7 +983,7 @@ if(a>=1&&b<=6){
         if (direction2 === 0) {
             
             if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
-                
+                document.getElementById("match-title").innerHTML=' fuck ';
                 columnResult[i]-=15;
                 
             }
@@ -991,12 +991,12 @@ if(a>=1&&b<=6){
     } else if (counter2 === 2) {
         
         if (gridc[a][b] === gridc[a - 2][b + 2]) {
-           
+            document.getElementById("match-title").innerHTML=' fuck ';
             columnResult[i]-=15;
             
         } 
         if (gridc[a][b] === gridc[a + 2][b - 2]){
-            
+          document.getElementById("match-title").innerHTML=' fuck ';  
           columnResult[i]-=15;
             
         }
@@ -1030,7 +1030,7 @@ if(a>=1&&b<=6){
     if (counter6 === 1) {
         if (direction6 === 1) {
             if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
-                
+               document.getElementById("match-title").innerHTML=' fuck '; 
                columnResult[i]-=50;
                 
             }
@@ -1038,7 +1038,7 @@ if(a>=1&&b<=6){
 
         if (direction6 === 0) {
             if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
-                
+                document.getElementById("match-title").innerHTML=' fuck ';
                 columnResult[i]-=50;
                 
             }
@@ -1046,14 +1046,14 @@ if(a>=1&&b<=6){
 
     } else if (counter6 === 2) {
         if (gridc[a][b] === gridc[a + 2][b + 2]) {
-            
+            document.getElementById("match-title").innerHTML=' fuck ';
             columnResult[i]-=50;
         
         }
         
         
         if(gridc[a][b] === gridc[a - 2][b - 2]){
-        
+            document.getElementById("match-title").innerHTML=' fuck ';
             columnResult[i]-=50;
         
         }
