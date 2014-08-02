@@ -2,6 +2,7 @@
 
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 var columnsCopy = [100, 6, 6, 6, 6, 6, 6];
+var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
 
 var x, chance = 1, grid = new Array(8);//Creating 2d array
 grid[0]= new Array(9);
@@ -543,7 +544,7 @@ function turn(x) {
 
             if(columns[r]>0){
                   chance += 1;
-                }
+            }
 
 
 
@@ -577,151 +578,88 @@ function copyGrid(){
 }
 
 
+function horizontalCheck(p, q){
+    var counter = 0, direction = 5;
+    var a=p, b=q;
+       
     
-
-function AIMove(){
-    
-    var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
-
-    var toReturn=0;
-    copyGrid();
-    
-        
-    for(var i = 1; i <= 7; i++){
-        
-        copyGrid();
-        
-        
-        var l = columnsCopy[i];
-        
-
-        
-        gridc[l][i]=0;
-        
-        var counter = 0, direction = 5;
-        
-        var a=l, b=i;
-        
-        //Horizontal self checking starts
-    
-        if (gridc[a][b] === gridc[a][b + 1]) {
-            counter += 1;
-            direction = 1;
-        }
+    if (gridc[a][b] === gridc[a][b + 1]) {
+        counter += 1;
+        direction = 1;
+    }
 
 
-        if (gridc[a][b] === gridc[a][b - 1]) {
-            counter += 1;
-            direction = 0;
-        }
-        
-        if (counter === 1) {
+    if (gridc[a][b] === gridc[a][b - 1]) {
+        counter += 1;
+        direction = 0;
+    }
+
+    if (counter === 1) {
         if (direction === 1) {
                                                                 
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 
-                columnResult[i]+=11;
+                if(gridc[a][b]===0){
+                    columnResult[b]+=11;
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=10;
+                }
             }
         }
 
         if (direction === 0) {
 
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+
+                if(gridc[a][b]===0){
+                    columnResult[b]+=11;
+                }
                 
-                columnResult[i]+=11;
-                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=10;
+                }
             }
         }
-
     } else if (counter === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
-            
-            columnResult[i]+=11;
+            if(gridc[a][b]===0){
+                columnResult[b]+=11;
+            }
+
+            else if(gridc[a][b]===1){
+                columnResult[b]+=10;
+            }    
         }
         if (gridc[a][b] === gridc[a][b - 2]){
-            
-             columnResult[i]+=11;
-        
-        }
-        
+            if(gridc[a][b]===0){
+                columnResult[b]+=11;
+            }
 
-    }
-    //horizontal self checking ends
-        
-    //horizontal opponent checking starts
-        
-        gridc[l][i]=1;
-        
-            counter = 0, direction = 5;
-            if (gridc[a][b] === gridc[a][b + 1]) {
-            counter += 1;
-            direction = 1;
-        }
-
-
-        if (gridc[a][b] === gridc[a][b - 1]) {
-            counter += 1;
-            direction = 0;
-        }
-        
-        if (counter === 1) {
-        if (direction === 1) {
-                                                                
-            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
-                
-                columnResult[i]+=10;
+            else if(gridc[a][b]===1){
+                columnResult[b]+=10;
             }
         }
-
-        if (direction === 0) {
-
-            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
-                
-                columnResult[i]+=10;
-                
-            }
-        }
-
-    } else if (counter === 2) {
-        if (gridc[a][b] === gridc[a][b + 2]) {
-            
-            columnResult[i]+=10;
-        }
-        if (gridc[a][b] === gridc[a][b - 2]){
-            
-             columnResult[i]+=10;
-        
-        }
-        
-
     }
-        
-    //horizontal opponent checking ends 
-        
-    //vertical self checking starts
-        
-        gridc[l][i]=0;
-        
-        if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+}    
 
-           columnResult[i]+=11;
-        }
-        
-    //vertical self checking ends
-    //vertical opponent checking starts
-        
-        gridc[l][i]=1;
-        
-        if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
+function verticalCheck(a, b){
+    if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
-           columnResult[i]+=10;
-        }
-    //vertical opponent checking ends
-        
-    //forward slash self checking starts
-    gridc[l][i]=0;    
+            if(gridc[a][b]===0){
+                columnResult[b]+=11;
+            }
+
+            else if(gridc[a][b]===1){
+                columnResult[b]+=10;
+            }
+    }
+}
+
+function forSlashCheck(a, b){
     var counter2 = 0, direction2 = 5;
-if(a>1&&b<=6){    
+    if(a>1&&a<=6&& b>=1&&b<=6){    
         if (gridc[a][b] === gridc[a - 1][b + 1]) {
             counter2 += 1;
             direction2 = 1;
@@ -735,12 +673,14 @@ if(a>1&&b<=6){
         if (counter2 === 1) {
             if (direction2 === 1) {
                 if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+                    
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=11;
+                    }
 
-
-
-                    columnResult[i]+=11;
-
-
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=10;
+                    }
                 }
             }
 
@@ -748,185 +688,173 @@ if(a>1&&b<=6){
 
                 if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
 
-                    columnResult[i]+=11;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=11;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=10;
+                    }
 
                 }
             }
-        } else if (counter2 === 2) {
+        } 
+        
+        else if (counter2 === 2) {
 
-    if(a>=2&&b<=5){
-            if (gridc[a][b] === gridc[a - 2][b + 2]) {
+            if(a>=2&&b<=5){
+                if (gridc[a][b] === gridc[a - 2][b + 2]) {
 
-                columnResult[i]+=11;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=11;
+                    }
 
-            } 
-            if (gridc[a][b] === gridc[a + 2][b - 2]){
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=10;
+                    }
 
-              columnResult[i]+=11;
+                } 
+                if (gridc[a][b] === gridc[a + 2][b - 2]){
+
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=11;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=10;
+                    }
+
+                }
+            }
+
+        }
+        
+    }
+}
+
+function bakSlashCheck(a, b){
+    var counter3 = 0, direction3 = 5;
+    
+    if(a>1&&a<=6&& b>1&&b<=6){
+    
+    if (gridc[a][b] === gridc[a + 1][b + 1]) {
+        counter3 += 1;
+        direction3 = 1;
+    }
+        
+        if (gridc[a][b] === gridc[a - 1][b - 1]) {
+            counter3 += 1;
+            direction3 = 0;
+        }
+
+        if (counter3 === 1) {
+            if (direction3 === 1) {
+                if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]-=100;
+                    }
+
+                }
+            }
+
+            if (direction3 === 0) {
+                if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]-=100;
+                    }
+
+                }
+            }
+
+        } else if (counter3 === 2) {
+            if (gridc[a][b] === gridc[a + 2][b + 2]) {
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]-=100;
+                    }
+
+            }
+
+
+            if(gridc[a][b] === gridc[a - 2][b - 2]){
+
+                    toContinue= toContinue*0;
+                    if(gridc[a][b]===0){
+                        columnResult[b]+=100;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]-=100;
+                    }
 
             }
         }
 
     }
+}
+function AIMove(){
+    
+    
+
+    var toReturn=0;
+    copyGrid();
+    
         
-}        
+    for(var i = 1; i <= 7; i++){
         
+        copyGrid();
+        var l = columnsCopy[i];
+    //Horizontal self checking starts
+        gridc[l][i]=0;
+        horizontalCheck(l,i);
+    //horizontal opponent checking starts
+        gridc[l][i]=1;
+        horizontalCheck(l,i);
+    //horizontal opponent checking ends 
+        
+    //vertical self checking starts
+        gridc[l][i]=0;
+        verticalCheck(l, i);
+    //vertical self checking ends
+    //vertical opponent checking starts
+        gridc[l][i]=1;
+        verticalCheck(l, i);    
+    //vertical opponent checking ends
+    
+    //forward slash self checking starts
+        gridc[l][i]=0;
+        forSlashCheck(l, i);
     //forward slash self checking ends    
     //forward slash opponent checking starts
       
-    gridc[l][i]=1;    
-     counter2 = 0, direction2 = 5;
-if(a>=1&&b<=6){    
-    if (gridc[a][b] === gridc[a - 1][b + 1]) {
-        counter2 += 1;
-        direction2 = 1;
-    }
-        
-    if (gridc[a][b] === gridc[a + 1][b - 1]) {
-        counter2 += 1;
-        direction2 = 0;
-    }
-        
-    if (counter2 === 1) {
-        if (direction2 === 1) {
-            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-                    
-                
-                  
-                columnResult[i]+=10;
-                
-                
-            }
-        }
-            
-        if (direction2 === 0) {
-            
-            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
-                
-                columnResult[i]+=10;
-                
-            }
-        }
-    } else if (counter2 === 2) {
-        
-        if (gridc[a][b] === gridc[a - 2][b + 2]) {
-           
-            columnResult[i]+=10;
-            
-        } 
-        if (gridc[a][b] === gridc[a + 2][b - 2]){
-            
-          columnResult[i]+=10;
-            
-        }
-        
-    }
-}        
+        gridc[l][i]=1;    
+        forSlashCheck(l, i); 
     //forward slash opponent checking ends
         
-        
-        
     //backward slash self checking starts
-    gridc[l][i]=0;
-        
-    var counter3 = 0, direction3 = 5;
-    
-    if (gridc[a][b] === gridc[a + 1][b + 1]) {
-        counter3 += 1;
-        direction3 = 1;
-    }
-if(a>1&&b<=6){    
-    if (gridc[a][b] === gridc[a - 1][b - 1]) {
-        counter3 += 1;
-        direction3 = 0;
-    }
-    
-    if (counter3 === 1) {
-        if (direction3 === 1) {
-            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
-                
-               columnResult[i]+=11;
-                
-            }
-        }
-
-        if (direction3 === 0) {
-            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
-                
-                columnResult[i]+=11;
-                
-            }
-        }
-
-    } else if (counter3 === 2) {
-        if (gridc[a][b] === gridc[a + 2][b + 2]) {
-            
-            columnResult[i]+=11;
-        
-        }
-        
-        
-        if(gridc[a][b] === gridc[a - 2][b - 2]){
-        
-            columnResult[i]+=11;
-        
-        }
-    }
-    //backward slash self checking ends 
-}        
-        
-    //backward slash opponent checking starts
-        
-        gridc[l][i] = 1;
-        
-        counter3 = 0, direction3 = 5;
-    
-    if (gridc[a][b] === gridc[a + 1][b + 1]) {
-        counter3 += 1;
-        direction3 = 1;
-    }
-if(a>1&&b<=6){    
-    if (gridc[a][b] === gridc[a - 1][b - 1]) {
-        counter3 += 1;
-        direction3 = 0;
-    }
-    
-    if (counter3 === 1) {
-        if (direction3 === 1) {
-            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
-                
-               columnResult[i]+=10;
-                
-            }
-        }
-
-        if (direction3 === 0) {
-            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
-                
-                columnResult[i]+=10;
-                
-            }
-        }
-
-    } else if (counter3 === 2) {
-        if (gridc[a][b] === gridc[a + 2][b + 2]) {
-            
-            columnResult[i]+=10;
-        
-        }
-        
-        
-        if(gridc[a][b] === gridc[a - 2][b - 2]){
-        
-            columnResult[i]+=10;
-        
-        }
-    }
-        
+        gridc[l][i]=0;
+        bakSlashCheck(l, i);
     //backward slash opponent checking ends
 }        
     //three in a row self starts
-        
+        var a =l, b=i;
         gridc[l][i]=0;
         
         //horizontal
@@ -1138,7 +1066,7 @@ if(a>=1&&b<=6){
         
         
     }
-}        
+        
 
         
         var maxi=0;
