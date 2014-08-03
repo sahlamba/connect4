@@ -21,22 +21,6 @@
 	</head>
 
 	<body>
-		<div class="header">
-			<div class="head-element left">
-			<div>
-				<h1>Connect<span style="color: #d83018; font-size:42px;">4</span><span style="font-size:14px;font-family:Ubuntu;color:#999;"> (Beta)</span></h1>
-			</div>
-			</div>
-			<div class="head-element right">
-            <div class="share-button-wrapper">
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            </div>
-			</div>
-		</div>
-		
 		<div id="rules-lightbox" onclick="hideRules();">
 			<i class="fa fa-times fa-2x close-img"></i>
 			<div id="rules">
@@ -61,128 +45,6 @@
 				</p>
 			</div>
 		</div>
-        
-        <div class="content">
-			<div class="menu">
-				<div onclick="viewRules();"><i class="fa fa-book"></i>&nbsp; Rules</div>
-				<div onclick="reload();"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
-				<a href="developers.html"><div><i class="fa fa-flash"></i>&nbsp; Developers</div></a>
-			</div>
-			<div class="match-title">
-			<div>
-				<h2><span style="color: #d83018;" id="player1">US</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span></h2> 
-			</div>
-			</div>
-			
-            <div class="grid">
-                <div id="r1">
-                    <div id="11">
-                    </div>
-                    <div id="12">
-                    </div>
-                    <div id="13">
-                    </div>
-                    <div id="14">
-                    </div>
-                    <div id="15">
-                    </div>
-                    <div id="16">
-                    </div>
-                    <div id="17">
-                    </div>
-                </div>
-                <div id="r2">
-                    <div id="21">
-                    </div>
-                    <div id="22">
-                    </div>
-                    <div id="23">
-                    </div>
-                    <div id="24">
-                    </div>
-                    <div id="25">
-                    </div>
-                    <div id="26">
-                    </div>
-                    <div id="27">
-                    </div>
-                </div>
-                <div id="r3">
-                    <div id="31">
-                    </div>
-                    <div id="32">
-                    </div>
-                    <div id="33">
-                    </div>
-                    <div id="34">
-                    </div>
-                    <div id="35">
-                    </div>
-                    <div id="36">
-                    </div>
-                    <div id="37">
-                    </div>
-                </div>
-                <div id="r4">
-                    <div id="41">
-                    </div>
-                    <div id="42">
-                    </div>
-                    <div id="43">
-                    </div>
-                    <div id="44">
-                    </div>
-                    <div id="45">
-                    </div>
-                    <div id="46">
-                    </div>
-                    <div id="47">
-                    </div>
-                </div>
-                <div id="r5">
-                    <div id="51">
-                    </div>
-                    <div id="52">
-                    </div>
-                    <div id="53">
-                    </div>
-                    <div id="54">
-                    </div>
-                    <div id="55">
-                    </div>
-                    <div id="56">
-                    </div>
-                    <div id="57">
-                    </div>
-                </div>
-                <div id="r6">
-                    <div id="61">
-                    </div>
-                    <div id="62">
-                    </div>
-                    <div id="63">
-                    </div>
-                    <div id="64">
-                    </div>
-                    <div id="65">
-                    </div>
-                    <div id="66">
-                    </div>
-                    <div id="67">
-                    </div>
-                </div>
-            </div>
-			
-			<div class="buttons">
-                <button id="1" onclick="turn(1);">1</button>
-                <button id="2" onclick="turn(2);">2</button>
-                <button id="3" onclick="turn(3);">3</button>
-                <button id="4" onclick="turn(4);">4</button>
-                <button id="5" onclick="turn(5);">5</button>
-                <button id="6" onclick="turn(6);">6</button>
-                <button id="7" onclick="turn(7);">7</button>
-            </div>
-        </div>
 		
 		<div id="result-lightbox">
 			<div id="result">
@@ -202,14 +64,154 @@
 			</div>
 		</div>
 		
-		<div class="credits">
-			<p>We created this shit, folks!<br></p>
-			<div class="credit-image-wrapper">
-				<a href="developers.html" target="_blank"><div class="credit-image sahil"></div></a>
-				<a href="developers.html" target="_blank"><div class="credit-image aman"></div></a>
-                <a href="developers.html" target="_blank"><div class="credit-image mihir"></div></a>
+		<div id="wrapper">
+			<div class="header">
+				<div class="head-element left">
+				<div>
+					<h1>Connect<span style="color: #d83018; font-size:42px;">4</span><span style="font-size:14px;font-family:Ubuntu;color:#999;"> (Beta)</span></h1>
+				</div>
+				</div>
+				<div class="head-element right">
+				<div class="share-button-wrapper">
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_linkedin_large' displayText='LinkedIn'></span>
+				</div>
+				</div>
 			</div>
-        </div>
+
+			<div class="content">
+				<div class="menu">
+					<div onclick="viewRules();"><i class="fa fa-book"></i>&nbsp; Rules</div>
+					<div onclick="reload();"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
+					<a href="developers.html"><div><i class="fa fa-flash"></i>&nbsp; Developers</div></a>
+				</div>
+				<div class="match-title">
+				<div>
+					<h2><span style="color: #d83018;" id="player1">US</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span></h2> 
+				</div>
+				</div>
+
+				<div class="grid">
+					<div id="r1">
+						<div id="11">
+						</div>
+						<div id="12">
+						</div>
+						<div id="13">
+						</div>
+						<div id="14">
+						</div>
+						<div id="15">
+						</div>
+						<div id="16">
+						</div>
+						<div id="17">
+						</div>
+					</div>
+					<div id="r2">
+						<div id="21">
+						</div>
+						<div id="22">
+						</div>
+						<div id="23">
+						</div>
+						<div id="24">
+						</div>
+						<div id="25">
+						</div>
+						<div id="26">
+						</div>
+						<div id="27">
+						</div>
+					</div>
+					<div id="r3">
+						<div id="31">
+						</div>
+						<div id="32">
+						</div>
+						<div id="33">
+						</div>
+						<div id="34">
+						</div>
+						<div id="35">
+						</div>
+						<div id="36">
+						</div>
+						<div id="37">
+						</div>
+					</div>
+					<div id="r4">
+						<div id="41">
+						</div>
+						<div id="42">
+						</div>
+						<div id="43">
+						</div>
+						<div id="44">
+						</div>
+						<div id="45">
+						</div>
+						<div id="46">
+						</div>
+						<div id="47">
+						</div>
+					</div>
+					<div id="r5">
+						<div id="51">
+						</div>
+						<div id="52">
+						</div>
+						<div id="53">
+						</div>
+						<div id="54">
+						</div>
+						<div id="55">
+						</div>
+						<div id="56">
+						</div>
+						<div id="57">
+						</div>
+					</div>
+					<div id="r6">
+						<div id="61">
+						</div>
+						<div id="62">
+						</div>
+						<div id="63">
+						</div>
+						<div id="64">
+						</div>
+						<div id="65">
+						</div>
+						<div id="66">
+						</div>
+						<div id="67">
+						</div>
+					</div>
+				</div>
+
+				<div class="buttons">
+					<button id="1" onclick="turn(1);">1</button>
+					<button id="2" onclick="turn(2);">2</button>
+					<button id="3" onclick="turn(3);">3</button>
+					<button id="4" onclick="turn(4);">4</button>
+					<button id="5" onclick="turn(5);">5</button>
+					<button id="6" onclick="turn(6);">6</button>
+					<button id="7" onclick="turn(7);">7</button>
+				</div>
+			</div>
+
+			<div class="credits">
+				<p>We created this shit, folks!<br></p>
+				<div class="credit-image-wrapper">
+					<a href="developers.html" target="_blank"><div class="credit-image sahil"></div></a>
+					<a href="developers.html" target="_blank"><div class="credit-image aman"></div></a>
+					<a href="developers.html" target="_blank"><div class="credit-image mihir"></div></a>
+				</div>
+			</div>
+		</div>
 
         <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
         <script src="js/play.js" type="text/javascript"></script>
