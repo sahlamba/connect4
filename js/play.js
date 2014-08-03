@@ -528,7 +528,7 @@ function turn(x) {
         
         var r=AIMove();
         p = columns[r];
-    if(columns[r]>1){
+    if(columns[r]>=1){
             grid[p][r] = 0;
 
             disableButtons();
@@ -559,6 +559,8 @@ function turn(x) {
 
             columns[r]--;
             }
+    
+            drawCondition();
         
 }
 
@@ -578,9 +580,8 @@ function copyGrid(){
 }
 
 
-function horizontalCheck(p, q){
+function horizontalCheck(a, b, c){
     var counter = 0, direction = 5;
-    var a=p, b=q;
        
     
     if (gridc[a][b] === gridc[a][b + 1]) {
@@ -600,11 +601,11 @@ function horizontalCheck(p, q){
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 
                 if(gridc[a][b]===0){
-                    columnResult[b]+=11;
+                    columnResult[b]+=(c*11);
                 }
                 
                 else if(gridc[a][b]===1){
-                    columnResult[b]+=10;
+                    columnResult[b]+=(c*10);
                 }
             }
         }
@@ -614,52 +615,52 @@ function horizontalCheck(p, q){
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
 
                 if(gridc[a][b]===0){
-                    columnResult[b]+=11;
+                    columnResult[b]+=(c*11);
                 }
                 
                 else if(gridc[a][b]===1){
-                    columnResult[b]+=10;
+                    columnResult[b]+=(c*10);
                 }
             }
         }
     } else if (counter === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
             if(gridc[a][b]===0){
-                columnResult[b]+=11;
-            }
-
-            else if(gridc[a][b]===1){
-                columnResult[b]+=10;
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
             }    
         }
         if (gridc[a][b] === gridc[a][b - 2]){
             if(gridc[a][b]===0){
-                columnResult[b]+=11;
+                    columnResult[b]+=(c*11);
             }
-
+                
             else if(gridc[a][b]===1){
-                columnResult[b]+=10;
+                    columnResult[b]+=(c*10);
             }
         }
     }
 }    
 
-function verticalCheck(a, b){
+function verticalCheck(a, b, c){
     if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
             if(gridc[a][b]===0){
-                columnResult[b]+=11;
-            }
-
-            else if(gridc[a][b]===1){
-                columnResult[b]+=10;
-            }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
     }
 }
 
-function forSlashCheck(a, b){
+function forSlashCheck(a, b, c){
     var counter2 = 0, direction2 = 5;
-    if(a>1&&a<=6&& b>=1&&b<=6){    
+    if(a>1&&a<=6&& b>=1&&b<6){    
         if (gridc[a][b] === gridc[a - 1][b + 1]) {
             counter2 += 1;
             direction2 = 1;
@@ -675,12 +676,12 @@ function forSlashCheck(a, b){
                 if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
                     
                     if(gridc[a][b]===0){
-                        columnResult[b]+=11;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]+=10;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
                 }
             }
 
@@ -689,12 +690,12 @@ function forSlashCheck(a, b){
                 if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
 
                     if(gridc[a][b]===0){
-                        columnResult[b]+=11;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]+=10;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
                 }
             }
@@ -706,23 +707,23 @@ function forSlashCheck(a, b){
                 if (gridc[a][b] === gridc[a - 2][b + 2]) {
 
                     if(gridc[a][b]===0){
-                        columnResult[b]+=11;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]+=10;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
                 } 
                 if (gridc[a][b] === gridc[a + 2][b - 2]){
 
                     if(gridc[a][b]===0){
-                        columnResult[b]+=11;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]+=10;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
                 }
             }
@@ -732,7 +733,7 @@ function forSlashCheck(a, b){
     }
 }
 
-function bakSlashCheck(a, b){
+function bakSlashCheck(a, b, c){
     var counter3 = 0, direction3 = 5;
     
     if(a>1&&a<=6&& b>1&&b<=6){
@@ -751,14 +752,14 @@ function bakSlashCheck(a, b){
             if (direction3 === 1) {
                 if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
 
-                    toContinue= toContinue*0;
+                    
                     if(gridc[a][b]===0){
-                        columnResult[b]+=100;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]-=100;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
                 }
             }
@@ -766,14 +767,14 @@ function bakSlashCheck(a, b){
             if (direction3 === 0) {
                 if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
 
-                    toContinue= toContinue*0;
+                    
                     if(gridc[a][b]===0){
-                        columnResult[b]+=100;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]-=100;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
                 }
             }
@@ -781,28 +782,26 @@ function bakSlashCheck(a, b){
         } else if (counter3 === 2) {
             if (gridc[a][b] === gridc[a + 2][b + 2]) {
 
-                    toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnResult[b]+=100;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]-=100;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
             }
 
 
             if(gridc[a][b] === gridc[a - 2][b - 2]){
 
-                    toContinue= toContinue*0;
                     if(gridc[a][b]===0){
-                        columnResult[b]+=100;
-                    }
-
-                    else if(gridc[a][b]===1){
-                        columnResult[b]-=100;
-                    }
+                    columnResult[b]+=(c*11);
+                }
+                
+                else if(gridc[a][b]===1){
+                    columnResult[b]+=(c*10);
+                }
 
             }
         }
@@ -823,265 +822,77 @@ function AIMove(){
         var l = columnsCopy[i];
     //Horizontal self checking starts
         gridc[l][i]=0;
-        horizontalCheck(l,i);
+        horizontalCheck(l,i,1);
     //horizontal opponent checking starts
         gridc[l][i]=1;
-        horizontalCheck(l,i);
+        horizontalCheck(l,i, 1);
     //horizontal opponent checking ends 
         
     //vertical self checking starts
         gridc[l][i]=0;
-        verticalCheck(l, i);
+        verticalCheck(l, i, 1);
     //vertical self checking ends
     //vertical opponent checking starts
         gridc[l][i]=1;
-        verticalCheck(l, i);    
+        verticalCheck(l, i, 1);    
     //vertical opponent checking ends
     
     //forward slash self checking starts
         gridc[l][i]=0;
-        forSlashCheck(l, i);
+        forSlashCheck(l, i, 1);
     //forward slash self checking ends    
     //forward slash opponent checking starts
       
         gridc[l][i]=1;    
-        forSlashCheck(l, i); 
+        forSlashCheck(l, i, 1); 
     //forward slash opponent checking ends
         
     //backward slash self checking starts
         gridc[l][i]=0;
-        bakSlashCheck(l, i);
-    //backward slash opponent checking ends
-}        
+        bakSlashCheck(l, i, 1);
+    //backward slash self checking ends
+        
+    //backward slashopponent checking starts
+        gridc[l][i]=1;
+        bakSlashCheck(l, i, 1);
+    //backward slash opponent checking ends        
     //three in a row self starts
-        var a =l, b=i;
+
         gridc[l][i]=0;
         
-        //horizontal
-        var counter4=0, emptyCounter=0, direction4=5;
-        if((gridc[a][b]===gridc[a][b-1]||gridc[a][b+1])&&(gridc[a][b]===gridc[a][b-2]||gridc[a][b]===gridc[a][b+2])){
-        
-            if(gridc[a][b-2]!==1||gridc[a][b-2]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b-1]!==1||gridc[a][b-1]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b+2]!==1||gridc[a][b+2]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b+1]!==1||gridc[a][b+1]!==0){
-                emptyCounter++;
-            }
-        
-        if(emptyCounter===2){
-                columnResult[i]+=9;
-            }
-            
-        }
-        
-        
-    //three in a row self ends   
-    
-    //just above check start
-        
-        
-        a=(l-1), b=(i);
-if(b<=6&&a>=1){
-        gridc[l][i]=1;
-        gridc[a][b]=0;
-        
-        
-    //horizontal opponent checking starts
-        
-      
-        
-            var counter5 = 0, direction5 = 5;
-            if (gridc[a][b] === gridc[a][b + 1]) {
-            counter5 += 1;
-            direction5 = 1;
-        }
-
-
-        if (gridc[a][b] === gridc[a][b - 1]) {
-            counter5 += 1;
-            direction5 = 0;
-        }
-        
-        if (counter5 === 1) {
-        if (direction5 === 1) {
-                                                                
-            if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
-                document.getElementById("match-title").innerHTML=' fuck ';
-                columnResult[i]-=15;
-            }
-        }
-
-        if (direction5 === 0) {
-
-            if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
-                document.getElementById("match-title").innerHTML=' fuck ';
-                columnResult[i]-=15;
-                
-            }
-        }
-
-    } else if (counter5 === 2) {
-        if (gridc[a][b] === gridc[a][b + 2]) {
-            document.getElementById("match-title").innerHTML=' fuck ';
-            columnResult[i]-=15;
-        }
-        if (gridc[a][b] === gridc[a][b - 2]){
-            document.getElementById("match-title").innerHTML=' fuck ';
-             columnResult[i]-=15;
-        
-        }
-        
-
-    }
- } 
-        
-    //horizontal opponent checking ends 
-    //forward slash opponnent checking starts
+//        for(var j=1; j<=7; j++){
+//            l=columns[j];
+//            gridc[l][j]=1;
+//            horizontalCheck(l, j, -0.25);
+//            verticalCheck(l, j, -0.25);
+//            forSlashCheck(l, j, -0.25);
+//            bakSlashCheck(l, j, -0.25);
+//            
+//            
+//        }
     
         
     
-    a=l-1, b=i; 
-if(a>=1&&b<=6){
-    gridc[l][i]=0;
-    gridc[l-1][i]=1; 
-       
-     
-    counter2 = 0, direction2 = 5;
-    
-    if (gridc[a][b] === gridc[a - 1][b + 1])
-    {
-        counter2 += 1;
-        direction2 = 1;
-    }
         
-    if (gridc[a][b] === gridc[a + 1][b - 1]) {
-        counter2 += 1;
-        direction2 = 0;
-    }
-        
-    if (counter2 === 1) {
-        if (direction2 === 1) {
-            if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-                    
-                
-                 document.getElementById("match-title").innerHTML=' fuck '; 
-                columnResult[i]-=15;
-                
-                
-            }
-        }
-            
-        if (direction2 === 0) {
-            
-            if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
-                document.getElementById("match-title").innerHTML=' fuck ';
-                columnResult[i]-=15;
-                
-            }
-        }
-    } else if (counter2 === 2) {
-        
-        if (gridc[a][b] === gridc[a - 2][b + 2]) {
-            document.getElementById("match-title").innerHTML=' fuck ';
-            columnResult[i]-=15;
-            
-        } 
-        if (gridc[a][b] === gridc[a + 2][b - 2]){
-          document.getElementById("match-title").innerHTML=' fuck ';  
-          columnResult[i]-=15;
-            
-        }
-        
-    }
-        
-    //forward slash opponnent checking end    
-}        
-        
-        
-    //backward slash checking starts
-         
-        a=l-1, b=i;
-
-        
-        var counter6 = 0, direction6 = 5;
- if(a>1&&b<=6){    
-     
-    gridc[l][i]=0;
-    gridc[l-1][i]=1;
-    if (gridc[a][b] === gridc[a + 1][b + 1]) {
-        counter6 += 1;
-        direction6 = 1;
-    }
-   
-    if (gridc[a][b] === gridc[a - 1][b - 1]) {
-        counter6 += 1;
-        direction6 = 0;
-    }
-    
-    if (counter6 === 1) {
-        if (direction6 === 1) {
-            if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
-               document.getElementById("match-title").innerHTML=' fuck '; 
-               columnResult[i]-=50;
-                
-            }
-        }
-
-        if (direction6 === 0) {
-            if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
-                document.getElementById("match-title").innerHTML=' fuck ';
-                columnResult[i]-=50;
-                
-            }
-        }
-
-    } else if (counter6 === 2) {
-        if (gridc[a][b] === gridc[a + 2][b + 2]) {
-            document.getElementById("match-title").innerHTML=' fuck ';
-            columnResult[i]-=50;
-        
-        }
-        
-        
-        if(gridc[a][b] === gridc[a - 2][b - 2]){
-            document.getElementById("match-title").innerHTML=' fuck ';
-            columnResult[i]-=50;
-        
-        }
-    }
-        
-        
-        
-    //backward slash checking ends    
-    //just above check end    
-        
-        
-    }
-        
-
+}
         
         var maxi=0;
         
         for(var j=1; j<=7; j++){
+            
              
             if(columnResult[j]>maxi){
                 if(columns[j]>=1){
                     maxi=j;
+                    
                 }
         
             }
+            document.getElementById("match-title").innerHTML=''+columnResult[maxi];
         }
         if(maxi !== 0 && maxi<=7 && maxi >=1 && columns[maxi]>0){
             return maxi;
+            
         }
         else{
             var checker =0;
@@ -1089,8 +900,9 @@ if(a>=1&&b<=6){
                 var k= Math.floor((Math.random() * 7) + 1);
 
                 if(columns[k]>0){
-                    return k;
                     checker =1;
+                    
+                    return k;
                 }
 
             
