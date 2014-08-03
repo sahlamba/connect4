@@ -106,7 +106,6 @@ and (min-device-width: 801px) {
 		border-radius: 10px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
-		border: 1px solid #555;
 		border-bottom: 10px solid #555;
 	}
 
@@ -609,12 +608,12 @@ and (min-device-width: 801px) {
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: #20c0b0;
+        background: #997100;
         transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: #008070;
+        background: #bb9300;
         transform:rotate(90deg);
     }
     75%{
@@ -639,12 +638,12 @@ and (min-device-width: 801px) {
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: #20c0b0;
+        background: #997100;
         -webkit-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: #008070;
+        background: #bb9300;
         -webkit-transform:rotate(90deg);
     }
     75%{
@@ -669,12 +668,12 @@ and (min-device-width: 801px) {
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: #20c0b0;
+        background: #997100;
         -moz-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: #008070;
+        background: #bb9300;
         -moz-transform:rotate(90deg);
     }
     75%{
@@ -699,12 +698,12 @@ and (min-device-width: 801px) {
     }
     25%{
         border-radius: 50% 0 0 0;
-        background: #20c0b0;
+        background: #997100;
         -o-transform:rotate(45deg);
     }
     50%{
         border-radius: 50% 50% 0 0;
-        background: #008070;
+        background: #bb9300;
         -o-transform:rotate(90deg);
     }
     75%{
