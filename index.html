@@ -80,6 +80,27 @@
 				</div>
 				</div>
 			</div>
+			
+			<div id="game-options">
+				<div>
+					<form id="player-form" onsubmit="setGameOptions();">
+						<h2>Select Game Options</h2>
+						<p><br><br>What would you like to be called?</p>
+						<input name="player_name" type="text" size="20" maxlength="40" placeholder="Player Name" value="">
+						<p><br>How easy do you want us to be on you?</p>
+						<select>
+							<option>Easy</option>
+							<option>Intermediate</option>
+							<option>Hard</option>
+						</select>
+						<br>
+<!--						<input type="submit" value="Play!" class="bttn">-->
+					</form>
+					<div class="bttn" onclick="hideOptions();">
+						<i class="fa fa-play-circle-o fa-lg"></i>&nbsp;Play!
+					</div>
+				</div>
+			</div>
 
 			<div class="content">
 				<div class="menu">
