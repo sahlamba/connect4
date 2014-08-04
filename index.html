@@ -83,20 +83,17 @@
 			
 			<div id="game-options">
 				<div>
-					<form id="player-form" onsubmit="setGameOptions();">
-						<h2>Select Game Options</h2>
-						<p><br><br>What would you like to be called?</p>
-						<input name="player_name" type="text" size="20" maxlength="40" placeholder="Player Name" value="">
-						<p><br>How easy do you want us to be on you?</p>
-						<select>
-							<option>Easy</option>
-							<option>Intermediate</option>
-							<option>Hard</option>
-						</select>
-						<br>
-<!--						<input type="submit" value="Play!" class="bttn">-->
-					</form>
-					<div class="bttn" onclick="hideOptions();">
+					<h2>Select Game Options</h2>
+					<p><br><br>What would you like to be called?</p>
+					<input id="player-name" type="text" size="20" maxlength="40" placeholder="Player Name" value="" tabindex="1">
+					<p><br>How easy do you want us to be on you?</p>
+					<select tabindex="2">
+						<option>Easy</option>
+						<option>Intermediate</option>
+						<option>Hard</option>
+					</select>
+					<br>
+					<div class="bttn" onclick="setGameOptions();" tabindex="3">
 						<i class="fa fa-play-circle-o fa-lg"></i>&nbsp;Play!
 					</div>
 				</div>
@@ -104,13 +101,13 @@
 
 			<div class="content">
 				<div class="menu">
-					<div onclick="viewRules();"><i class="fa fa-book"></i>&nbsp; Rules</div>
-					<div onclick="reload();"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
-					<a href="developers.html"><div><i class="fa fa-flash"></i>&nbsp; Developers</div></a>
+					<div onclick="viewRules();" tabindex="4"><i class="fa fa-book"></i>&nbsp; Rules</div>
+					<div onclick="reload();" tabindex="5"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
+					<a href="developers.html" tabindex="6"><div><i class="fa fa-flash"></i>&nbsp; Developers</div></a>
 				</div>
 				<div class="match-title">
 				<div>
-					<h2><span style="color: #d83018;" id="player1">US</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span></h2> 
+					<h2></h2>
 				</div>
 				</div>
 

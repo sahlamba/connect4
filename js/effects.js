@@ -1,4 +1,4 @@
-/*global $, confirm*/
+/*global $, confirm, console*/
 
 function reload() {
 	"use strict";
@@ -15,12 +15,12 @@ var rules_light_box_flag = 0;
 function setGameOptions() {
 	"use strict";
 	
-	var playerForm = document.forms[0], playerName = playerForm.elements[0].value;
-	document.getElementById('match-title').innerHTML = '<div><h2><span style="color: #d83018;" id="player1">' + playerName + '</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span></h2></div>';
-}
-
-function hideOptions() {
-	"use strict";
+	var playerName = $('#player-name').value;
+	if (playerName === null) {
+		playerName = "You";
+	}
+	
+	$('.match-title div h2').innerHTML = '<span style="color: #d83018;" id="player1">' + playerName + '</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span>';
 	
 	$('#game-options').fadeOut(200);
 }

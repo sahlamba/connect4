@@ -110,14 +110,11 @@ and (min-device-width: 801px) {
 		#game-options > div {
 			width: 600px;
 			margin: 0 auto;
+			padding: 20px 0;
 			text-align: center;
 		}
 	
-	#player-form {
-		margin: 20px auto;
-	}
-	
-	#player-form input[type="text"] {
+	#player-name {
 		padding: 10px;
 		border-radius: 5px;
 		border: 1px solid #ddd;
@@ -125,7 +122,7 @@ and (min-device-width: 801px) {
 		color: #333;
 	}
 	
-	#player-form select {
+	select {
 		padding: 10px;
 		border-radius: 5px;
 		border: 1px solid #ddd;
