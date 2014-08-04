@@ -528,7 +528,8 @@ function turn(x) {
         return;
     }
 
-
+    columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
+    
     var r = AIMove();
     
     p = columns[r];
@@ -859,7 +860,7 @@ function AIMove(){
 
         gridc[l][i] = 0;
         
-        columnsCopy[i]--;                                   // columnsCopy or columns ?
+        columnsCopy[i]--;
         
         for(var j=1; j<=7; j++){
             l=columnsCopy[j];
