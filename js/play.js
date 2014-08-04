@@ -856,21 +856,22 @@ function AIMove(){
         gridc[l][i]=1;
         bakSlashCheck(l, i, 1);
     //backward slash opponent checking ends        
-    //three in a row self starts
+    //one move ahead starts
 
         gridc[l][i]=0;
-        
-//        for(var j=1; j<=7; j++){
-//            l=columns[j];
-//            gridc[l][j]=1;
-//            horizontalCheck(l, j, -0.25);
-//            verticalCheck(l, j, -0.25);
-//            forSlashCheck(l, j, -0.25);
-//            bakSlashCheck(l, j, -0.25);
-//            
-//            
-//        }
+        columnsCopy[i]--;
+        for(var j=1; j<=7; j++){
+            l=columnsCopy[j];
+            gridc[l][j]=1;
+            horizontalCheck(l, j, -0.25);
+            verticalCheck(l, j, -0.25);
+            forSlashCheck(l, j, -0.25);
+            bakSlashCheck(l, j, -0.25);
+            
+            
+        }
     
+        //one move ahead ends
         
     
         
