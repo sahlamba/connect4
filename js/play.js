@@ -527,7 +527,7 @@ function turn(x) {
         
         var r=AIMove();
         p = columns[r];
-    if(columns[r]>1){
+    if(columns[r]>=1){
             grid[p][r] = 0;
 
             disableButtons();
@@ -558,7 +558,8 @@ function turn(x) {
 
             columns[r]--;
             }
-        
+    
+        drawCondition();
 }
 
 
