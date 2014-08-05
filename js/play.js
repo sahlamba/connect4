@@ -621,7 +621,7 @@ function AIMove(){
                                                                 
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 
-                columnResult[i]+=11;
+                columnResult[i]+=50;
             }
         }
 
@@ -629,7 +629,7 @@ function AIMove(){
 
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                 
-                columnResult[i]+=11;
+                columnResult[i]+=50;
                 
             }
         }
@@ -637,11 +637,11 @@ function AIMove(){
     } else if (counter === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
             
-            columnResult[i]+=11;
+            columnResult[i]+=50;
         }
         if (gridc[a][b] === gridc[a][b - 2]){
             
-             columnResult[i]+=11;
+             columnResult[i]+=50;
         
         }
         
@@ -670,7 +670,7 @@ function AIMove(){
                                                                 
             if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                 
-                columnResult[i]+=10;
+                columnResult[i]+=20;
             }
         }
 
@@ -678,7 +678,7 @@ function AIMove(){
 
             if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                 
-                columnResult[i]+=10;
+                columnResult[i]+=20;
                 
             }
         }
@@ -686,11 +686,11 @@ function AIMove(){
     } else if (counter === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
             
-            columnResult[i]+=10;
+            columnResult[i]+=20;
         }
         if (gridc[a][b] === gridc[a][b - 2]){
             
-             columnResult[i]+=10;
+             columnResult[i]+=20;
         
         }
         
@@ -705,7 +705,7 @@ function AIMove(){
         
         if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
-           columnResult[i]+=11;
+           columnResult[i]+=50;
         }
         
     //vertical self checking ends
@@ -739,7 +739,7 @@ if(a>1&&b<=6){
 
 
 
-                    columnResult[i]+=11;
+                    columnResult[i]+=50;
 
 
                 }
@@ -749,7 +749,7 @@ if(a>1&&b<=6){
 
                 if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
 
-                    columnResult[i]+=11;
+                    columnResult[i]+=50;
 
                 }
             }
@@ -758,12 +758,12 @@ if(a>1&&b<=6){
     if(a>=2&&b<=5){
             if (gridc[a][b] === gridc[a - 2][b + 2]) {
 
-                columnResult[i]+=11;
+                columnResult[i]+=50;
 
             } 
             if (gridc[a][b] === gridc[a + 2][b - 2]){
 
-              columnResult[i]+=11;
+              columnResult[i]+=50;
 
             }
         }
@@ -794,7 +794,7 @@ if(a>=1&&b<=6){
                     
                 
                   
-                columnResult[i]+=10;
+                columnResult[i]+=20;
                 
                 
             }
@@ -804,7 +804,7 @@ if(a>=1&&b<=6){
             
             if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                 
-                columnResult[i]+=10;
+                columnResult[i]+=20;
                 
             }
         }
@@ -812,12 +812,12 @@ if(a>=1&&b<=6){
         
         if (gridc[a][b] === gridc[a - 2][b + 2]) {
            
-            columnResult[i]+=10;
+            columnResult[i]+=20;
             
         } 
         if (gridc[a][b] === gridc[a + 2][b - 2]){
             
-          columnResult[i]+=10;
+          columnResult[i]+=20;
             
         }
         
@@ -846,7 +846,7 @@ if(a>1&&b<=6){
         if (direction3 === 1) {
             if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                 
-               columnResult[i]+=11;
+               columnResult[i]+=50;
                 
             }
         }
@@ -854,7 +854,7 @@ if(a>1&&b<=6){
         if (direction3 === 0) {
             if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                 
-                columnResult[i]+=11;
+                columnResult[i]+=50;
                 
             }
         }
@@ -862,14 +862,14 @@ if(a>1&&b<=6){
     } else if (counter3 === 2) {
         if (gridc[a][b] === gridc[a + 2][b + 2]) {
             
-            columnResult[i]+=11;
+            columnResult[i]+=50;
         
         }
         
         
         if(gridc[a][b] === gridc[a - 2][b - 2]){
         
-            columnResult[i]+=11;
+            columnResult[i]+=50;
         
         }
     }
@@ -896,7 +896,7 @@ if(a>1&&b<=6){
         if (direction3 === 1) {
             if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                 
-               columnResult[i]+=10;
+               columnResult[i]+=20;
                 
             }
         }
@@ -904,7 +904,7 @@ if(a>1&&b<=6){
         if (direction3 === 0) {
             if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                 
-                columnResult[i]+=10;
+                columnResult[i]+=20;
                 
             }
         }
@@ -912,14 +912,14 @@ if(a>1&&b<=6){
     } else if (counter3 === 2) {
         if (gridc[a][b] === gridc[a + 2][b + 2]) {
             
-            columnResult[i]+=10;
+            columnResult[i]+=20;
         
         }
         
         
         if(gridc[a][b] === gridc[a - 2][b - 2]){
         
-            columnResult[i]+=10;
+            columnResult[i]+=20;
         
         }
     }
@@ -928,33 +928,33 @@ if(a>1&&b<=6){
 }        
     //three in a row self starts
         
-        gridc[l][i]=0;
-        
-        //horizontal
-        var counter4=0, emptyCounter=0, direction4=5;
-        if((gridc[a][b]===gridc[a][b-1]||gridc[a][b+1])&&(gridc[a][b]===gridc[a][b-2]||gridc[a][b]===gridc[a][b+2])){
-        
-            if(gridc[a][b-2]!==1||gridc[a][b-2]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b-1]!==1||gridc[a][b-1]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b+2]!==1||gridc[a][b+2]!==0){
-                emptyCounter++;
-            }
-            
-            if(gridc[a][b+1]!==1||gridc[a][b+1]!==0){
-                emptyCounter++;
-            }
-        
-        if(emptyCounter===2){
-                columnResult[i]+=9;
-            }
-            
-        }
+//        gridc[l][i]=0;
+//        
+//        //horizontal
+//        var counter4=0, emptyCounter=0, direction4=5;
+//        if((gridc[a][b]===gridc[a][b-1]||gridc[a][b+1])&&(gridc[a][b]===gridc[a][b-2]||gridc[a][b]===gridc[a][b+2])){
+//        
+//            if(gridc[a][b-2]!==1||gridc[a][b-2]!==0){
+//                emptyCounter++;
+//            }
+//            
+//            if(gridc[a][b-1]!==1||gridc[a][b-1]!==0){
+//                emptyCounter++;
+//            }
+//            
+//            if(gridc[a][b+2]!==1||gridc[a][b+2]!==0){
+//                emptyCounter++;
+//            }
+//            
+//            if(gridc[a][b+1]!==1||gridc[a][b+1]!==0){
+//                emptyCounter++;
+//            }
+//        
+//        if(emptyCounter===2){
+//                columnResult[i]+=9;
+//            }
+//            
+//        }
         
         
     //three in a row self ends   
@@ -1104,7 +1104,7 @@ if(a>=1&&b<=6){
         if (direction6 === 1) {
             if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                 
-               columnResult[i]-=50;
+               columnResult[i]-=15;
                 
             }
         }
@@ -1112,7 +1112,7 @@ if(a>=1&&b<=6){
         if (direction6 === 0) {
             if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                 
-                columnResult[i]-=50;
+                columnResult[i]-=15;
                 
             }
         }
@@ -1120,14 +1120,14 @@ if(a>=1&&b<=6){
     } else if (counter6 === 2) {
         if (gridc[a][b] === gridc[a + 2][b + 2]) {
             
-            columnResult[i]-=50;
+            columnResult[i]-=15;
         
         }
         
         
         if(gridc[a][b] === gridc[a - 2][b - 2]){
         
-            columnResult[i]-=50;
+            columnResult[i]-=15;
         
         }
     }
@@ -1164,14 +1164,7 @@ if(a>=1&&b<=6){
                 if(columns[k]>0){
                     return k;
                     checker =1;
-                }
-
-            
+                }   
             }    
         }
-        
-    
-    
-    
-    
 }
