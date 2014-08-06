@@ -577,7 +577,7 @@ function copyGrid(){
         }
         
     }
-    var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
+    
 }
 
 
@@ -603,10 +603,12 @@ function horizontalCheck(a, b, c){
                 
                 if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
+                    toContinue=0;
                 }
             }
         }
@@ -617,30 +619,36 @@ function horizontalCheck(a, b, c){
 
                 if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
+                    toContinue=0;
                 }
             }
         }
     } else if (counter === 2) {
         if (gridc[a][b] === gridc[a][b + 2]) {
-            if(gridc[a][b]===0){
+                if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
-            }    
+                    toContinue=0;
+                }    
         }
         if (gridc[a][b] === gridc[a][b - 2]){
             if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
+                columnResult[b]+=(c*11);
+                toContinue=0;
             }
-                
+
             else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
+                columnResult[b]+=(c*10);
+                toContinue=0;
             }
         }
     }
@@ -649,12 +657,14 @@ function horizontalCheck(a, b, c){
 function verticalCheck(a, b, c){
     if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
-            if(gridc[a][b]===0){
+                if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
+                    toContinue=0;
                 }
     }
 }
@@ -677,12 +687,14 @@ function forSlashCheck(a, b, c){
                 if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
                     
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
                 }
             }
 
@@ -691,12 +703,14 @@ function forSlashCheck(a, b, c){
                 if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
 
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
 
                 }
             }
@@ -708,23 +722,27 @@ function forSlashCheck(a, b, c){
                 if (gridc[a][b] === gridc[a - 2][b + 2]) {
 
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
 
                 } 
                 if (gridc[a][b] === gridc[a + 2][b - 2]){
 
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
 
                 }
             }
@@ -755,12 +773,14 @@ function bakSlashCheck(a, b, c){
 
                     
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
 
                 }
             }
@@ -770,12 +790,14 @@ function bakSlashCheck(a, b, c){
 
                     
                     if(gridc[a][b]===0){
-                    columnResult[b]+=(c*11);
-                }
-                
-                else if(gridc[a][b]===1){
-                    columnResult[b]+=(c*10);
-                }
+                        columnResult[b]+=(c*11);
+                        toContinue=0;
+                    }
+
+                    else if(gridc[a][b]===1){
+                        columnResult[b]+=(c*10);
+                        toContinue=0;
+                    }
 
                 }
             }
@@ -783,12 +805,14 @@ function bakSlashCheck(a, b, c){
         } else if (counter3 === 2) {
             if (gridc[a][b] === gridc[a + 2][b + 2]) {
 
-                    if(gridc[a][b]===0){
+                 if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
+                    toContinue=0;
                 }
 
             }
@@ -796,12 +820,14 @@ function bakSlashCheck(a, b, c){
 
             if(gridc[a][b] === gridc[a - 2][b - 2]){
 
-                    if(gridc[a][b]===0){
+                if(gridc[a][b]===0){
                     columnResult[b]+=(c*11);
+                    toContinue=0;
                 }
                 
                 else if(gridc[a][b]===1){
                     columnResult[b]+=(c*10);
+                    toContinue=0;
                 }
 
             }
@@ -811,7 +837,8 @@ function bakSlashCheck(a, b, c){
 }
 function AIMove(){
     
-    
+    var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
+    toContinue=1;
 
     var toReturn=0;
     copyGrid();
@@ -819,8 +846,10 @@ function AIMove(){
         
     for(var i = 1; i <= 7; i++){
         
+        
         copyGrid();
         var l = columnsCopy[i];
+    
     //Horizontal self checking starts
         gridc[l][i]=0;
         horizontalCheck(l,i,1);
@@ -858,20 +887,21 @@ function AIMove(){
         bakSlashCheck(l, i, 1);
     //backward slash opponent checking ends        
     //one move ahead starts
+//        if(toContinue!=0){
+//            gridc[l][i]=0;
+//            columnsCopy[i]--;
+//            for(var j=1; j<=7; j++){
+//                l=columnsCopy[j];
+//                gridc[l][j]=1;
+//                horizontalCheck(l, j, -0.25);
+//                verticalCheck(l, j, -0.25);
+//                forSlashCheck(l, j, -0.25);
+//                bakSlashCheck(l, j, -0.25);
 //
-//        gridc[l][i]=0;
-//        columnsCopy[i]--;
-//        for(var j=1; j<=7; j++){
-//            l=columnsCopy[j];
-//            gridc[l][j]=1;
-//            horizontalCheck(l, j, -0.25);
-//            verticalCheck(l, j, -0.25);
-//            forSlashCheck(l, j, -0.25);
-//            bakSlashCheck(l, j, -0.25);
-            
-//            
+//
+//            }
 //        }
-//    
+    
         //one move ahead ends
         
     
@@ -890,7 +920,7 @@ function AIMove(){
                 }
         
             }
-            document.getElementById("match-title").innerHTML=''+columnResult[maxi];
+
         }
         if(maxi !== 0 && maxi<=7 && maxi >=1 && columns[maxi]>0){
             return maxi;
