@@ -1354,49 +1354,49 @@ function AIMove(){
                                 
                               
                                 
-                                var counter5 = 0, direction5 = 5;
-                                if (gridc[a][b] === gridc[a][b + 1]) {
-                                    counter5 += 1;
-                                    direction5 = 1;
-                                }
+                            var counter5 = 0, direction5 = 5;
+                            if (gridc[a][b] === gridc[a][b + 1]) {
+                                counter5 += 1;
+                                direction5 = 1;
+                            }
 
 
-                                if (gridc[a][b] === gridc[a][b - 1]) {
-                                    counter5 += 1;
-                                    direction5 = 0;
-                                }
-                                
-                                if (counter5 === 1) {
-                                    if (direction5 === 1) {
-                                                                                            
-                                        if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
-                                            
-                                            columnResult[i]+=8;
-                                        }
-                                    }
-
-                                    if (direction5 === 0) {
-
-                                        if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
-                                            
-                                            columnResult[i]+=8;
-                                            
-                                        }
-                                    }
-
-                                } else if (counter5 === 2) {
-                                    if (gridc[a][b] === gridc[a][b + 2]) {
+                            if (gridc[a][b] === gridc[a][b - 1]) {
+                                counter5 += 1;
+                                direction5 = 0;
+                            }
+                            
+                            if (counter5 === 1) {
+                                if (direction5 === 1) {
+                                                                                        
+                                    if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                                         
                                         columnResult[i]+=8;
                                     }
-                                    if (gridc[a][b] === gridc[a][b - 2]){
-                                        
-                                         columnResult[i]+=8;
-                                    
-                                    }
-                                    
-
                                 }
+
+                                if (direction5 === 0) {
+
+                                    if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+                                        
+                                        columnResult[i]+=8;
+                                        
+                                    }
+                                }
+
+                            } else if (counter5 === 2) {
+                                if (gridc[a][b] === gridc[a][b + 2]) {
+                                    
+                                    columnResult[i]+=8;
+                                }
+                                if (gridc[a][b] === gridc[a][b - 2]){
+                                    
+                                     columnResult[i]+=8;
+                                
+                                }
+                                
+
+                            }
                         } 
                         
                             //horizontal opponent checking ends 
