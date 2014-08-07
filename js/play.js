@@ -530,37 +530,37 @@ function turn(x) {
         var r=AIMove();
         p = columns[r];
     if(columns[r]>=1){
-            grid[p][r] = 0;
+        grid[p][r] = 0;
 
-            disableButtons();
+        disableButtons();
 
-             del = setTimeout(function(){
-                
+        del = setTimeout(function(){
 
-                document.getElementById("" + p + r).className = 'round2';
-                check(p, r); 
-                //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
-                 }, 1000);
+
+            document.getElementById("" + p + r).className = 'round2';
+            check(p, r); 
+            //document.getElementById("" + p + x).innerHTML = '' + grid[p][x];
+             }, 1000);
 
 
             if(columns[r]>0){
                   chance += 1;
-                }
+            }
 
 
 
-            
-            
+
+
 
             setTimeout(function(){clearTimeout(del);
-                                 
-                                 enableButtons();
-                                 
-                                 }, 1000);
+
+                             enableButtons();
+
+                             }, 1000);
 
             columns[r]--;
             }
-    
+
         drawCondition();
 }
 
@@ -585,7 +585,7 @@ function copyGrid(){
 function AIMove(){
     
     var columnResult = [1, 0, 0, 0, 0, 0, 0, 0];
-    var toContinue;
+    var toContinue=1;
     var toReturn=0;
     copyGrid();
     
@@ -673,7 +673,7 @@ function AIMove(){
                                                                     
                 if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                     
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 }
             }
@@ -682,7 +682,7 @@ function AIMove(){
 
                 if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                     
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 }
             }
@@ -690,12 +690,12 @@ function AIMove(){
         } else if (counter === 2) {
             if (gridc[a][b] === gridc[a][b + 2]) {
                 
-                columnResult[i]+=30;
+                columnResult[i]+=45;
                 toContinue=0;
             }
             if (gridc[a][b] === gridc[a][b - 2]){
                 
-                columnResult[i]+=30;
+                columnResult[i]+=45;
                 toContinue=0;           
             }
         }
@@ -798,7 +798,7 @@ function AIMove(){
                             
                         
                           
-                        columnResult[i]+=30;
+                        columnResult[i]+=45;
                         toContinue=0;
                         
                     }
@@ -808,7 +808,7 @@ function AIMove(){
                     
                     if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                         
-                        columnResult[i]+=30;
+                        columnResult[i]+=45;
                         toContinue=0;
                     }
                 }
@@ -816,12 +816,12 @@ function AIMove(){
                 
                 if (gridc[a][b] === gridc[a - 2][b + 2]) {
                    
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 } 
                 if (gridc[a][b] === gridc[a + 2][b - 2]){
                     
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 }
                 
@@ -903,7 +903,7 @@ function AIMove(){
                 if (direction3 === 1) {
                     if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                         
-                       columnResult[i]+=30;
+                       columnResult[i]+=45;
                        toContinue=0; 
                     }
                 }
@@ -911,7 +911,7 @@ function AIMove(){
                 if (direction3 === 0) {
                     if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                         
-                        columnResult[i]+=30;
+                        columnResult[i]+=45;
                         toContinue=0;
                     }
                 }
@@ -919,14 +919,14 @@ function AIMove(){
             } else if (counter3 === 2) {
                 if (gridc[a][b] === gridc[a + 2][b + 2]) {
                     
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 }
                 
                 
                 if(gridc[a][b] === gridc[a - 2][b - 2]){
                 
-                    columnResult[i]+=30;
+                    columnResult[i]+=45;
                     toContinue=0;
                 }
             }
@@ -968,10 +968,10 @@ function AIMove(){
         
         //just above check start
         
-        if(toContinue !== 0){
+
             
             a=(l-1), b=(i);
-            if(b<=7 && a>=1){
+            if(b<7 && a>=1){
                 gridc[l][i]=0;
                 columnsCopy[i]--;
                 gridc[a][b]=1;
@@ -1012,19 +1012,19 @@ function AIMove(){
                             }
                         }
 
-                } else if (counter5 === 2) {
-                    if (gridc[a][b] === gridc[a][b + 2]) {
-                        
-                        columnResult[i]-=10;
-                    }
-                    if (gridc[a][b] === gridc[a][b - 2]){
-                        
-                         columnResult[i]-=10;
-                    
-                    }
-                    
+                    } else if (counter5 === 2) {
+                        if (gridc[a][b] === gridc[a][b + 2]) {
 
-                }
+                            columnResult[i]-=10;
+                        }
+                        if (gridc[a][b] === gridc[a][b - 2]){
+
+                             columnResult[i]-=10;
+
+                        }
+
+
+                    }
                 columnsCopy[i]++;
                 columnsCopy[b]++;
             } 
@@ -1035,7 +1035,7 @@ function AIMove(){
             
         
             a=l-1, b=i; 
-            if(a>=1 && b<=7){
+            if(a>1 && b<7){
                 gridc[l][i]=0;
                 gridc[a][b]=1; 
                 columnsCopy[i]--;
@@ -1100,7 +1100,7 @@ function AIMove(){
 
             
             var counter6 = 0, direction6 = 5;
-            if(a>1&&b<=7){    
+            if(a>1&&b<7){    
                  
                 gridc[l][i]=0;
                 gridc[l-1][i]=1;
@@ -1154,12 +1154,12 @@ function AIMove(){
             }
         
 
-        columnsCopy[i]--;
+    if(toContinue != 0 && toContinue === 1){        
         for(var k=1; k<=7; k++){
-
-            gridc[l][i]=0;
-
             copyGrid();
+            l=columnsCopy[i];
+            gridc[l][i]=0;
+            columnsCopy[i]--;
             var l2 = columnsCopy[k];
             if(columnsCopy[k]>0){
                 gridc[l2][k]=1;
@@ -1167,7 +1167,7 @@ function AIMove(){
 
 
                 a=(l2), b=(k);
-                if(b<=7 && a>=1){
+                if(b<7 && a>=1){
                     
                         
                         
@@ -1192,15 +1192,15 @@ function AIMove(){
                                                                                     
                                 if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                                     
-                                    columnResult[i]-=10;
-                                }8
+                                    columnResult[i]-=9;
+                                }
                             }
 
                             if (direction5 === 0) {
 
                                 if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                                     
-                                    columnResult[i]-=10;
+                                    columnResult[i]-=9;
                                     
                                 }
                             }
@@ -1208,11 +1208,11 @@ function AIMove(){
                     } else if (counter5 === 2) {
                         if (gridc[a][b] === gridc[a][b + 2]) {
                             
-                            columnResult[i]-=10;
+                            columnResult[i]-=9;
                         }
                         if (gridc[a][b] === gridc[a][b - 2]){
                             
-                             columnResult[i]-=10;
+                             columnResult[i]-=9;
                         
                         }
                         
@@ -1226,7 +1226,7 @@ function AIMove(){
                 
             
                 a=l2, b=k; 
-                if(a>=1 && b<=7){
+                if(a>1 && b<7){
                        
                      
                     counter2 = 0, direction2 = 5;
@@ -1247,7 +1247,7 @@ function AIMove(){
                                     
                                 
                                   
-                                columnResult[i]-=10;
+                                columnResult[i]-=9;
                                 
                                 
                             }
@@ -1257,7 +1257,7 @@ function AIMove(){
                             
                             if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                                 
-                                columnResult[i]-=10;
+                                columnResult[i]-=9;
                                 
                             }
                         }
@@ -1265,12 +1265,12 @@ function AIMove(){
                         
                         if (gridc[a][b] === gridc[a - 2][b + 2]) {
                            
-                            columnResult[i]-=10;
+                            columnResult[i]-=9;
                             
                         } 
                         if (gridc[a][b] === gridc[a + 2][b - 2]){
                             
-                          columnResult[i]-=10;
+                          columnResult[i]-=9;
                             
                         }
                         
@@ -1286,7 +1286,7 @@ function AIMove(){
 
                 
                 var counter6 = 0, direction6 = 5;
-                if(a>1&&b<=7){    
+                if(a>1&&b<7){    
                      
                     
                     if (gridc[a][b] === gridc[a + 1][b + 1]) {
@@ -1303,7 +1303,7 @@ function AIMove(){
                         if (direction6 === 1) {
                             if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                                 
-                               columnResult[i]-=10;
+                               columnResult[i]-=9;
                                 
                             }
                         }
@@ -1311,7 +1311,7 @@ function AIMove(){
                         if (direction6 === 0) {
                             if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                                 
-                                columnResult[i]-=10;
+                                columnResult[i]-=9;
                                 
                             }
                         }
@@ -1319,14 +1319,14 @@ function AIMove(){
                     } else if (counter6 === 2) {
                         if (gridc[a][b] === gridc[a + 2][b + 2]) {
                             
-                            columnResult[i]-=10;
+                            columnResult[i]-=9;
                         
                         }
                         
                         
                         if(gridc[a][b] === gridc[a - 2][b - 2]){
                         
-                            columnResult[i]-=10;
+                            columnResult[i]-=9;
                         
                         }
                     }
@@ -1336,17 +1336,20 @@ function AIMove(){
                     
 
                 }
-                columnsCopy[k]--;
+                
                 for(var m=1; m<=7; m++){
+                    copyGrid();
                     gridc[l][i]=0;
+                    columnsCopy[i]--;
                     gridc[l2][k]=1;
+                    columnsCopy[k]--;
                     var l3 = columnsCopy[m];
                     if(columnsCopy[m]>0){
                         gridc[l3][m]=0;
                         columnsCopy[m]--;
 
                         a=(l3), b=(m);
-                        if(b<=7 && a>=1){
+                        if(b<7 && a>=1){
                             
                                 
                                 
@@ -1542,9 +1545,10 @@ function AIMove(){
             var k= Math.floor((Math.random() * 7) + 1);
 
             if(columns[k]>0){
+                document.getElementById("match-title").innerHTML=''+columnResult[maxi];
                 return k;
                 checker =1;
-                document.getElementById("match-title").innerHTML=''+columnResult[maxi];
+                
             }
 
         }   
