@@ -777,7 +777,7 @@ if(a>1&&b<=6){
       
     gridc[l][i]=1;    
      counter2 = 0, direction2 = 5;
-if(a>=1&&b<=6){    
+if(a>1&&b<=6){    
     if (gridc[a][b] === gridc[a - 1][b + 1]) {
         counter2 += 1;
         direction2 = 1;
