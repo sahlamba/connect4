@@ -38,7 +38,7 @@ function result(i) {
 	} else if (i === 1) {
 		var playerName = document.getElementById('player1').innerHTML;
 		if (playerName === 'You') {
-			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> win and hence has the right to taunt the loser for life!</h2>';
+			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> win and hence have the right to taunt the loser for life!</h2>';
 		} else {
 			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> wins and hence has the right to taunt the loser for life!</h2>';
 		}
