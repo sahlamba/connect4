@@ -1,0 +1,4 @@
+1. Just above check not working (both    horizontally and diagonally).
+2. Game stopped when top row filled.
+3. Not winning even when double crossed.
+4. 
