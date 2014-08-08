@@ -10,18 +10,17 @@ function reload() {
 	});
 }
 
-var rules_light_box_flag = 0;
+var rules_light_box_flag = 0, playerName = document.getElementById('player-name').value;
 
 function setGameOptions() {
 	"use strict";
 	
-	var playerName = $('#player-name').value;
-	if (playerName === null) {
+	playerName = document.getElementById('player-name').value;
+	if (playerName.length === 0) {
 		playerName = "You";
 	}
 	
-	$('.match-title div h2').innerHTML = '<span style="color: #d83018;" id="player1">' + playerName + '</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2">S.A.M.</span>';
-	
+	document.getElementById('player1').innerHTML = playerName;
 	$('#game-options').fadeOut(200);
 }
 

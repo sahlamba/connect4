@@ -36,11 +36,16 @@ function result(i) {
 	if (i === 0) {
 		document.getElementById("actual-result").innerHTML = '<h2>The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		var playerName = document.getElementById('player1').innerHTML;
+		if (playerName === 'You') {
+			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> win and hence has the right to taunt the loser for life!</h2>';
+		} else {
+			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> wins and hence has the right to taunt the loser for life!</h2>';
+		}
         terminator = 2;
         
 	} else if (i === 2) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">S.A.M. Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">S.A.M.</span> wins and hence has the right to taunt the loser for life!</h2>';
 	}
 	
 	$("#result-lightbox").delay(1000).fadeIn(500);
