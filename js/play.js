@@ -969,7 +969,7 @@ function AIMove(){
         //just above check start
         
 
-            
+         if(toContinue != 0 && toContinue === 1){   
             a=(l-1), b=(i);
             if(b<7 && a>=1){
                 gridc[l][i]=0;
@@ -1060,7 +1060,7 @@ function AIMove(){
                             
                               
                             columnResult[i]-=10;
-                            toContinue=0;
+                            
                             
                             
                         }
@@ -1071,7 +1071,7 @@ function AIMove(){
                         if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                             
                             columnResult[i]-=10;
-                            toContinue=0;
+                            
                         }
                     }
                 } else if (counter2 === 2) {
@@ -1084,7 +1084,7 @@ function AIMove(){
                     if (gridc[a][b] === gridc[a + 2][b - 2]){
                         
                         columnResult[i]-=10;
-                        toContinue=0;
+                        
                         
                     }
                     
@@ -1122,7 +1122,7 @@ function AIMove(){
                         if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                             
                             columnResult[i]-=10;
-                            toContinue=0;
+                            
                         }
                     }
 
@@ -1130,7 +1130,7 @@ function AIMove(){
                         if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                             
                             columnResult[i]-=10;
-                            toContinue=0;
+                            
                         }
                     }
 
@@ -1138,14 +1138,14 @@ function AIMove(){
                     if (gridc[a][b] === gridc[a + 2][b + 2]) {
                         
                         columnResult[i]-=10;
-                        toContinue=0;
+                        
                     }
                     
                     
                     if(gridc[a][b] === gridc[a - 2][b - 2]){
                     
                         columnResult[i]-=10;
-                        toContinue=0;
+                        
                     }
                 }
                     
@@ -1156,7 +1156,7 @@ function AIMove(){
             }
         
 
-    if(toContinue != 0 && toContinue === 1){        
+            
         for(var k=1; k<=7; k++){
             copyGrid();
             l=columnsCopy[i];
