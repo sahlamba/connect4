@@ -39,10 +39,10 @@ i {
 }
 
 .blur-back {
-	-webkit-filter: blur(20px);
-	-moz-filter: blur(20px);
-	-ms-filter: blur(20px);
-	filter: blur(20px);
+	-webkit-filter: blur(12px);
+	-moz-filter: blur(12px);
+	-ms-filter: blur(12px);
+	filter: blur(12px);
 }
 
 /*
