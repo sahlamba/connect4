@@ -1,5 +1,7 @@
 /*global $*/
 
+/**** Amateur AI ****/
+
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 var columnsCopy = [100, 6, 6, 6, 6, 6, 6];
 
@@ -36,16 +38,12 @@ function result(i) {
 	if (i === 0) {
 		document.getElementById("actual-result").innerHTML = '<h2>The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		var playerName = document.getElementById('player1').innerHTML;
-		if (playerName === 'You') {
-			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> win and hence have the right to taunt the loser for life!</h2>';
-		} else {
-			document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + playerName + '</span> wins and hence has the right to taunt the loser for life!</h2>';
-		}
-        terminator = 2;
-        
+		var player1Name = document.getElementById('player1').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + player1Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
+		terminator = 2;
 	} else if (i === 2) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">S.A.M.</span> wins and hence has the right to taunt the loser for life!</h2>';
+		var player2Name = document.getElementById('player2').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
 	}
 	
 	$("#result-lightbox").delay(1000).fadeIn(500);

@@ -114,12 +114,16 @@ and (min-device-width: 801px) {
 			text-align: center;
 		}
 	
-	#player-name {
+	#player-name1, #player-name2 {
 		padding: 10px;
 		border-radius: 5px;
 		border: 1px solid #ddd;
 		margin: 10px auto;
 		color: #333;
+	}
+	
+	#player-name2 {
+		display: none;
 	}
 	
 	select {
