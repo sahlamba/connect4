@@ -1691,7 +1691,192 @@ function AIMove(){
 
                                     //backward slash checking ends    
                                     //just above check end    
-                                } 
+                                }
+                                
+                                for(var i2; i2<=7; i2++){
+                                    copyGrid();
+                                    gridc[l][i]=0;
+                                    columnsCopy[i]--;
+                                    gridc[l2][k]=1;
+                                    columnsCopy[k]--;
+                                    gridc[l3][m]=0;
+                                    columnsCopy[m]--;
+                                    gridc[l4][n]=1;
+                                    columnsCopy[n]--;
+                                    var l5 = columnsCopy[i2];
+                                    if(columnsCopy[i2]>0){
+                                        gridc[l5][i2]=0;
+                                        columnsCopy[i2]--;
+                                        
+                                        a=l5, b=i2;
+                                        
+                                        
+                                        
+                                        if(b<7 && a>=1){
+
+
+
+                                            //horizontal opponent checking starts
+
+
+
+                                            var counter5 = 0, direction5 = 5;
+                                            if (gridc[a][b] === gridc[a][b + 1]) {
+                                                counter5 += 1;
+                                                direction5 = 1;
+                                            }
+
+
+                                            if (gridc[a][b] === gridc[a][b - 1]) {
+                                                counter5 += 1;
+                                                direction5 = 0;
+                                            }
+
+                                            if (counter5 === 1) {
+                                                if (direction5 === 1) {
+
+                                                    if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
+
+                                                        columnResult[i]+=7;
+                                                    }
+                                                }
+
+                                                if (direction5 === 0) {
+
+                                                    if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
+
+                                                        columnResult[i]+=7;
+
+                                                    }
+                                                }
+
+                                            } else if (counter5 === 2) {
+                                                if (gridc[a][b] === gridc[a][b + 2]) {
+
+                                                    columnResult[i]+=7;
+                                                }
+                                                if (gridc[a][b] === gridc[a][b - 2]){
+
+                                                     columnResult[i]+=7;
+
+                                                }
+
+
+                                            }
+                                        } 
+
+                                            //horizontal opponent checking ends 
+                                            //forward slash opponent checking starts
+
+
+
+
+                                        if(a>1 && b<7){ 
+
+
+                                            counter2 = 0, direction2 = 5;
+
+                                            if (gridc[a][b] === gridc[a - 1][b + 1]){
+                                                counter2 += 1;
+                                                direction2 = 1;
+                                            }
+
+                                            if (gridc[a][b] === gridc[a + 1][b - 1]) {
+                                                counter2 += 1;
+                                                direction2 = 0;
+                                            }
+
+                                            if (counter2 === 1) {
+                                                if (direction2 === 1) {
+                                                    if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+
+                                                        columnResult[i]+=7;
+
+                                                    }
+                                                }
+
+                                                if (direction2 === 0) {
+
+                                                    if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
+
+                                                        columnResult[i]+=7;
+
+                                                    }
+                                                }
+                                            } else if (counter2 === 2) {
+
+                                                if (gridc[a][b] === gridc[a - 2][b + 2]) {
+
+                                                    columnResult[i]+=7;
+
+                                                } 
+                                                if (gridc[a][b] === gridc[a + 2][b - 2]){
+
+                                                  columnResult[i]+=7;
+
+                                                }
+
+                                            }
+
+                                            //forward slash opponnent checking end    
+                                        }        
+
+
+                                            //backward slash checking starts
+
+
+
+
+                                        var counter6 = 0, direction6 = 5;
+                                        if(a>1&&b<7){    
+
+                                            if (gridc[a][b] === gridc[a + 1][b + 1]) {
+                                                counter6 += 1;
+                                                direction6 = 1;
+                                            }
+
+                                            if (gridc[a][b] === gridc[a - 1][b - 1]) {
+                                                counter6 += 1;
+                                                direction6 = 0;
+                                            }
+
+                                            if (counter6 === 1) {
+                                                if (direction6 === 1) {
+                                                    if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
+
+                                                       columnResult[i]+=7;
+
+                                                    }
+                                                }
+
+                                                if (direction6 === 0) {
+                                                    if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
+
+                                                        columnResult[i]+=7;
+
+                                                    }
+                                                }
+
+                                            } else if (counter6 === 2) {
+                                                if (gridc[a][b] === gridc[a + 2][b + 2]) {
+
+                                                    columnResult[i]+=7;
+
+                                                }
+
+
+                                                if(gridc[a][b] === gridc[a - 2][b - 2]){
+
+                                                    columnResult[i]+=7;
+
+                                                }
+                                            }
+
+                                            //backward slash checking ends    
+                                            //just above check end    
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
