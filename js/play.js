@@ -969,7 +969,7 @@ function AIMove(){
         //just above check start
         
 
-         if(toContinue != 0 && toContinue === 1){   
+         if(toContinue === 1){   
             a=(l-1), b=(i);
             if(b<7 && a>=1){
                 gridc[l][i]=0;
@@ -978,7 +978,7 @@ function AIMove(){
                 columnsCopy[b]--;
                     
                     
-                        //horizontal opponent checking starts
+                //horizontal opponent checking starts
                     
                   
                     
@@ -1067,7 +1067,7 @@ function AIMove(){
                             
                               
                             columnResult[i]-=80;
-                            80
+                            
                             
                             
                         }
@@ -1555,7 +1555,7 @@ function AIMove(){
 
 
 
-                                            //horizontal opponent checking starts
+                                    //horizontal opponent checking starts
 
 
 
@@ -1664,11 +1664,11 @@ function AIMove(){
 
                                     }
 
-                                    //forward slash opponnent checking end    
+                                //forward slash opponnent checking end    
                                 }        
 
 
-                                    //backward slash checking starts
+                                //backward slash checking starts
 
 
 
@@ -1794,15 +1794,16 @@ function AIMove(){
                                             }
                                         } 
 
-                                            //horizontal opponent checking ends 
+                                        //horizontal opponent checking ends 
                                         
-                                            //verticle check
+                                        //vertical check
+                                        
                                         if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
                                            columnResult[i]-=80;
 
                                         }
-                                            //forward slash opponent checking starts
+                                        //forward slash opponent checking starts
 
 
 
