@@ -623,7 +623,7 @@ function AIMove(){
                                                                     
                 if (gridc[a][b] === gridc[a][b + 1] && gridc[a][b] === gridc[a][b + 2] && gridc[a][b] === gridc[a][b + 3]) {
                     
-                    columnResult[i]+=100;
+                    columnResult[i]+=120;
                     toContinue=0;
                 }
             }
@@ -632,7 +632,7 @@ function AIMove(){
 
                 if (gridc[a][b] === gridc[a][b - 1] && gridc[a][b] === gridc[a][b - 2] && gridc[a][b] === gridc[a][b - 3]) {
                     
-                    columnResult[i]+=100;
+                    columnResult[i]+=120;
                     toContinue=0;
                 }
             }
@@ -640,12 +640,12 @@ function AIMove(){
         } else if (counter === 2) {
             if (gridc[a][b] === gridc[a][b + 2]) {
                 
-                columnResult[i]+=100;
+                columnResult[i]+=120;
                 toContinue=0;
             }
             if (gridc[a][b] === gridc[a][b - 2]){
                 
-                 columnResult[i]+=100;
+                 columnResult[i]+=120;
                  toContinue=0;
             
             }
@@ -708,7 +708,7 @@ function AIMove(){
         
         if (gridc[a][b] === gridc[a + 1][b] && gridc[a][b] === gridc[a + 2][b] && gridc[a][b] === gridc[a + 3][b]) {
 
-           columnResult[i]+=100;
+           columnResult[i]+=120;
            toContinue=0;
         }
         
@@ -742,7 +742,7 @@ function AIMove(){
             if (counter2 === 1) {
                 if (direction2 === 1) {
                     if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-                        columnResult[i]+=100;
+                        columnResult[i]+=120;
                         toContinue=0;
                     }
                 }
@@ -751,7 +751,7 @@ function AIMove(){
 
                     if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
 
-                        columnResult[i]+=100;
+                        columnResult[i]+=120;
                         toContinue=0;    
                     }
                 }
@@ -760,13 +760,13 @@ function AIMove(){
                 if(a>=2&&b<=5){
                         if (gridc[a][b] === gridc[a - 2][b + 2]) {
 
-                            columnResult[i]+=100;
+                            columnResult[i]+=120;
                             toContinue=0;
 
                         } 
                         if (gridc[a][b] === gridc[a + 2][b - 2]){
 
-                            columnResult[i]+=100;
+                            columnResult[i]+=120;
                             toContinue=0;
 
                         }
@@ -850,7 +850,7 @@ function AIMove(){
                 if (direction3 === 1) {
                     if (gridc[a][b] === gridc[a + 1][b + 1] && gridc[a][b] === gridc[a + 2][b + 2] && gridc[a][b] === gridc[a + 3][b + 3]) {
                         
-                       columnResult[i]+=100;
+                       columnResult[i]+=120;
                        toContinue=0; 
                     }
                 }
@@ -858,7 +858,7 @@ function AIMove(){
                 if (direction3 === 0) {
                     if (gridc[a][b] === gridc[a - 1][b - 1] && gridc[a][b] === gridc[a - 2][b - 2] && gridc[a][b] === gridc[a - 3][b - 3]) {
                         
-                        columnResult[i]+=100;
+                        columnResult[i]+=120;
                         toContinue=0;
                     }
                 }
@@ -866,14 +866,14 @@ function AIMove(){
             } else if (counter3 === 2) {
                 if (gridc[a][b] === gridc[a + 2][b + 2]) {
                     
-                    columnResult[i]+=100;
+                    columnResult[i]+=120;
                     toContinue=0;                
                 }
                 
                 
                 if(gridc[a][b] === gridc[a - 2][b - 2]){
                 
-                    columnResult[i]+=100;
+                    columnResult[i]+=120;
                     toContinue=0;
                 }
             }
