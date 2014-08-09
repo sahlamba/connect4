@@ -1,5 +1,7 @@
 /*global $*/
 
+/**** Expert AI ****/
+
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 var columnsCopy = [100, 6, 6, 6, 6, 6, 6];
 
@@ -34,16 +36,20 @@ function result(i) {
 	"use strict";
 	
 	if (i === 0) {
-		document.getElementById("actual-result").innerHTML = '<h2 style="color:#d83018;">The game has hence been drawn.</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2>The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:coral; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
-        terminator=2;
-        
+		var player1Name = document.getElementById('player1').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + player1Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
+		terminator = 2;
 	} else if (i === 2) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		var player2Name = document.getElementById('player2').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
 	}
 	
-	$("#result-lightbox").delay(1500).fadeIn(500);
+	$("#result-lightbox").delay(1000).fadeIn(500);
+	setTimeout(function () {
+		$('#wrapper').addClass('blur-back');
+	}, 1000);
 }
 
 function disableButtons() {
@@ -1936,20 +1942,15 @@ function AIMove(){
     }
     if(maxi !== 0 && maxi<=7 && maxi >=1 && columns[maxi]>0){
         return maxi;
-    }
-    else{
-        var checker =0;
-        while(checker===0){
-            var k= Math.floor((Math.random() * 7) + 1);
-
-            if(columns[k]>0){
-                document.getElementById("match-title").innerHTML=''+columnResult[maxi];
-                return k;
-                checker =1;
-                
-            }
-
-        }   
-    }
+    } else {
+		var checker = 0;
+		while(checker === 0) {
+			var k= Math.floor((Math.random() * 7) + 1);
+			if(columns[k] > 0) {
+				return k;
+				checker = 1;
+			}
+		}
+	}
 }   
 

@@ -1130,13 +1130,13 @@ if(a>1&&b<=6){
             return maxi;
         }
         else{
-            var checker =0;
+            var checker = 0;
                 while(checker===0){
-                var k= Math.floor((Math.random() * 7) + 1);
+                var k = Math.floor((Math.random() * 7) + 1);
 
                 if(columns[k]>0){
                     return k;
-                    checker =1;
+                    checker = 1;
                 }   
             }    
         }
