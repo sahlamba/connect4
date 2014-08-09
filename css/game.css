@@ -1,0 +1,772 @@
+@font-face {
+    font-family: 'AR Destine';
+    src: url("../font-awesome/ar-destine.ttf") format('truetype');
+}
+
+.bttn {
+	width: 120px;
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 5px;
+	margin: 10px auto;
+	background: #d83018;
+	color: #eee;
+}
+
+	.bttn:hover {
+		background: #333;
+		cursor: pointer;
+	}
+
+@media only screen 
+and (min-device-width: 801px) {
+	.menu {
+		position: relative;
+		width: 80%;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+
+	.menu div {
+		display: inline-block;
+		cursor: pointer;
+		margin: 0 20px;
+		font-size: inherit;
+		color: #555;
+	}
+
+	.menu div:hover {
+		color: #d83018;
+	}
+
+	#rules-lightbox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5000;
+		background: rgba(255, 255, 255, 0.8);
+		text-align: center;
+		display: none;
+	}
+
+	.close-img {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		cursor: pointer;
+	}
+	
+	#rules {
+		padding: 40px 0;
+		width: 100%;
+		max-height: 100%;
+	}
+	
+	#rules > p {
+		width: 600px;
+		line-height: 2em;
+		margin: 0 auto;
+	}
+	
+	#result-lightbox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 6000;
+		background: rgba(255, 255, 255, 0.4);
+		text-align: center;
+		display: none;
+	}
+	
+	#result {
+		padding: 50px;
+		width: 600px;
+		margin: 0 auto;
+		max-height: 100%;
+	}
+	
+	#actual-result {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	#game-options {
+		position: absolute;
+		width: 100%;
+		height: 652px;
+		top: 63px;
+		left: 0px;
+		z-index: 2000;
+		background: rgba(255, 255, 255, 0.9);
+	}
+	
+		#game-options > div {
+			width: 600px;
+			margin: 0 auto;
+			padding: 20px 0;
+			text-align: center;
+		}
+	
+	#player-name1, #player-name2 {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+		margin: 10px auto;
+		color: #333;
+	}
+	
+	#player-name2 {
+		display: none;
+	}
+	
+	select {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+		margin: 10px auto;
+		background: #fff;
+		color: #333;
+	}
+	
+	.match-title {
+		position: relative;
+		width: 80%;
+		padding: 20px 0;
+		margin: 0 auto;
+	}
+    
+        .match-title div h2 {
+            font-family: 'AR Destine' !important;
+            font-size: 24px !important;
+        }
+	
+	.content {
+		margin: 0 auto;
+	}
+
+	.grid {
+		width: 404px;
+		height: 348px;
+		margin: 0 auto;
+		background: #fafaf1;
+		border-radius: 10px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom: 10px solid #555;
+	}
+
+	.grid div {
+		width: auto;
+		height: 50px;
+		margin: 3px auto;
+	}
+
+	.grid div div {
+		width: 50px;
+		margin-top: 14px;
+		font-size: 0;
+		display: inline-block;
+		background-color: #999;
+		border-radius: 2px;
+	}
+	
+	.buttons {
+		padding: 30px 0;
+	}
+
+	.buttons button {
+		display: inline-block;
+		width: 50px;
+		overflow: hidden;
+		padding: 3px;
+		border-radius: 3px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-color: #777;
+		border-bottom: 3px solid #555;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.buttons button:hover {
+		background-color: #d83018;
+		border-bottom: 3px solid #830003;
+	}
+
+	.credits {
+		position: relative;
+		width: 50%;
+		overflow: hidden;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		z-index: 1000;
+	}
+
+	.credit-image-wrapper {
+		position: relative;
+		width: 192px;
+		margin: 10px auto;
+	}
+
+	.credit-image {
+		position: relative;
+		float: left;
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		background-color: #ff1493;
+		border: 2px solid #333;
+		margin: 0 5px;
+	}
+}
+
+.round1 {
+	height: 50px;
+	width: 50px;
+	animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-webkit-animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-moz-animation: square-circle1 0.75s .5s 1  alternate forwards;
+	-o-animation: square-circle1 0.75s .5s 1  alternate forwards;
+	visibility: visible !important;
+}
+
+@keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        transform:rotate(180deg);
+    }
+}
+
+@-webkit-keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+@-moz-keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -moz-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle1 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -o-transform:rotate(180deg);
+    }
+}
+
+.round2{
+	height: 50px;
+	width: 50px;
+	animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-webkit-animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-moz-animation: square-circle2 0.75s .5s 1  alternate forwards;
+	-o-animation: square-circle2 0.75s .5s 1  alternate forwards;
+	visibility: visible !important;
+}
+
+@keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+       	transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        transform:rotate(180deg);
+    }
+}
+
+@-webkit-keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+@-moz-keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -moz-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle2 {
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -o-transform:rotate(180deg);
+    }
+}
+
+.resultAnim1 {
+	height:50px;
+	width:50px;
+	animation: square-circle1 0.75s infinite alternate-reverse;
+	-webkit-animation: square-circle1 0.75s infinite alternate-reverse;
+	-moz-animation: square-circle1 0.75s infinite alternate-reverse;
+	-o-animation: square-circle1 0.75s infinite alternate-reverse;
+	transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-moz-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-o-transition-timing-function: cubic-bezier(.53,.3,.25,.99);	
+}
+
+.resultAnim3 {
+	height:50px;
+	width:50px;
+	animation: square-circle3 0.75s infinite alternate-reverse;
+	-webkit-animation: square-circle3 0.75s infinite alternate-reverse;
+	-moz-animation: square-circle3 0.75s infinite alternate-reverse;
+	-o-animation: square-circle3 0.75s infinite alternate-reverse;
+	transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-moz-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-o-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+}
+
+.resultAnim2{
+	height: 50px;
+	width: 50px;
+	animation: square-circle2 0.75s infinite alternate-reverse;
+	-webkit-animation: square-circle2 0.75s infinite alternate-reverse;
+	-moz-animation: square-circle2 0.75s infinite alternate-reverse;
+	-o-animation: square-circle2 0.75s infinite alternate-reverse;
+	transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-moz-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-o-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+}
+
+.resultAnim4{
+	height: 50px;
+	width: 50px;
+	animation: square-circle4 0.75s infinite alternate-reverse;
+	-webkit-animation: square-circle4 0.75s infinite alternate-reverse;
+	-moz-animation: square-circle4 0.75s infinite alternate-reverse;
+	-o-animation: square-circle4 0.75s infinite alternate-reverse;
+	transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-webkit-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-moz-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+	-o-transition-timing-function: cubic-bezier(.53,.3,.25,.99);
+}
+
+@keyframes square-circle3 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        transform:rotate(180deg);
+    }
+}
+
+@-webkit-keyframes square-circle3 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+@-moz-keyframes square-circle3 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle3 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #720002;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #940004;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #b61006;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #d83018;
+        -o-transform:rotate(180deg);
+    }
+}
+
+@keyframes square-circle4 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        transform:rotate(180deg);
+    }
+}
+
+@-webkit-keyframes square-circle4 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -webkit-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -webkit-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -webkit-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -webkit-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -webkit-transform:rotate(180deg);
+    }
+}
+
+@-moz-keyframes square-circle4 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -moz-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -moz-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -moz-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -moz-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -moz-transform:rotate(180deg);
+    }
+}
+
+@-o-keyframes square-circle4 {
+
+    0%{
+        border-radius: 0 0 0 0;
+        background: #999;
+        -o-transform:rotate(0deg);
+    
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background: #997100;
+        -o-transform:rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background: #bb9300;
+        -o-transform:rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background: #ddb500;
+        -o-transform:rotate(135deg);
+    }
+    100%{
+        border-radius: 50%;
+        background: #ffd700;
+        -o-transform:rotate(180deg);
+    }
+}

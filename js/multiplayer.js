@@ -1,5 +1,7 @@
 /*global $*/
 
+/**** Multiplayer ****/
+
 var columns = [100, 6, 6, 6, 6, 6, 6, 6];
 
 var x, chance = 1, grid = new Array(7); //Creating 2d array
@@ -17,14 +19,19 @@ function result(i) {
 	"use strict";
 	
 	if (i === 0) {
-		document.getElementById("actual-result").innerHTML = '<h2 style="color:#d83018;">The game has hence been drawn.</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2>The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:coral; font-size: 20px">Player 1 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		var player1Name = document.getElementById('player1').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + player1Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
 	} else if (i === 2) {
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#02e4ca; font-size: 20px">Player 2 Wins</span> and hence has the right to taunt the loser for life!</h2>';
+		var player2Name = document.getElementById('player2').innerHTML;
+		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
 	}
 	
-	$("#result-lightbox").delay(1500).fadeIn(500);
+	$("#result-lightbox").delay(1000).fadeIn(500);
+	setTimeout(function () {
+		$('#wrapper').addClass('blur-back');
+	}, 1000);
 }
 
 function disableButtons() {
@@ -208,8 +215,6 @@ function drawCondition() {
     }
 }
 
-
-
 var a = 0, b = 0;
 function check(a, b) {
 	"use strict";
@@ -264,7 +269,6 @@ function check(a, b) {
 
 	} else if (counter === 2) {
 		if (grid[a][b] === grid[a][b + 2]) {
-			
             if (grid[a][b] === 1) {
                     var b1 = b - 1, b2 = b + 1, b3 = b + 2;
                     resultAnim1(a, b, b1, b2, b3);
@@ -275,8 +279,7 @@ function check(a, b) {
                     resultAnim2(a, b, b1, b2, b3);
                 }
 		}
-        if (grid[a][b] === grid[a][b - 2]){
-            
+        if (grid[a][b] === grid[a][b - 2]) {
              if (grid[a][b] === 1) {
                     var b1 = b - 1, b2 = b + 1, b3 = b - 2;
                     resultAnim1(a, b, b1, b2, b3);
@@ -286,10 +289,7 @@ function check(a, b) {
 				    var b1 = b - 1, b2 = b + 1, b3 = b - 2;
                     resultAnim2(a, b, b1, b2, b3);
                 }
-        
         }
-
-
 	}
 	
 	//Horixontal checking ends
@@ -298,10 +298,10 @@ function check(a, b) {
     if (grid[a][b] === grid[a + 1][b] && grid[a][b] === grid[a + 2][b] && grid[a][b] === grid[a + 3][b]) {
 		if (grid[a][b] === 1) {
 			result(1);
-            resultAnimVer1(a, b, a+1, a+2, a+3);
+            resultAnimVer1(a, b, a + 1, a + 2, a + 3);
 		} else if (grid[a][b] === 0) {
 			result(2);
-            resultAnimVer2(a, b, a+1, a+2, a+3);
+            resultAnimVer2(a, b, a + 1, a + 2, a + 3);
 		}
 		disableButtons();
 	}
@@ -325,10 +325,10 @@ function check(a, b) {
 		if (direction2 === 1) {
 			if (grid[a][b] === grid[a - 1][b + 1] && grid[a][b] === grid[a - 2][b + 2] && grid[a][b] === grid[a - 3][b + 3]) {
 				if (grid[a][b] === 1) {
-                    resultAnimForDia1a(a,b);
+                    resultAnimForDia1a(a, b);
 					result(1);
 				} else if (grid[a][b] === 0) {
-                    resultAnimForDia1b(a,b);
+                    resultAnimForDia1b(a, b);
 					result(2);
 				}
 				disableButtons();
@@ -336,7 +336,6 @@ function check(a, b) {
 		}
             
 		if (direction2 === 0) {
-			
 			if (grid[a][b] === grid[a + 1][b - 1] && grid[a][b] === grid[a + 2][b - 2] && grid[a][b] === grid[a + 3][b - 3]) {
 				if (grid[a][b] === 1) {
                     resultAnimForDia2a(a, b);
@@ -349,7 +348,6 @@ function check(a, b) {
 			}
 		}
 	} else if (counter2 === 2) {
-		
         if (grid[a][b] === grid[a - 2][b + 2]) {
 			if (grid[a][b] === 1) {
                     resultAnimForDia3a(a, b, -2);
@@ -358,23 +356,15 @@ function check(a, b) {
                     resultAnimForDia3b(a, b, -2);
                     result(2);                    
                 }
-			
         } 
-        if (grid[a][b] === grid[a + 2][b - 2]){
-            
+        if (grid[a][b] === grid[a + 2][b - 2]) {
            if (grid[a][b] === 1) {
-                    
                     resultAnimForDia3a(a, b, 2);
 					result(1);
-				
-            
             } else if (grid[a][b] === 0) {
                     resultAnimForDia3b(a, b, 2);
-                    result(2);
-				    
-                    
+                    result(2);   
                 }
-            
 		}
         disableButtons();
 	}
@@ -418,51 +408,34 @@ function check(a, b) {
 					result(2);
 				}
 				disableButtons();
-
 			}
 		}
 
 	} else if (counter3 === 2) {
 		if (grid[a][b] === grid[a + 2][b + 2]) {
-            
 		      if (grid[a][b] === 1) {
-                    
                     resultAnimBak3a(a, b, 2);
 					result(1);
-				
-            
             } else if (grid[a][b] === 0) {
                     resultAnimBak3b(a, b, 2);
-                    result(2);
-				    
-                    
+                    result(2);       
             }
-        
         }
         
         
         if(grid[a][b] === grid[a - 2][b - 2]){
         
             if (grid[a][b] === 1) {
-                    
                     resultAnimBak3a(a, b, -2);
 					result(1);
-				
             
             } else if (grid[a][b] === 0) {
                     resultAnimBak3b(a, b, -2);
-                    result(2);
-				    
-                    
-            }
-        
+                    result(2);       
+            }   
         }
 	}
-	
 	//Backward slash diagonal checking ends
-
-
-
 }
 
 function turn(x) {
