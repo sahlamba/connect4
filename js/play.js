@@ -933,38 +933,24 @@ function AIMove(){
                 
             //backward slash opponent checking ends
         }        
-            //three in a row self starts
-        
-        // gridc[l][i]=0;
-        
-        // //horizontal
-        // var counter4=0, emptyCounter=0, direction4=5;
-        // if((gridc[a][b]===gridc[a][b-1]||gridc[a][b+1])&&(gridc[a][b]===gridc[a][b-2]||gridc[a][b]===gridc[a][b+2])){
-        
-        //     if(gridc[a][b-2]!==1||gridc[a][b-2]!==0){
-        //         emptyCounter++;
-        //     }
-            
-        //     if(gridc[a][b-1]!==1||gridc[a][b-1]!==0){
-        //         emptyCounter++;
-        //     }
-            
-        //     if(gridc[a][b+2]!==1||gridc[a][b+2]!==0){
-        //         emptyCounter++;
-        //     }
-            
-        //     if(gridc[a][b+1]!==1||gridc[a][b+1]!==0){
-        //         emptyCounter++;
-        //     }
-        
-        // if(emptyCounter===2){
-        //         columnResult[i]+=9;
-        //     }
-            
-        // }
-        
-        
-        //three in a row self ends   
+
+            // three with one gap starts
+
+            gridc[l][i] = 0;
+
+                // horizontal starts
+                    var counter4 = 0;
+
+                    if(gridc[a][b+2] === 0 && gridc[a][b+3] === 0 && gridc[a][b+1] !== 0 && gridc[a][b+1] !== 1){
+                        columnResult[i] += 9;
+                    }
+
+                    if(gridc[a][b-2] === 0 && gridc[a][b-3] === 0 && gridc[a][b-1] !== 0 && gridc[a][b-1] !== 1){
+                        columnResult[i] += 9;
+                    }
+                // horizontal ends
+
+            // three with one gap ends
         
         //just above check start
         
