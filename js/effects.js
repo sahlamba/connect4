@@ -77,20 +77,20 @@ function hideRules() {
 $(document).ready(function () {
 	"use strict";
 	
-	$('select').change(function () {
-		if ($("select option:selected").text() === "Multiplayer") {
-			removeJS('js/expert.js');
-			removeJS('js/amateur.js');
-			includeJS('js/multiplayer.js');
-			player2Flag = 1;
-			$('#player-name2').fadeIn(100);
-		} else if ($("select option:selected").text() === "Expert") {
+	$('input[type=radio][name=level]').change(function () {
+		if (this.value === '2') {
 			$('#player-name2').fadeOut(100);
 			player2Name = document.getElementById('player-name2').value;
 			player2Flag = 0;
 			removeJS('js/multiplayer.js');
 			removeJS('js/amateur.js');
 			includeJS('js/expert.js');
+		} else if (this.value === '3') {
+			removeJS('js/expert.js');
+			removeJS('js/amateur.js');
+			includeJS('js/multiplayer.js');
+			player2Flag = 1;
+			$('#player-name2').fadeIn(100);
 		} else {
 			removeJS('js/expert.js');
 			removeJS('js/multiplayer.js');

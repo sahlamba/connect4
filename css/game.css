@@ -126,13 +126,8 @@ and (min-device-width: 801px) {
 		display: none;
 	}
 	
-	select {
-		padding: 10px;
-		border-radius: 5px;
-		border: 1px solid #ddd;
-		margin: 10px auto;
-		background: #fff;
-		color: #333;
+	input[name=level] {
+		margin: 20px 2px 10px 10px;
 	}
 	
 	.match-title {

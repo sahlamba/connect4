@@ -263,7 +263,7 @@ and (min-device-width: 801px) {
 	}
 	
 	#wrapper {
-		background: url("../images/back.png") repeat fixed;
+		background: url("../images/back.png") repeat;
 	}
 
 	.header {
