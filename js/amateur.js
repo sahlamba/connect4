@@ -1141,3 +1141,25 @@ if(a>1&&b<=6){
             }    
         }
 }
+
+$(document).ready(function () {
+	"use strict";
+	
+	$(document).keyup(function (e) {
+		if (e.keyCode === 49) {
+			turn(1);
+		} else if (e.keyCode === 50) {
+			turn(2);
+		} else if (e.keyCode === 51) {
+			turn(3);
+		} else if (e.keyCode === 52) {
+			turn(4);
+		} else if (e.keyCode === 53) {
+			turn(5);
+		} else if (e.keyCode === 54) {
+			turn(6);
+		} else if (e.keyCode === 55) {
+			turn(7);
+		}
+	});
+});

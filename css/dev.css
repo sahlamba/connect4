@@ -104,22 +104,22 @@ and (min-device-width: 801px) {
 */
 
 .sam {
-	background: url("../images/ryb.png") no-repeat center;
+	background: url("../images/brown.png") no-repeat center;
 	background-size: cover;
 }
 
-.pens {
-    background: url("../images/pens.png") 50% 0 repeat fixed;
+.sam-back {
+    background: url("../images/yellow-squares.png") 50% 0 repeat fixed;
 }
 
-.design-tools {
+.sahil-back {
     background: url("../images/design-tools.jpg") 50% 0 repeat fixed;
 }
 
-.red-letters {
+.aman-back {
     background: url("../images/red-letters.png") 50% 0 repeat fixed;
 }
 
-.hex {
-	background: url("../images/hex.png") 50% 0 repeat fixed;
+.mihir-back {
+	background: url("../images/blue-science.png") 50% 0 repeat fixed;
 }
