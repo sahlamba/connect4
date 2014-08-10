@@ -21,6 +21,10 @@ and (min-device-width: 801px) {
 	.to-top {
 		display: none;
 	}
+    
+    .to-top:hover {
+        background: rgba(255, 255, 255, 1);
+    }
 	
 	.play {
 		font-size: 24px;
@@ -45,7 +49,7 @@ and (min-device-width: 801px) {
 	
 		.member > div {
 			width: 870px;
-            height: 200px;
+            height: 217px;
 			padding: 70px 0;
 			margin: 0 auto;
 		}
@@ -56,19 +60,19 @@ and (min-device-width: 801px) {
 		height: 150px;
 		border-radius: 75px;
 		border: 5px solid #fff;
-		margin: 20px 40px;
+		margin: 28px 40px;
 	}
 	
 	.member-desc {
 		position: relative;
 		width: 590px;
-        height: 170px;
+        height: 177px;
         padding: 20px;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.9);
         color: #333;
         overflow: hidden;
-        text-align: left;
+        text-align: justify;
 	}
     
     h3 {
