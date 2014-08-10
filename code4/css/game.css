@@ -118,11 +118,12 @@ and (min-device-width: 801px) {
 		padding: 10px;
 		border-radius: 5px;
 		border: 1px solid #ddd;
-		margin: 10px auto;
+		margin: 10px auto 5px auto;
 		color: #333;
 	}
 	
 	#player-name2 {
+		margin: 5px auto 10px auto;
 		display: none;
 	}
 	

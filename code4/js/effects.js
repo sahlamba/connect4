@@ -43,7 +43,9 @@ function setGameOptions() {
 	player2Name = document.getElementById('player-name2').value;
 	if (player2Name.length === 0) {
 		if (player2Flag === 0) {
-			player2Name = "S.A.M.";
+			player2Name = "Amateur S.A.M.";
+		} else if (player2Flag === 1) {
+			player2Name = "Expert S.A.M.";
 		} else {
 			player2Name = "Player2";
 		}
@@ -78,20 +80,20 @@ $(document).ready(function () {
 	"use strict";
 	
 	$('input[type=radio][name=level]').change(function () {
-		if (this.value === '2') {
+		if (this.value === '2') { //Expert
 			$('#player-name2').fadeOut(100);
 			player2Name = document.getElementById('player-name2').value;
-			player2Flag = 0;
+			player2Flag = 1;
 			removeJS('js/multiplayer.js');
 			removeJS('js/amateur.js');
 			includeJS('js/expert.js');
-		} else if (this.value === '3') {
+		} else if (this.value === '3') { //Multiplayer
 			removeJS('js/expert.js');
 			removeJS('js/amateur.js');
 			includeJS('js/multiplayer.js');
-			player2Flag = 1;
+			player2Flag = 2;
 			$('#player-name2').fadeIn(100);
-		} else {
+		} else { //Amateur
 			removeJS('js/expert.js');
 			removeJS('js/multiplayer.js');
 			includeJS('js/amateur.js');
