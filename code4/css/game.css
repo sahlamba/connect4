@@ -152,8 +152,8 @@ and (max-device-width: 900px) {
 	}
 
 	.grid {
-		width: 300px;
-		height: 260px;
+		width: 280px;
+		height: 241px;
 		margin: 0 auto;
 		background: #fafaf1;
 		border-radius: 10px;
@@ -164,12 +164,12 @@ and (max-device-width: 900px) {
 
 	.grid div {
 		width: auto;
-		height: 30px;
+		height: 35px;
 		margin: 3px auto;
 	}
 
 	.grid div div {
-		width: 30px;
+		width: 35px;
 		margin-top: 4px;
 		font-size: 0;
 		display: inline-block;
