@@ -18,6 +18,51 @@
 		cursor: pointer;
 	}
 
+.close-img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: pointer;
+}
+
+#player-name1, #player-name2 {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin: 10px auto 5px auto;
+	color: #333;
+}
+
+#player-name2 {
+	margin: 5px auto 10px auto;
+	display: none;
+}
+
+input[name=level] {
+	margin: 15px 2px 0 10px;
+}
+
+.content {
+	margin: 0 auto;
+}
+
+.credit-image-wrapper {
+	position: relative;
+	width: 192px;
+	margin: 10px auto;
+}
+
+.credit-image {
+	position: relative;
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #ff1493;
+	border: 2px solid #333;
+	margin: 0 5px;
+}
+
 @media only screen 
 and (min-device-width: 320px)
 and (max-device-width: 900px) {
@@ -50,13 +95,6 @@ and (max-device-width: 900px) {
 		background: rgba(255, 255, 255, 0.9);
 		text-align: center;
 		display: none;
-	}
-
-	.close-img {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		cursor: pointer;
 	}
 	
 	#rules {
@@ -118,23 +156,6 @@ and (max-device-width: 900px) {
 			text-align: center;
 		}
 	
-	#player-name1, #player-name2 {
-		padding: 10px;
-		border-radius: 5px;
-		border: 1px solid #ddd;
-		margin: 10px auto 5px auto;
-		color: #333;
-	}
-	
-	#player-name2 {
-		margin: 5px auto 10px auto;
-		display: none;
-	}
-	
-	input[name=level] {
-		margin: 15px 2px 0 10px;
-	}
-	
 	.match-title {
 		position: relative;
 		width: 90%;
@@ -146,10 +167,6 @@ and (max-device-width: 900px) {
             font-family: 'AR Destine' !important;
             font-size: 24px !important;
         }
-	
-	.content {
-		margin: 0 auto;
-	}
 
 	.grid {
 		width: 280px;
@@ -209,23 +226,6 @@ and (max-device-width: 900px) {
 		padding-bottom: 20px;
 		z-index: 1000;
 	}
-
-	.credit-image-wrapper {
-		position: relative;
-		width: 192px;
-		margin: 10px auto;
-	}
-
-	.credit-image {
-		position: relative;
-		float: left;
-		width: 50px;
-		height: 50px;
-		border-radius: 25px;
-		background-color: #ff1493;
-		border: 2px solid #333;
-		margin: 0 5px;
-	}
 }
 
 @media only screen 
@@ -259,13 +259,6 @@ and (min-device-width: 901px) {
 		background: rgba(255, 255, 255, 0.8);
 		text-align: center;
 		display: none;
-	}
-
-	.close-img {
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		cursor: pointer;
 	}
 	
 	#rules {
@@ -324,23 +317,6 @@ and (min-device-width: 901px) {
 			text-align: center;
 		}
 	
-	#player-name1, #player-name2 {
-		padding: 10px;
-		border-radius: 5px;
-		border: 1px solid #ddd;
-		margin: 10px auto 5px auto;
-		color: #333;
-	}
-	
-	#player-name2 {
-		margin: 5px auto 10px auto;
-		display: none;
-	}
-	
-	input[name=level] {
-		margin: 15px 2px 0 10px;
-	}
-	
 	.match-title {
 		position: relative;
 		width: 80%;
@@ -352,10 +328,6 @@ and (min-device-width: 901px) {
             font-family: 'AR Destine' !important;
             font-size: 24px !important;
         }
-	
-	.content {
-		margin: 0 auto;
-	}
 
 	.grid {
 		width: 404px;
@@ -413,23 +385,6 @@ and (min-device-width: 901px) {
 		margin: 0 auto;
 		padding-bottom: 20px;
 		z-index: 1000;
-	}
-
-	.credit-image-wrapper {
-		position: relative;
-		width: 192px;
-		margin: 10px auto;
-	}
-
-	.credit-image {
-		position: relative;
-		float: left;
-		width: 50px;
-		height: 50px;
-		border-radius: 25px;
-		background-color: #ff1493;
-		border: 2px solid #333;
-		margin: 0 5px;
 	}
 }
 
