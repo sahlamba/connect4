@@ -137,7 +137,7 @@ and (max-device-width: 900px) {
 	
 	.match-title {
 		position: relative;
-		width: 98%;
+		width: 95%;
 		padding: 20px 0;
 		margin: 0 auto;
 	}
@@ -154,9 +154,7 @@ and (max-device-width: 900px) {
 	.grid {
 		width: 280px;
 		height: 241px;
-		padding-top: 7px;
-		padding-left: 4px;
-		padding-right: 4px;
+		padding: 4px;
 		margin: 0 auto;
 		background: #fafaf1;
 		border-radius: 10px;
@@ -186,9 +184,9 @@ and (max-device-width: 900px) {
 
 	.buttons button {
 		display: inline-block;
-		width: 30px;
+		width: 35px;
 		overflow: hidden;
-		padding: 2px;
+		padding: 3px;
 		border-radius: 3px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
