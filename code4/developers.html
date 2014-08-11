@@ -137,6 +137,32 @@
 		</div>
 
         <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-		<script src = "js/parallax.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				var down = $('.scroll-down-instruction'), up = $('.to-top');
+				
+				$(window).scroll(function () {
+					if ($(window).scrollTop() > 300) {
+						down.fadeOut(100);
+						up.fadeIn(300);
+					} else {
+						up.fadeOut(100);
+						down.fadeIn(300);
+					}
+				});
+				
+				$('a[href="#top"]').on('click', function (e) {
+				e.preventDefault();
+
+				var target = this.hash, $target = $(target);
+
+					$('html, body').stop().animate({
+						'scrollTop': $target.offset().top
+					}, 1000, 'swing', function () {
+						//window.location.hash = target;
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
