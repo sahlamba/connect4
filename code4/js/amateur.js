@@ -34,22 +34,22 @@ var terminator = 1; //1=on 2=off
 
 function result(i) {
 	"use strict";
+	var player1Name = document.getElementById('player1').innerHTML;
+	var player2Name = document.getElementById('player2').innerHTML;
 	
 	if (i === 0) {
 		document.getElementById("actual-result").innerHTML = '<h2>The game has hence been drawn.</h2>';
 	} else if (i === 1) {
-		var player1Name = document.getElementById('player1').innerHTML;
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#d83018; font-size: 20px">' + player1Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2>Don\'t get too cheesy <span style="color:#d83018; font-size: 20px">' + player1Name + '</span>, it was just ' + player2Name + ' being easy on you!</h2>';
 		terminator = 2;
 	} else if (i === 2) {
-		var player2Name = document.getElementById('player2').innerHTML;
-		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> wins and hence has the right to taunt the loser for life!</h2>';
+		document.getElementById("actual-result").innerHTML = '<h2>If at first you don\'t succeed, it\'s because <span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> won\'t let you!</h2>';
 	}
 	
-	$("#result-lightbox").delay(1000).fadeIn(500);
+	$("#result-lightbox").delay(2000).fadeIn(500);
 	setTimeout(function () {
 		$('#wrapper').addClass('blur-back');
-	}, 1000);
+	}, 2000);
 }
 
 function disableButtons() {

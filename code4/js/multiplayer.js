@@ -27,10 +27,10 @@ function result(i) {
 		document.getElementById("actual-result").innerHTML = '<h2><span style="color:#ffd700; font-size: 20px">' + player2Name + '</span> wins and hence has the right to taunt <span style="color:#d83018; font-size: 20px">' + player1Name + '</span> for life!</h2>';
 	}
 	
-	$("#result-lightbox").delay(1000).fadeIn(500);
+	$("#result-lightbox").delay(2000).fadeIn(500);
 	setTimeout(function () {
 		$('#wrapper').addClass('blur-back');
-	}, 1000);
+	}, 2000);
 }
 
 function disableButtons() {
