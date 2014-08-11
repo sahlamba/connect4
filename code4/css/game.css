@@ -61,16 +61,16 @@ and (max-device-width: 900px) {
 	
 	#rules {
 		padding: 40px 0;
-		width: 95%;
+		width: 100%;
 		max-height: 80%;
 		overflow: scroll;
 	}
 	
 	#rules > p {
-		width: 300px;
+		width: 95%;
 		line-height: 2em;
 		margin: 0 auto;
-		text-align: justify;
+		text-align: center;
 	}
 	
 	#result-lightbox {
@@ -104,6 +104,7 @@ and (max-device-width: 900px) {
 	#game-options {
 		position: absolute;
 		width: 100%;
+		min-height: 100%;
 		overflow: hidden;
 		top: 63px;
 		left: 0px;
