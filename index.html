@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 
 <!-- connect4 index.html -->
-<!-- Designed & developed by Aman Srivastava & Sahil Lamba -->
+<!-- Designed & developed by Aman Srivastava, Mihir Rana & Sahil Lamba -->
+<!-- Picture Courtesy: Yash Sharma -->
 
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="A simple and awesome, virtual Connect 4 game!">
+
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/icon">
 		<link href="images/favicon.ico" rel="icon" type="image/icon">
+		
 		<link href="css/main.css" rel="stylesheet" type="text/css">
-		<link href="css/font.css" rel="stylesheet" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script src="js/play.js"></script>
-    	<script src="js/effects.js"></script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "00d7dfb1-e12f-4b19-aca5-6ee38134f80f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+		<link href="css/game.css" rel="stylesheet" type="text/css">
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu|Pacifico' rel='stylesheet' type='text/css'>
+
 		<title>Connect 4</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+		<script src="js/amateur.js" type="text/javascript"></script>
 	</head>
 
 	<body>
-		<div id="header">
-			<div id="anim">
-			</div>
-			<div>
-				<h1>Connect <span style="color: #d83018; font-size: 48px;">4</span></h1>
-                <p><br><br>Can't find someone to play with? Don't worry, he's undergoing a training programme! #S.A.M.</p>
+		<div id="result-lightbox">
+			<div id="result">
+				<h1>Congratulations!</h1>
+				<div id="actual-result">
+				</div>
+				<div class="share-button-wrapper">
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_linkedin_large' displayText='LinkedIn'></span>
+				</div>
+				<div class="menu">
+					<a href=""><div><i class="fa fa-repeat"></i>&nbsp; Play Again</div></a>
+					<a href="developers.html"><div><i class="fa fa-cubes"></i>&nbsp; Developers</div></a>
+				</div>
 			</div>
 		</div>
 		
-		<div id="rules-lightbox">
-			<img src="images/close.gif" alt="Close" class="close-img" onclick="hideRules();">
+		<div id="rules-lightbox" onclick="hideRules();">
+			<i class="fa fa-times fa-2x close-img"></i>
 			<div id="rules">
 				<h1>How to play?</h1>
 				<p>
@@ -42,175 +54,205 @@
 					<br><br>
 					Click on the column number below each column to drop a disc into that column.
 					<br><br>
-					<strong>Remember!</strong>
+					<span style="color: #d83018;">Remember!</span>
 					<br>
 					Since the discs are <em>dropped</em>, the lowermost empty slot (square-shaped) in the choosen column will receive the new disc.
                     <br>
-                    So get ready to exercise your brains and beat the opponent to shame. Go on <span style="color: #fdfcce; font-size: 20px;"> Connect </span><span style="color: #d83018; font-size: 20px;"> 4</span>
+                    So get ready to exercise your brains and beat the opponent to shame. Go on,<br>
+                    <span style="color:#555; font-size:20px; font-family:'Pacifico';">
+                        Connect<span style="color: #d83018; font-size:30px;">4</span>
+                    </span>
                     <br><br>
                     P.S. for the dim witted: Just click on numbers and watch the cool animations.
 				</p>
 			</div>
 		</div>
 		
-		<div id="menu">
-			<div class="icon-book-open" onclick="viewRules();">
-			</div>
-			<div class="icon-ccw" onclick="reload();">
-			</div>
-		</div>
-        
-        <div id="content">
-			<div id="match-title">
-			<div>
-				<h2><span style="color: coral; font-size: 20px;" id="player1">Player1</span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #02e4ca; font-size: 20px;" id="player2">Player2</span></h2> 
-			</div>
-			</div>
-			
-            <div id="grid">
-                <div id="r1">
-                    <div id="11">
-                    </div>
-                    <div id="12">
-                    </div>
-                    <div id="13">
-                    </div>
-                    <div id="14">
-                    </div>
-                    <div id="15">
-                    </div>
-                    <div id="16">
-                    </div>
-                    <div id="17">
-                    </div>
-                </div>
-                <div id="r2">
-                    <div id="21">
-                    </div>
-                    <div id="22">
-                    </div>
-                    <div id="23">
-                    </div>
-                    <div id="24">
-                    </div>
-                    <div id="25">
-                    </div>
-                    <div id="26">
-                    </div>
-                    <div id="27">
-                    </div>
-                </div>
-                <div id="r3">
-                    <div id="31">
-                    </div>
-                    <div id="32">
-                    </div>
-                    <div id="33">
-                    </div>
-                    <div id="34">
-                    </div>
-                    <div id="35">
-                    </div>
-                    <div id="36">
-                    </div>
-                    <div id="37">
-                    </div>
-                </div>
-                <div id="r4">
-                    <div id="41">
-                    </div>
-                    <div id="42">
-                    </div>
-                    <div id="43">
-                    </div>
-                    <div id="44">
-                    </div>
-                    <div id="45">
-                    </div>
-                    <div id="46">
-                    </div>
-                    <div id="47">
-                    </div>
-                </div>
-                <div id="r5">
-                    <div id="51">
-                    </div>
-                    <div id="52">
-                    </div>
-                    <div id="53">
-                    </div>
-                    <div id="54">
-                    </div>
-                    <div id="55">
-                    </div>
-                    <div id="56">
-                    </div>
-                    <div id="57">
-                    </div>
-                </div>
-                <div id="r6">
-                    <div id="61">
-                    </div>
-                    <div id="62">
-                    </div>
-                    <div id="63">
-                    </div>
-                    <div id="64">
-                    </div>
-                    <div id="65">
-                    </div>
-                    <div id="66">
-                    </div>
-                    <div id="67">
-                    </div>
-                </div>
-            </div>
-			
-			<div id="buttons">
-                <button id="1" onclick="turn(1);">1</button>
-                <button id="2" onclick="turn(2);">2</button>
-                <button id="3" onclick="turn(3);">3</button>
-                <button id="4" onclick="turn(4);">4</button>
-                <button id="5" onclick="turn(5);">5</button>
-                <button id="6" onclick="turn(6);">6</button>
-                <button id="7" onclick="turn(7);">7</button>
-            </div>
-        </div>
-		
-		<div id="result-lightbox">
-			<div id="result">
-				<h1>Congratulations!</h1>
-				<div id="actual-result">
+		<div id="wrapper">
+			<div class="header">
+				<div class="head-element left">
+				<div>
+					<h1>Connect<span style="color: #d83018; font-size:42px;">4</span><span style="font-size:14px;font-family:Ubuntu;color:#999;"> (Beta)</span></h1>
 				</div>
-				<div id="menu">
-					<div class="icon-book-open" onclick="viewRules();">
-					</div>
-					<a href="">
-						<div class="icon-ccw">
-						</div>
-					</a>
+				</div>
+				<div class="head-element right" id="share-buttons">
+				<div class="share-button-wrapper">
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_linkedin_large' displayText='LinkedIn'></span>
+				</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="share">
-			<p>Share this on<br></p>
-            <div id="share-button-wrapper">
+			
+			<div id="game-options">
+				<div>
+					<h2>Select Game Options</h2>
+					<p><br><br>Choose your game type/level</p>
+					<input name="level" type="radio" value="1" autofocus checked="checked" autocomplete="off" tabindex="1"> Amateur
+					<input name="level" type="radio" value="2" autocomplete="off" tabindex="2"> Expert
+                    <p></p> <!-- For line break -->
+					<input name="level" type="radio" value="3" autocomplete="off" tabindex="3"> Multiplayer
+					<p><br><br>What would you like to be called?</p>
+					<input id="player-name1" type="text" size="20" maxlength="40" placeholder="Player Name" tabindex="4">
+					<p></p> <!-- For line break -->
+					<input id="player-name2" type="text" size="20" maxlength="40" placeholder="Player Name 2" tabindex="5">
+					<br>
+					<button type="submit" class="bttn" onclick="setGameOptions();" tabindex="6">
+						<i class="fa fa-play-circle-o fa-lg"></i>&nbsp; Play!
+					</button>
+				</div>
+			</div>
 
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_linkedin_large' displayText='LinkedIn'></span>
-            </div>
-		</div>
-		
-		<div id="credits">
-			<p>Designed &amp; Developed by<br></p>
-			<div id="credit-image-wrapper">
-				<a href="https://www.facebook.com/sahil.lamba95" target="_blank"><div class="credit-image sahil"></div></a>
-				<a href="https://www.facebook.com/aman.srivastava.520125" target="_blank"><div class="credit-image aman"></div></a>
-                <a href="https://www.facebook.com/ranamihir" target="_blank"><div class="credit-image mihir"></div></a>
+			<div class="content">
+				<div class="menu">
+					<div onclick="viewRules();" tabindex="7"><i class="fa fa-book"></i>&nbsp; Rules</div>
+					<div onclick="reload();" tabindex="8"><i class="fa fa-repeat"></i>&nbsp; Start Over</div>
+					<a href="developers.html" target="_blank" tabindex="9"><div><i class="fa fa-cubes"></i>&nbsp; Developers</div></a>
+				</div>
+				<div class="match-title">
+				<div>
+					<h2>
+						<span style="color: #d83018;" id="player1"></span>&nbsp;&nbsp;Vs&nbsp;&nbsp;<span style="color: #ffd700;" id="player2"></span>
+					</h2>
+				</div>
+				</div>
+
+				<div class="grid">
+					<div id="r1">
+						<div id="11">
+						</div>
+						<div id="12">
+						</div>
+						<div id="13">
+						</div>
+						<div id="14">
+						</div>
+						<div id="15">
+						</div>
+						<div id="16">
+						</div>
+						<div id="17">
+						</div>
+					</div>
+					<div id="r2">
+						<div id="21">
+						</div>
+						<div id="22">
+						</div>
+						<div id="23">
+						</div>
+						<div id="24">
+						</div>
+						<div id="25">
+						</div>
+						<div id="26">
+						</div>
+						<div id="27">
+						</div>
+					</div>
+					<div id="r3">
+						<div id="31">
+						</div>
+						<div id="32">
+						</div>
+						<div id="33">
+						</div>
+						<div id="34">
+						</div>
+						<div id="35">
+						</div>
+						<div id="36">
+						</div>
+						<div id="37">
+						</div>
+					</div>
+					<div id="r4">
+						<div id="41">
+						</div>
+						<div id="42">
+						</div>
+						<div id="43">
+						</div>
+						<div id="44">
+						</div>
+						<div id="45">
+						</div>
+						<div id="46">
+						</div>
+						<div id="47">
+						</div>
+					</div>
+					<div id="r5">
+						<div id="51">
+						</div>
+						<div id="52">
+						</div>
+						<div id="53">
+						</div>
+						<div id="54">
+						</div>
+						<div id="55">
+						</div>
+						<div id="56">
+						</div>
+						<div id="57">
+						</div>
+					</div>
+					<div id="r6">
+						<div id="61">
+						</div>
+						<div id="62">
+						</div>
+						<div id="63">
+						</div>
+						<div id="64">
+						</div>
+						<div id="65">
+						</div>
+						<div id="66">
+						</div>
+						<div id="67">
+						</div>
+					</div>
+				</div>
+
+				<div class="buttons">
+					<button id="1" onclick="turn(1);">1</button>
+					<button id="2" onclick="turn(2);">2</button>
+					<button id="3" onclick="turn(3);">3</button>
+					<button id="4" onclick="turn(4);">4</button>
+					<button id="5" onclick="turn(5);">5</button>
+					<button id="6" onclick="turn(6);">6</button>
+					<button id="7" onclick="turn(7);">7</button>
+				</div>
 			</div>
-        </div>
+
+			<div class="credits">
+				<p>We created this shit, folks!<br></p>
+				<div class="credit-image-wrapper">
+					<a href="developers.html#top" target="_blank"><div id="sahil" class="credit-image sahil"></div></a>
+					<a href="developers.html#aman" target="_blank"><div id="aman" class="credit-image aman"></div></a>
+					<a href="developers.html#mihir" target="_blank"><div id="mihir" class="credit-image mihir"></div></a>
+				</div>
+			</div>
+		</div>
+
+        <script src="js/effects.js" type="text/javascript"></script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">
+            stLight.options({publisher: "00d7dfb1-e12f-4b19-aca5-6ee38134f80f", doNotHash: false, doNotCopy: false, hashAddressBar: false});
+        </script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-53701656-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+
+		</script>
 	</body>
 </html>
