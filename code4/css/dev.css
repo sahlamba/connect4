@@ -67,7 +67,7 @@ and (max-device-width: 900px) {
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.9);
         color: #333;
-        text-align: center;
+        text-align: left;
 	}
     
     h3 {
