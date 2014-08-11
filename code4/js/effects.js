@@ -109,4 +109,30 @@ $(document).ready(function () {
 			$('#wrapper').removeClass('blur-back');
 		}
 	});
+	
+	var sahil = $('#sahil'), aman = $('#aman'), mihir = $('#mihir');
+	
+	sahil.hover(function () {
+		aman.css("background-image", 'url(images/aman-left.jpg)');
+		mihir.css("background-image", 'url(images/mihir-left.jpg)');
+	}, function () {
+		aman.css("background-image", 'url(images/aman.jpg)');
+		mihir.css("background-image", 'url(images/mihir.jpg)');
+	});
+	
+	aman.hover(function () {
+		sahil.css("background-image", 'url(images/sahil-right.jpg)');
+		mihir.css("background-image", 'url(images/mihir-left.jpg)');
+	}, function () {
+		sahil.css("background-image", 'url(images/sahil.jpg)');
+		mihir.css("background-image", 'url(images/mihir.jpg)');
+	});
+	
+	mihir.hover(function () {
+		aman.css("background-image", 'url(images/aman-right.jpg)');
+		sahil.css("background-image", 'url(images/sahil-right.jpg)');
+	}, function () {
+		aman.css("background-image", 'url(images/aman.jpg)');
+		sahil.css("background-image", 'url(images/sahil.jpg)');
+	});
 });

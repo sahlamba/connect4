@@ -140,15 +140,21 @@ and (min-device-width: 901px) {
 }
 
 .aman {
-	background: url("../images/aman.jpg") no-repeat center;
+	background: url("../images/aman.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 }
 
 .sahil {
-	background: url("../images/sahil.jpg") no-repeat center;
+	background: url("../images/sahil.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 }
 .mihir {
-	background: url("../images/mihir.jpg") no-repeat center;
+	background: url("../images/mihir.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 }
