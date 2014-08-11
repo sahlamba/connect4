@@ -1,5 +1,86 @@
 @media only screen 
-and (min-device-width: 801px) {
+and (min-device-width: 320px) 
+and (max-device-width: 900px) {
+	.scroll-down-instruction, .to-top {
+		position: fixed;
+		padding: 10px;
+		border-radius: 10px;
+		background: rgba(255, 255, 255, 0.6);
+		z-index: 3900;
+		bottom: 10px;
+		right: 10px;
+		color: #333;
+	}
+	
+	.to-top {
+		display: none;
+	}
+    
+    .to-top:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+	
+	.play {
+		font-size: 24px;
+		margin-top: 8px;
+		color: #555;
+	}
+
+		.play:hover {
+			color: #d83018;
+		}
+	
+	#top {
+		padding-top: 0px !important;
+	}
+	
+	.member {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background-position: 50% 0;
+	}
+	
+		.member > div {
+			width: 90%;
+            overflow: hidden;
+			padding: 10%;
+			margin: 0 auto;
+		}
+	
+	.member-img {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius: 75px;
+		border: 5px solid #fff;
+		margin: 10px auto;
+		float: clear !important;
+	}
+	
+	.member-desc {
+		position: relative;
+		width: 90%;
+        overflow: hidden;
+        padding: 10%;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        text-align: justify;
+	}
+    
+    h3 {
+        color: #333;
+        font-size: 20px;
+    }
+    
+    h4 {
+        color: #555;
+    }
+}
+
+@media only screen 
+and (min-device-width: 901px) {
 	.header {
 		position: fixed;
 		top: 0;
