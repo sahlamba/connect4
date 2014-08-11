@@ -89,6 +89,7 @@ and (max-device-width: 900px) {
 		padding: 50px 0;
 		width: 90%;
 		margin: 0 auto;
+		margin-bottom: 20%;
 		max-height: 80%;
 		overflow: scroll;
 	}
