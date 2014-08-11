@@ -1,3 +1,16 @@
+.play:hover {
+	color: #d83018;
+}
+
+h3 {
+	color: #333;
+	font-size: 20px;
+}
+
+h4 {
+	color: #555;
+}
+
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 900px) {
@@ -6,30 +19,14 @@ and (max-device-width: 900px) {
 	}
 	
 	.scroll-down-instruction, .to-top {
-		position: fixed;
-		padding: 10px;
-		border-radius: 10px;
-		background: rgba(255, 255, 255, 0.6);
-		z-index: 3900;
-		bottom: 10px;
-		right: 10px;
-		color: #333;
 		display: none !important;
 	}
-    
-    .to-top:hover {
-        background: rgba(255, 255, 255, 1);
-    }
 	
 	.play {
 		font-size: 20px;
 		margin-top: -5px;
 		color: #555;
 	}
-
-		.play:hover {
-			color: #d83018;
-		}
 	
 	#top {
 		padding-top: 0px !important;
@@ -69,15 +66,6 @@ and (max-device-width: 900px) {
         color: #333;
         text-align: center;
 	}
-    
-    h3 {
-        color: #333;
-        font-size: 20px;
-    }
-    
-    h4 {
-        color: #555;
-    }
 }
 
 @media only screen 
@@ -113,10 +101,6 @@ and (min-device-width: 901px) {
 		margin-top: 8px;
 		color: #555;
 	}
-
-		.play:hover {
-			color: #d83018;
-		}
 	
 	#top {
 		padding-top: 63px !important;
@@ -155,15 +139,6 @@ and (min-device-width: 901px) {
         overflow: hidden;
         text-align: justify;
 	}
-    
-    h3 {
-        color: #333;
-        font-size: 20px;
-    }
-    
-    h4 {
-        color: #555;
-    }
 }
 
 /*
