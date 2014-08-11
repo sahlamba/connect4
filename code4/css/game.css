@@ -19,7 +19,213 @@
 	}
 
 @media only screen 
-and (min-device-width: 801px) {
+and (min-device-width: 320px)
+and (max-device-width: 900px) {
+	.menu {
+		position: relative;
+		width: 80%;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+
+	.menu div {
+		display: inline-block;
+		cursor: pointer;
+		margin: 0 20px;
+		font-size: inherit;
+		color: #555;
+	}
+
+	.menu div:hover {
+		color: #d83018;
+	}
+
+	#rules-lightbox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5000;
+		background: rgba(255, 255, 255, 0.8);
+		text-align: center;
+		display: none;
+	}
+
+	.close-img {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		cursor: pointer;
+	}
+	
+	#rules {
+		padding: 40px 0;
+		width: 100%;
+		max-height: 100%;
+	}
+	
+	#rules > p {
+		width: 600px;
+		line-height: 2em;
+		margin: 0 auto;
+	}
+	
+	#result-lightbox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 6000;
+		background: rgba(255, 255, 255, 0.4);
+		text-align: center;
+		display: none;
+	}
+	
+	#result {
+		padding: 50px;
+		width: 600px;
+		margin: 0 auto;
+		max-height: 100%;
+	}
+	
+	#actual-result {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	
+	#game-options {
+		position: absolute;
+		width: 100%;
+		height: 652px;
+		top: 63px;
+		left: 0px;
+		z-index: 2000;
+		background: rgba(255, 255, 255, 0.9);
+	}
+	
+		#game-options > div {
+			width: 600px;
+			margin: 0 auto;
+			padding: 20px 0;
+			text-align: center;
+		}
+	
+	#player-name1, #player-name2 {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #ddd;
+		margin: 10px auto 5px auto;
+		color: #333;
+	}
+	
+	#player-name2 {
+		margin: 5px auto 10px auto;
+		display: none;
+	}
+	
+	input[name=level] {
+		margin: 15px 2px 0 10px;
+	}
+	
+	.match-title {
+		position: relative;
+		width: 80%;
+		padding: 20px 0;
+		margin: 0 auto;
+	}
+    
+        .match-title div h2 {
+            font-family: 'AR Destine' !important;
+            font-size: 24px !important;
+        }
+	
+	.content {
+		margin: 0 auto;
+	}
+
+	.grid {
+		width: 404px;
+		height: 348px;
+		margin: 0 auto;
+		background: #fafaf1;
+		border-radius: 10px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom: 10px solid #555;
+	}
+
+	.grid div {
+		width: auto;
+		height: 50px;
+		margin: 3px auto;
+	}
+
+	.grid div div {
+		width: 50px;
+		margin-top: 14px;
+		font-size: 0;
+		display: inline-block;
+		background-color: #999;
+		border-radius: 2px;
+	}
+	
+	.buttons {
+		padding: 30px 0;
+	}
+
+	.buttons button {
+		display: inline-block;
+		width: 50px;
+		overflow: hidden;
+		padding: 3px;
+		border-radius: 3px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-color: #777;
+		border-bottom: 3px solid #555;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.buttons button:hover {
+		background-color: #d83018;
+		border-bottom: 3px solid #830003;
+	}
+
+	.credits {
+		position: relative;
+		width: 50%;
+		overflow: hidden;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		z-index: 1000;
+	}
+
+	.credit-image-wrapper {
+		position: relative;
+		width: 192px;
+		margin: 10px auto;
+	}
+
+	.credit-image {
+		position: relative;
+		float: left;
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		background-color: #ff1493;
+		border: 2px solid #333;
+		margin: 0 5px;
+	}
+}
+
+@media only screen 
+and (min-device-width: 901px) {
 	.menu {
 		position: relative;
 		width: 80%;
