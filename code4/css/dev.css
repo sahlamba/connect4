@@ -1,6 +1,10 @@
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 900px) {
+	.header {
+		height: 126px;
+	}
+	
 	.scroll-down-instruction, .to-top {
 		position: fixed;
 		padding: 10px;
@@ -10,10 +14,7 @@ and (max-device-width: 900px) {
 		bottom: 10px;
 		right: 10px;
 		color: #333;
-	}
-	
-	.to-top {
-		display: none;
+		display: none !important;
 	}
     
     .to-top:hover {
@@ -44,7 +45,7 @@ and (max-device-width: 900px) {
 		.member > div {
 			width: 90%;
             overflow: hidden;
-			padding: 10%;
+			padding: 10% 0;
 			margin: 0 auto;
 		}
 	
@@ -54,7 +55,7 @@ and (max-device-width: 900px) {
 		height: 150px;
 		border-radius: 75px;
 		border: 5px solid #fff;
-		margin: 10px auto;
+		margin: 20px auto;
 		float: clear !important;
 	}
 	
@@ -62,11 +63,11 @@ and (max-device-width: 900px) {
 		position: relative;
 		width: 90%;
         overflow: hidden;
-        padding: 10%;
+        padding: 5%;
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.9);
         color: #333;
-        text-align: justify;
+        text-align: center;
 	}
     
     h3 {
