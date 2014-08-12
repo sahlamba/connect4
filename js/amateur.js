@@ -445,17 +445,19 @@ function check(a, b) {
 			}
 
 			if (direction3 === 0) {
-				if (grid[a][b] === grid[a - 1][b - 1] && grid[a][b] === grid[a - 2][b - 2] && grid[a][b] === grid[a - 3][b - 3]) {
-					if (grid[a][b] === 1) {
-						resultAnimBak2a(a, b);
-						result(1);
-					} else if (grid[a][b] === 0) {
-						resultAnimBak2b(a, b);
-						result(2);
-					}
-					disableButtons();
+                if(a > 1 && b <= 7){
+                    if (grid[a][b] === grid[a - 1][b - 1] && grid[a][b] === grid[a - 2][b - 2] && grid[a][b] === grid[a - 3][b - 3]) {
+                        if (grid[a][b] === 1) {
+                            resultAnimBak2a(a, b);
+                            result(1);
+                        } else if (grid[a][b] === 0) {
+                            resultAnimBak2b(a, b);
+                            result(2);
+                        }
+                        disableButtons();
 
-				}
+                    }
+                }
 			}
 
 		}  if (counter3 === 2) {
@@ -1059,7 +1061,7 @@ if(a>1&&b<=6){
 
         
         var counter6 = 0, direction6 = 5;
- if(a>1&&b<=6){    
+ if(a > 1 && b < 6){    
      
     gridc[l][i]=0;
     gridc[l-1][i]=1;

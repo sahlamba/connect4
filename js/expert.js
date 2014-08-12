@@ -243,7 +243,7 @@ var sum = 0;
 function drawCondition() {
 	"use strict";
 	
-    if (chance===42) {
+    if (chance===41) {
         
 		disableButtons();
         result(0);
@@ -946,30 +946,30 @@ function AIMove(){
         if(toContinue!=0){
              
             // three with one gap starts
-            gridc[l][i] = 1;
-
-            //horizontal starts
-
-            if(gridc[a][b+2] === 1 && gridc[a][b+3] === 1 && gridc[a][b+1] !== 0 && gridc[a][b+1] !== 1){
-                columnResult[i+1] += 10;
-            }
-
-            if(gridc[a][b-2] === 1 && gridc[a][b-3] === 1 && gridc[a][b-1] !== 0 && gridc[a][b-1] !== 1){
-                columnResult[i-1] += 10;
-            }
-
-            // horizontal ends
-        
             gridc[l][i] = 0;
 
             //horizontal starts
 
             if(gridc[a][b+2] === 1 && gridc[a][b+3] === 1 && gridc[a][b+1] !== 0 && gridc[a][b+1] !== 1){
-                columnResult[i] += 9;
+                columnResult[i+1] += 35;
             }
 
             if(gridc[a][b-2] === 1 && gridc[a][b-3] === 1 && gridc[a][b-1] !== 0 && gridc[a][b-1] !== 1){
-                columnResult[i] += 9;
+                columnResult[i-1] += 35;
+            }
+
+            // horizontal ends
+        
+            gridc[l][i] = 1;
+
+            //horizontal starts
+
+            if(gridc[a][b+2] === 1 && gridc[a][b+3] === 1 && gridc[a][b+1] !== 0 && gridc[a][b+1] !== 1){
+                columnResult[i] += 30;
+            }
+
+            if(gridc[a][b-2] === 1 && gridc[a][b-3] === 1 && gridc[a][b-1] !== 0 && gridc[a][b-1] !== 1){
+                columnResult[i] += 30;
             }
 
             // horizontal ends
@@ -1456,10 +1456,12 @@ function AIMove(){
                                 
                             if (counter2 === 1) {
                                 if (direction2 === 1) {
-                                    if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
-                                          
-                                        columnResult[i]+=30;
-                                        
+                                    if(a>1 && b<7){
+                                        if (gridc[a][b] === gridc[a - 1][b + 1] && gridc[a][b] === gridc[a - 2][b + 2] && gridc[a][b] === gridc[a - 3][b + 3]) {
+
+                                            columnResult[i]+=30;
+
+                                        }
                                     }
                                 }
                                     
@@ -1467,7 +1469,7 @@ function AIMove(){
                                     
                                     if (gridc[a][b] === gridc[a + 1][b - 1] && gridc[a][b] === gridc[a + 2][b - 2] && gridc[a][b] === gridc[a + 3][b - 3]) {
                                         
-                                        columnResult[i]+=20;
+                                        columnResult[i]+=30;
                                         
                                     }
                                 }
