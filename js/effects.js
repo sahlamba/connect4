@@ -102,7 +102,7 @@ $(document).ready(function () {
 		}
 	});
     
-    var dynamicHeight = window.outerHeight, sahil = $('#sahil'), aman = $('#aman'), mihir = $('#mihir');
+    var dynamicHeight = window.outerHeight;
     
     $('#game-options').css("height", dynamicHeight + 'px');
 
@@ -113,8 +113,14 @@ $(document).ready(function () {
 			$('#wrapper').removeClass('blur-back');
 		}
 	});
-	
-	sahil.hover(function () {
+});
+
+$(window).load(function () {
+    "use strict";
+    
+    var sahil = $('#sahil'), aman = $('#aman'), mihir = $('#mihir');
+    
+    sahil.hover(function () {
 		aman.css("background-image", 'url(images/aman-left.jpg)');
 		mihir.css("background-image", 'url(images/mihir-left.jpg)');
 	}, function () {
