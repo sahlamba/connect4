@@ -144,7 +144,7 @@ and (max-device-width: 900px) {
 	#game-options {
 		position: absolute;
 		width: 100%;
-		height: 565px;
+/*		height: 565px;*/
 		top: 63px;
 		left: 0px;
 		z-index: 2000;
@@ -282,7 +282,7 @@ and (min-device-width: 901px) {
 		width: 100%;
 		height: 100%;
 		z-index: 6000;
-		background: rgba(255, 255, 255, 0.4);
+		background: rgba(255, 255, 255, 0.8);
 		text-align: center;
 		display: none;
 	}
@@ -305,7 +305,7 @@ and (min-device-width: 901px) {
 	#game-options {
 		position: absolute;
 		width: 100%;
-		height: 682px;
+/*		height: 682px;*/
 		top: 63px;
 		left: 0px;
 		z-index: 2000;

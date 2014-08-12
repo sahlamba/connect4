@@ -943,7 +943,7 @@ function AIMove(){
 		
                 //just above check start
         
-        if(toContinue!=0){
+        
              
             // three with one gap starts
             gridc[l][i] = 0;
@@ -976,7 +976,7 @@ function AIMove(){
         
             // three with one gap ends 
 
-             
+        if(toContinue!=0){ 
             a=(l-1), b=(i);
             if(b<7 && a>=1){
                 gridc[l][i]=0;
@@ -1049,7 +1049,7 @@ function AIMove(){
             
         
             a=l-1, b=i; 
-            if(a>1 && b<7){
+            if(a > 1 && b < 6){
                 gridc[l][i]=0;
                 gridc[a][b]=1; 
                 columnsCopy[i]--;
@@ -1116,7 +1116,7 @@ function AIMove(){
 
             
             var counter6 = 0, direction6 = 5;
-            if(a>1&&b<7){    
+            if(a > 1 && b < 6){    
                  
                 gridc[l][i]=0;
                 gridc[l-1][i]=1;
@@ -1250,7 +1250,7 @@ function AIMove(){
                 
             
                 a=l2, b=k; 
-                if(a>1 && b<7){
+                if(a > 1 && b < 6){
                        
                      
                     counter2 = 0, direction2 = 5;
@@ -1310,7 +1310,7 @@ function AIMove(){
 
                 
                 var counter6 = 0, direction6 = 5;
-                if(a>1&&b<7){    
+                if(a > 1 && b < 6){    
                      
                     
                     if (gridc[a][b] === gridc[a + 1][b + 1]) {
@@ -1439,7 +1439,7 @@ function AIMove(){
                         
                     
                          
-                        if(a>1 && b<7){ 
+                        if(a > 1 && b < 6){ 
                                
                              
                             counter2 = 0, direction2 = 5;
@@ -1498,7 +1498,7 @@ function AIMove(){
 
                         
                         var counter6 = 0, direction6 = 5;
-                        if(a>1&&b<7){    
+                        if(a > 1 && b < 6){    
                              
                             if (gridc[a][b] === gridc[a + 1][b + 1]) {
                                 counter6 += 1;
@@ -1626,7 +1626,7 @@ function AIMove(){
 
 
 
-                                if(a>1 && b<7){ 
+                                if(a > 1 && b < 6v){ 
 
 
                                     counter2 = 0, direction2 = 5;
@@ -1683,7 +1683,7 @@ function AIMove(){
 
 
                                 var counter6 = 0, direction6 = 5;
-                                if(a>1&&b<7){    
+                                if(a > 1 && b < 6){    
 
                                     if (gridc[a][b] === gridc[a + 1][b + 1]) {
                                         counter6 += 1;

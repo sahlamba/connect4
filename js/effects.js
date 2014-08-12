@@ -101,6 +101,10 @@ $(document).ready(function () {
 			$('#player-name2').fadeOut(100);
 		}
 	});
+    
+    var dynamicHeight = window.outerHeight, sahil = $('#sahil'), aman = $('#aman'), mihir = $('#mihir');
+    
+    $('#game-options').css("height", dynamicHeight + 'px');
 
 	$(document).keyup(function (e) {
 		if (e.keyCode === 27 && rules_light_box_flag === 1) { //Esc Key
@@ -109,8 +113,6 @@ $(document).ready(function () {
 			$('#wrapper').removeClass('blur-back');
 		}
 	});
-	
-	var sahil = $('#sahil'), aman = $('#aman'), mihir = $('#mihir');
 	
 	sahil.hover(function () {
 		aman.css("background-image", 'url(images/aman-left.jpg)');

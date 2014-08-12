@@ -10,6 +10,7 @@
 
 body {
 	text-align: center;
+    background: url("../images/back.png") repeat;
 }
 
 p {
@@ -49,9 +50,6 @@ i {
 @media only screen 
 and (min-device-width: 320px) 
 and (max-device-width: 900px) {
-	#wrapper {
-		background: url("../images/back.png") repeat;
-	}
 	
 	.header {
 		position: relative;
@@ -90,10 +88,6 @@ and (max-device-width: 900px) {
 and (min-device-width: 901px) {
 	html {
 		min-width: 900px;
-	}
-	
-	#wrapper {
-		background: url("../images/back.png") repeat;
 	}
 
 	.header {
