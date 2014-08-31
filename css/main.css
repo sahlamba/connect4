@@ -1,3 +1,13 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('../font-awesome/ubuntu.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Pacifico';
+	src: url('../font-awesome/pacifico.ttf') format('truetype');
+}
+
 * {
 	margin: 0;
 	padding: 0;

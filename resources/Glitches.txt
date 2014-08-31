@@ -1,4 +1,0 @@
-1. Does not win when back & forward slash is done at boundaries
-2. Draw condition to be added
-3. Order of preference to be reviewed
-4. Does not defend horizontally

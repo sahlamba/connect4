@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
+        id        = "com.phonegap.connect4"
         version   = "1.0.0">
 
     <name>Connect4</name>
@@ -12,7 +12,7 @@
         A simple and awesome, virtual Conncet 4 game!
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
+    <author href="http://thedrumsknight.github.io/connect4/developers.html" email="teamsamcodes@gmail.com">
         S.A.M. Codes
     </author>
 

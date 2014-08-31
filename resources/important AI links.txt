@@ -1,1 +1,0 @@
-http://www.wieschoo.com/tutorials/optimization/connect4-ai-minimax/001189/
