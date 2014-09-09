@@ -154,9 +154,7 @@ input[name=level] {
 #game-options {
 	position: absolute;
 	overflow: hidden;
-	top: 20px;
-	left: 50%;
-	margin-left: -144px;
+	margin: 20px;
 	z-index: 2000;
 	background: rgba(255, 255, 255, 0.9);
 	border-radius: 10px;

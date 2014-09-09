@@ -10,6 +10,30 @@ function reload() {
 	});
 }
 
+function disableButtons() {
+	"use strict";
+	
+    document.getElementById("1").disabled = true;
+    document.getElementById("2").disabled = true;
+    document.getElementById("3").disabled = true;
+    document.getElementById("4").disabled = true;
+    document.getElementById("5").disabled = true;
+    document.getElementById("6").disabled = true;
+    document.getElementById("7").disabled = true;
+}
+
+function enableButtons() {
+	"use strict";
+	
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = false;
+    document.getElementById("3").disabled = false;
+    document.getElementById("4").disabled = false;
+    document.getElementById("5").disabled = false;
+    document.getElementById("6").disabled = false;
+    document.getElementById("7").disabled = false;
+}
+
 function includeJS(x) {
 	"use strict";
 	var fileref = document.createElement('script');
@@ -55,6 +79,7 @@ function setGameOptions() {
 	document.getElementById('player2').innerHTML = player2Name;
 	$('#game-options').fadeOut(200);
 	$('#game-options-lightbox').fadeOut(200);
+	enableButtons();
 }
 
 function viewRules() {
@@ -79,6 +104,8 @@ function hideRules() {
 
 $(document).ready(function () {
 	"use strict";
+	
+	disableButtons();
 	
 	$('input[type=radio][name=level]').change(function () {
 		if (this.value === '2') { //Expert
