@@ -100,7 +100,7 @@ input[name=level] {
 	padding: 40px 0;
 	width: 100%;
 	max-height: 80%;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 #rules > p {
@@ -127,7 +127,7 @@ input[name=level] {
 	width: 90%;
 	margin: 0 auto;
 	max-height: 60%;
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 #actual-result {
@@ -138,19 +138,34 @@ input[name=level] {
 	margin-bottom: 50px;
 }
 
+#game-options-lightbox {
+	position: absolute;
+	top: 73px;
+	left: 50%;
+	margin-left: -164px;
+	width: 328px;
+	height: 418px;
+	z-index: 6000;
+	background: rgba(51, 51, 51, 0.9);
+	text-align: center;
+	border-radius: 10px;
+}
+
 #game-options {
 	position: absolute;
-	width: 100%;
-	top: 63px;
-	left: 0px;
+	overflow: hidden;
+	top: 20px;
+	left: 50%;
+	margin-left: -144px;
 	z-index: 2000;
 	background: rgba(255, 255, 255, 0.9);
+	border-radius: 10px;
 }
 
 	#game-options > div {
-		width: 95%;
+		width: 248px;
 		margin: 0 auto;
-		padding: 20px 0;
+		padding: 30px 20px;
 		text-align: center;
 	}
 

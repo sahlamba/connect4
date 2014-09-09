@@ -54,6 +54,7 @@ function setGameOptions() {
 	document.getElementById('player1').innerHTML = player1Name;
 	document.getElementById('player2').innerHTML = player2Name;
 	$('#game-options').fadeOut(200);
+	$('#game-options-lightbox').fadeOut(200);
 }
 
 function viewRules() {
@@ -81,6 +82,7 @@ $(document).ready(function () {
 	
 	$('input[type=radio][name=level]').change(function () {
 		if (this.value === '2') { //Expert
+			$('#game-options-lightbox').css("height", "418px");
 			$('#player-name2').fadeOut(100);
 			player2Name = document.getElementById('player-name2').value;
 			player2Flag = 1;
@@ -92,19 +94,17 @@ $(document).ready(function () {
 			removeJS('js/amateur.js');
 			includeJS('js/multiplayer.js');
 			player2Flag = 2;
+			$('#game-options-lightbox').css("height", "455px");
 			$('#player-name2').fadeIn(100);
 		} else { //Amateur
 			removeJS('js/expert.js');
 			removeJS('js/multiplayer.js');
 			includeJS('js/amateur.js');
 			player2Flag = 0;
+			$('#game-options-lightbox').css("height", "418px");
 			$('#player-name2').fadeOut(100);
 		}
 	});
-    
-    var dynamicHeight = window.outerHeight;
-    
-    $('#game-options').css("height", dynamicHeight + 'px');
 
 	$(document).keyup(function (e) {
 		if (e.keyCode === 27 && rules_light_box_flag === 1) { //Esc Key

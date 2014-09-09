@@ -9,7 +9,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<meta name="description" content="A simple and awesome, virtual Connect 4 game!">
+		<meta name="description" content="Connect 4 is a simple, addictive and an awesome Puzzle based game. The objective is to just connect 4 of your dots horizontally, vertically or diagonally to win the game and hence humiliate your opponent or our super-funky AI S.A.M.!">
 		
 		<link rel="apple-touch-icon" href="icon.png">
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/icon">
@@ -83,22 +83,24 @@
 				</div>
 			</div>
 			
-			<div id="game-options">
-				<div>
-					<h2>Select Game Options</h2>
-					<p><br><br>Choose your game type/level</p>
-					<input name="level" type="radio" value="1" autofocus checked="checked" autocomplete="off" tabindex="1"> Amateur
-					<input name="level" type="radio" value="2" autocomplete="off" tabindex="2"> Expert
-                    <p></p> <!-- For line break -->
-					<input name="level" type="radio" value="3" autocomplete="off" tabindex="3"> Multiplayer
-					<p><br><br>What would you like to be called?</p>
-					<input id="player-name1" type="text" size="20" maxlength="40" placeholder="Player Name" tabindex="4">
-					<p></p> <!-- For line break -->
-					<input id="player-name2" type="text" size="20" maxlength="40" placeholder="Player Name 2" tabindex="5">
-					<br>
-					<button type="submit" class="bttn" onclick="setGameOptions();" tabindex="6">
-						<i class="fa fa-play-circle-o fa-lg"></i>&nbsp; Play!
-					</button>
+			<div id="game-options-lightbox">
+				<div id="game-options">
+					<div>
+						<h2>Select Game Options</h2>
+						<p><br><br>Choose your game type/level</p>
+						<input name="level" type="radio" value="1" autofocus checked="checked" autocomplete="off" tabindex="1"> Amateur
+						<input name="level" type="radio" value="2" autocomplete="off" tabindex="2"> Expert
+						<p></p> <!-- For line break -->
+						<input name="level" type="radio" value="3" autocomplete="off" tabindex="3"> Multiplayer
+						<p><br><br>What would you like to be called?</p>
+						<input id="player-name1" type="text" size="20" maxlength="40" placeholder="Player Name" tabindex="4">
+						<p></p> <!-- For line break -->
+						<input id="player-name2" type="text" size="20" maxlength="40" placeholder="Player Name 2" tabindex="5">
+						<br>
+						<button type="submit" class="bttn" onclick="setGameOptions();" tabindex="6">
+							<i class="fa fa-play-circle-o fa-lg"></i>&nbsp; Play!
+						</button>
+					</div>
 				</div>
 			</div>
 
