@@ -2,46 +2,47 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.teamsamcodes.connect4"
-		versionCode = "1.0.0"
+		versionCode=""
 		version   = "1.0.0">
-		<name>Connect4</name>
+		<name>Connect 4</name>
 		<description>
-A simple and awesome, virtual Conncet 4 game!</description>
+Connect 4 is a simple, addictive and an awesome Puzzle based game. The objective is to just connect 4 of your dots horizontally, vertically or diagonally to win the game and hence humiliate your opponent or our super-funky AI S.A.M.!
+		</description>
 		<author href="http://thedrumsknight.github.io/connect4/developers.html" email="teamsamcodes@gmail.com">
 Team S.A.M. Codes
 		</author>
 		<preference name="phonegap-version" value="3.5.0" />
-		<preference name="orientation" value="default" />
+		<preference name="orientation" value="portrait" />
 		<preference name="fullscreen" value="true" />
 		<preference name="target-device" value="universal" />
 		<preference name="webviewbounce" value="true" />
 		<preference name="prerendered-icon" value="true" />
-		<preference name="stay-in-webview" value="true" />
-		<preference name="ios-statusbarstyle" value="black-opaque" />
+		<preference name="stay-in-webview" value="false" />
+		<preference name="ios-statusbarstyle" value="default" />
 		<preference name="detect-data-types" value="true" />
-		<preference name="exit-on-suspend" value="true" />
+		<preference name="exit-on-suspend" value="false" />
 		<preference name="show-splash-screen-spinner" value="true" />
 		<preference name="auto-hide-splash-screen" value="true" />
-		<preference name="EnableViewportScale" value="false" />
+		<preference name="EnableViewportScale" value="true" />
 		<preference name="MediaPlaybackRequiresUserAction" value="false" />
 		<preference name="AllowInlineMediaPlayback" value="false" />
 		<preference name="BackupWebStorage" value="cloud" />
 		<preference name="TopActivityIndicator" value="gray" />
-		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
+		<preference name="KeyboardDisplayRequiresUserAction" value="false" />
 		<preference name="HideKeyboardFormAccessoryBar" value="false" />
 		<preference name="SuppressesIncrementalRendering" value="false" />
-		<preference name="android-minSdkVersion" value="9" />
+		<preference name="android-minSdkVersion" value="7" />
 		<preference name="android-installLocation" value="auto" />
 		<preference name="SplashScreenDelay" value="5000" />
 		<preference name="ErrorUrl" value=""/>
-		<preference name="BackgroundColor" value=""/>
+		<preference name="BackgroundColor" value="0x333333"/>
 		<preference name="KeepRunning" value="true"/>
-		<preference name="DisallowOverscroll" value="false"/>
+		<preference name="DisallowOverscroll" value="true"/>
 		<preference name="LoadingDialog" value=","/> 
 		<preference name="LoadUrlTimeoutValue" value="20000" />
-		<preference name="disable-cursor" value="true" />
+		<preference name="disable-cursor" value="false" />
 		<gap:platform name="android" />
-		<feature name="http://api.phonegap.com/1.0/file"/>
+		<feature name="http://api.phonegap.com/1.0/media"/>
 		<feature name="http://api.phonegap.com/1.0/network"/>
 		<gap:plugin name="org.apache.cordova.battery-status"  />
 		<gap:plugin name="org.apache.cordova.camera"  />
@@ -65,10 +66,10 @@ Team S.A.M. Codes
 		<icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
 		<icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
 		<icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
-		<icon src="icon.png" />
+		<icon src="res/icon/android/icon-72-hdpi.png" />
+		<gap:splash src="res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:density="ldpi" />
 		<gap:splash src="res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:density="mdpi" />
 		<gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="hdpi" />
 		<gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
-		<gap:splash src="splash.png" />
-		<access origin="*" />
+		<gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xxhdpi" />
 	</widget>
