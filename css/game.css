@@ -225,6 +225,7 @@ and (max-device-width: 900px) {
 		width: 80%;
 		overflow: hidden;
 		margin: 0 auto;
+		margin-top: 20px;
 		padding-bottom: 20px;
 		z-index: 1000;
 	}
@@ -385,6 +386,7 @@ and (min-device-width: 901px) {
 		width: 50%;
 		overflow: hidden;
 		margin: 0 auto;
+		margin-top: 20px;
 		z-index: 1000;
 	}
 }
