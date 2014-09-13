@@ -72,4 +72,5 @@ Team S.A.M. Codes
 		<gap:splash src="res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:density="hdpi" />
 		<gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
 		<gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xxhdpi" />
+		<access origin="*" subdomains="true" browserOnly="true" />
 	</widget>
