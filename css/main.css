@@ -18,6 +18,13 @@ p {
 	color: #333;
 }
 
+span.play-store {
+    display: inherit !important;
+}
+
+span.play-store img {
+    margin-top: -6px;
+}
 
 span {
 	font-size: inherit;
@@ -66,10 +73,15 @@ and (max-device-width: 900px) {
 		.head-element > div {
 			padding: 10px 0;
 		}
-	
-	#share-buttons {
-		display: none;
+    
+	#share-buttons .share-button-wrapper {
+		display: block;
+		margin-top: 5px;
 	}
+    
+    #share-buttons .share-button-wrapper span {
+        display: none !important;
+    }
 	
 	h1 {
 		margin-top: -20px;
