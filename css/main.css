@@ -80,7 +80,7 @@ and (max-device-width: 900px) {
 	}
     
     #share-buttons .share-button-wrapper span {
-        display: none !important;
+        display: none;
     }
 	
 	h1 {
