@@ -22,10 +22,6 @@ span.play-store {
     display: inherit !important;
 }
 
-span.play-store img {
-    margin-top: -6px;
-}
-
 span {
 	font-size: inherit;
 	font-family: inherit;
@@ -61,7 +57,7 @@ and (max-device-width: 900px) {
 	.header {
 		position: relative;
 		width: 100%;
-		height: 124px;
+		height: 127px;
 		border-bottom: 1px solid #ddd;
 		background: rgba(255, 255, 255, 0.9);
 	}
@@ -81,6 +77,10 @@ and (max-device-width: 900px) {
     
     #share-buttons .share-button-wrapper span {
         display: none;
+    }
+    
+    span.play-store img {
+        margin-top: -10px;
     }
 	
 	h1 {
@@ -123,6 +123,10 @@ and (min-device-width: 901px) {
 		display: block;
 		margin-top: 5px;
 	}
+    
+    span.play-store img {
+        margin-top: -6px;
+    }
 	
 	.left {
 		float: left;
